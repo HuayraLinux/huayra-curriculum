@@ -17,6 +17,7 @@ all:
 	@echo "  $(V)watch$(N)       Genera los archivos compilados de forma contínua."
 	@echo ""
 	@echo "  $(V)test_mac$(N)    Prueba la aplicación sobre OSX"
+	@echo "  $(V)test_linux$(N)  Prueba la aplicación sobre Linux"
 	@echo ""
 
 build:
@@ -33,6 +34,9 @@ actualizar:
 test_mac: build
 	@echo "Cuidado - se está usando la version de nodewebkit del sistema."
 	open -a /Applications/node-webkit.app dist
+
+test_linux: build
+	nw dist
 
 version:
 	# patch || minor

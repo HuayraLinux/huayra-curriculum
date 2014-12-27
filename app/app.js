@@ -5,6 +5,7 @@ import config from './config/environment';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
+
 var App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
@@ -12,5 +13,6 @@ var App = Ember.Application.extend({
 });
 
 loadInitializers(App, config.modulePrefix);
+Ember.my_app = App;
 
 export default App;

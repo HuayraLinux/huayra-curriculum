@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'node-webkit-ember-seed',
+    modulePrefix: 'huayra-curriculum',
     environment: environment,
     baseURL: '',
     locationType: 'hash',

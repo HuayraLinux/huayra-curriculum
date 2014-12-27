@@ -12,3 +12,9 @@ html, body {
 [data-ember-action] {
   cursor: pointer;
 }
+
+input {
+  border: 1px solid rgb(226, 226, 226) !important;
+  padding: 6px !important;
+  border-bottom: 0 !important;
+}

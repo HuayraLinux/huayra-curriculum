@@ -1,11 +1,13 @@
 {
   "main": "app://localhost/index.html",
-  "name": "node-webkit-ember-seed",
+  "name": "huayra-curriculum",
   "version": "0.0.1",
   "window": {
-    "title": "node-webkit-ember-seed",
+    "title": "huayra-curriculum",
     "width": 800,
     "height": 500,
+    "min_width": 300,
+    "min_height": 300,
     "toolbar": true,
     "position": "center"
   }

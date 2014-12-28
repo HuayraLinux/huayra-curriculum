@@ -6,8 +6,8 @@
     "title": "huayra-curriculum",
     "width": 800,
     "height": 500,
-    "min_width": 300,
-    "min_height": 300,
+    "min_width": 800,
+    "min_height": 500,
     "toolbar": true,
     "position": "center"
   }

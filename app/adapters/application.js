@@ -85,7 +85,7 @@ export default DS.RESTAdapter.extend({
         if (err) {
           reject(err);
         } else {
-          result[collection] = data;
+          result[collection] = result;
           resolve(Ember.A(result));
         }
       });

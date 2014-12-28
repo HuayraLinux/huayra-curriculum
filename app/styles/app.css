@@ -18,3 +18,7 @@ input {
   padding: 6px !important;
   border-bottom: 0 !important;
 }
+
+.version {
+  float: right;
+}

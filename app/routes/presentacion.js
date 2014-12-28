@@ -16,9 +16,8 @@ export default Ember.Route.extend({
 
       var controller = this;
 
-      curriculum.save().then(function() {
-        controller.transitionTo('asistente.paso1', curriculum);
-      });
+      curriculum.save();
+      controller.transitionTo('asistente.paso1', curriculum);
     }
   }
 });

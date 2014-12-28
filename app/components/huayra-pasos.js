@@ -3,10 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   paso_actual: 1,
   pasos: [
-          {numero: 1, activo: false, ruta: 'create', texto: 'Datos Personales'},
-          {numero: 2, activo: false, ruta: 'create', texto: 'Estudios'},
-          {numero: 3, activo: false, ruta: 'create', texto: 'Exp. Laboral'},
-          {numero: 4, activo: false, ruta: 'create', texto: 'Exp. Voluntariado'},
+          {numero: 1, activo: false, ruta: 'create', texto: 'Datos Personales 1'},
+          {numero: 2, activo: false, ruta: 'create', texto: 'Datos Personales 2'},
+          {numero: 3, activo: false, ruta: 'create', texto: 'Estudios'},
+          {numero: 4, activo: false, ruta: 'create', texto: 'Experiencia'},
           {numero: 5, activo: false, ruta: 'create', texto: 'Intereses'},
           {numero: 6, activo: false, ruta: 'create', texto: 'Finalizando ...'},
          ],

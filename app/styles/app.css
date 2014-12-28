@@ -22,3 +22,7 @@ input {
 .version {
   float: right;
 }
+
+.tutorial p {
+  font-size: 15px;
+}

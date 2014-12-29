@@ -1,7 +1,7 @@
 {
   "main": "app://localhost/index.html",
   "name": "huayra-curriculum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "window": {
     "title": "huayra-curriculum",
     "width": 800,

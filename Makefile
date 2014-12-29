@@ -1,7 +1,7 @@
 N=[0m
 V=[01;32m
 
-VERSION=0.0.1
+VERSION=0.0.2
 NAME=huayra-curriculum
 
 all:
@@ -40,7 +40,7 @@ test_linux: build
 
 version:
 	# patch || minor
-	@bumpversion patch --current-version ${VERSION} package.json public/package.json Makefile --list
+	@bumpversion patch --current-version ${VERSION} public/package.json Makefile --list app/components/huayra-version.js
 	make build
 	@echo "Es recomendable escribir el comando que genera los tags y sube todo a github:"
 	@echo ""

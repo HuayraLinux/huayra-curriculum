@@ -1,22 +1,22 @@
 <div class="row">
 
-  <div class="tutorial col-md-6 col-xs-6">
-    <h4>Paso 6</h4>
+  <div class="tutorial col-md-12 col-xs-12">
+    <div class='hero-unit'>
+      <h3>¡Listo!</h3>
 
-    <p>primer.</p>
+      <p>Ya tenemos armado tu CV en formato .odt, listo para
+        imprimir o modificar desde open-office.</p>
 
+      {{#if guardando}}
+        <button disabled class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button> (generando...)
+      {{else}}
+        <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button>
+      {{/if}}
+
+    </div>
   </div>
 
-  <div class="col-md-6 col-xs-6">
-    Formulario: {{model}}
-
-    <button {{action 'finalizar' model}} class='btn btn-success'><a class='fs fa-ok'></a> Finalizar</button>
-
-
-  </div>
 </div>
 
 
-
-
-{{outlet}}
+<input id='fileDialog' type="file" nwsaveas="curriculum.odt" style="display: none"/>

@@ -35,6 +35,8 @@
     "ember-cli-components": "^0.2.0",
     "nedb": "^1.0.1",
     "ember-idx-forms": "^0.5.1",
-    "ember-validations": "~ 2.0.0-alpha.1"
+    "ember-validations": "~ 2.0.0-alpha.1",
+    "odt": "^1.1.0",
+    "temporary": "0.0.8"
   }
 }

@@ -13,6 +13,12 @@
     <script src='reemplazar-require-paso-1.js'></script>
     <script src='capturar-excepciones.js'></script>
 
+    <script charset="utf-8">
+      function abrir_devtools() {
+        require('nw.gui').Window.get().showDevTools();
+      }
+    </script>
+
     {{content-for 'head'}}
 
     <!-- AGREGADOS POR EMBERCLI -->

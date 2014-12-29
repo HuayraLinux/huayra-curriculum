@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg3272"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="huayra-curriculum.svg">
+  <defs
+     id="defs3274">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3199"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect9230"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8934"
+       is_visible="true"
+       pattern="m 231.32421,416.23945 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.2"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8938"
+       is_visible="true"
+       pattern="m 233.09197,430.63412 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8942"
+       is_visible="true"
+       pattern="m 234.85974,425.58336 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8942-2"
+       is_visible="true"
+       pattern="m 230.82246,340.58605 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8934-9"
+       is_visible="true"
+       pattern="m 231.32421,416.23945 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.2"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8938-6"
+       is_visible="true"
+       pattern="m 233.09197,430.63412 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8942-8"
+       is_visible="true"
+       pattern="m 234.85974,425.58336 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect8942-2-6"
+       is_visible="true"
+       pattern="m 230.82246,340.58605 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="234.49505"
+     inkscape:cy="-24.815101"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3277">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36218)">
+    <g
+       id="g3030">
+      <path
+         transform="translate(205,843.50504)"
+         d="m 30.714287,79.571426 a 113.57143,116.42857 0 1 1 -227.142857,0 113.57143,116.42857 0 1 1 227.142857,0 z"
+         sodipodi:ry="116.42857"
+         sodipodi:rx="113.57143"
+         sodipodi:cy="79.571426"
+         sodipodi:cx="-82.85714"
+         id="path3028"
+         style="fill:#ffffff"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3026"
+         d="M 98.14369,1048.3955 C 75.81395,1043.5446 58.17244,1033.359 38.68322,1014.065 -41.32025,934.86281 15.35784,797.69176 128.08708,797.69176 c 93.34038,0 155.07771,99.03085 114.21401,183.20703 -9.60968,19.79521 -35.31708,46.42861 -54.88105,56.85791 -25.06675,13.3628 -58.4333,17.3389 -89.27635,10.6388 z m 18.23376,-72.608 c 1.59034,-1.59034 0.48654,-4.57526 -3.10613,-8.3995 -7.52586,-8.01091 -7.94569,-28.36676 -0.66542,-32.26304 6.97168,-3.73114 31.47175,4.35251 49.53968,16.34531 18.94613,12.57572 22.0112,11.19638 22.0112,-9.90548 0,-13.94797 0.80305,-16.98616 5.09725,-19.28433 2.80348,-1.50038 5.09725,-4.97165 5.09725,-7.71394 0,-2.7423 -2.29377,-6.41846 -5.09725,-8.16926 -4.19774,-2.62154 -5.09725,-5.94346 -5.09725,-18.82421 0,-20.45481 -3.9929,-24.36654 -15.81438,-15.49287 -4.61864,3.46694 -14.70538,9.53697 -22.41496,13.48897 -12.58176,6.44952 -17.14979,7.2874 -44.6009,8.18072 -36.26013,1.17999 -39.50366,2.88532 -39.50366,20.77001 0,13.5185 3.20191,17.95507 12.95835,17.95507 6.4839,0 6.8338,0.633 6.69181,12.10596 -0.19879,16.06846 5.01817,31.01432 11.82648,33.88099 6.16461,2.59564 19.33403,1.0695 23.07793,-2.6744 z m 44.84173,-35.95745 c -6.30785,-4.14715 -18.35009,-9.65041 -26.76055,-12.22952 -14.6244,-4.48461 -15.32568,-5.08259 -16.06952,-13.7031 -0.77331,-8.96203 -0.69269,-9.03826 14.01742,-13.256 14.10189,-4.04334 22.14542,-7.88575 37.31572,-17.82569 l 6.78866,-4.44811 0,34.69953 c 0,19.08475 -0.86016,34.61035 -1.91146,34.50135 -1.05131,-0.10908 -7.07243,-3.59132 -13.38027,-7.73846 z"
+         style="fill:#56a443" />
+    </g>
+  </g>
+</svg>

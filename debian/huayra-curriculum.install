@@ -1,0 +1,6 @@
+dist/* usr/share/huayra-curriculum/dist
+bin/huayra-curriculum usr/bin/
+
+node_modules/* usr/share/huayra-curriculum/node_modules
+debian/huayra-curriculum.desktop /usr/share/applications
+debian/huayra-curriculum.svg /usr/share/icons/hicolor/scalable/apps

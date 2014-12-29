@@ -1,3 +1,15 @@
+huayra-curriculum (0.0.2-1) unstable; urgency=low
+
+  * Arreglo menor y re-compilación.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 29 Dec 2014 20:25:28 +0100
+
+huayra-curriculum (0.0.2) unstable; urgency=low
+
+  * Agregando un botón para mostrar las devtools. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 29 Dec 2014 19:58:18 +0100
+
 huayra-curriculum (0.0.1) unstable; urgency=low
 
   * Primer paquete de prueba generado.

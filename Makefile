@@ -21,7 +21,7 @@ all:
 	@echo ""
 
 build:
-	ember build
+	./node_modules/ember-cli/bin/ember build
 
 watch:
 	ember build --watch

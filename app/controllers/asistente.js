@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
   actions: {
     cancelar: function() {
       this.transitionToRoute('presentacion');
+      this.set('paso_actual', 1);
     }
   }
 });

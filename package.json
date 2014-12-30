@@ -38,5 +38,7 @@
     "ember-validations": "~ 2.0.0-alpha.1",
     "odt": "^1.1.0",
     "temporary": "0.0.8"
+  },
+  "dependencies": {
   }
 }

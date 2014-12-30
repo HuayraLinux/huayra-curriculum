@@ -7,6 +7,7 @@ var Curriculum = DS.Model.extend({
   direccion: DS.attr('string'),
   telefono: DS.attr('string'),
   email: DS.attr('string'),
+  fecha: DS.attr('date'),
 });
 
 

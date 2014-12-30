@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
+
   cantidad_de_elementos: function() {
       return this.get('model').get('length');
   }.property('model.@each'),

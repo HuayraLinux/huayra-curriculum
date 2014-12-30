@@ -11,7 +11,8 @@ export default Ember.Route.extend({
       var curriculum = this.store.createRecord('curriculum', {
         id: get_id(),
         nombre: this.get('nombre'),
-        apellido: this.get('apellido')
+        apellido: this.get('apellido'),
+        fecha: new Date(),
       });
 
       var controller = this;

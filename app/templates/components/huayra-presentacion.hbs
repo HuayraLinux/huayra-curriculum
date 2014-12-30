@@ -33,6 +33,9 @@
   padding-top: 10px;
   text-align: justify;
 }
+.barra-botones {
+  margin-top: 40px;
+}
 </style>
 
 <div class="row">
@@ -53,7 +56,10 @@
           prácticas, algunos trucos y plantillas para guiarte
           paso a paso.</p>
 
-        <button {{action 'alCrear'}} class="btn btn-success">Crear un curriculum nuevo</button>
+        <div class='barra-botones'>
+          <button {{action 'alabrir'}} class='btn btn-warning'>Abrir uno existente</button>
+          <button {{action 'alCrear'}} class="btn btn-success">Crear un curriculum nuevo</button>
+        </div>
 
       </div>
     </div>

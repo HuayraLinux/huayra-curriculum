@@ -56,6 +56,7 @@ export default function db(application, models, log_enabled) {
      *
      */
     insert: function(db_name, record, callback) {
+      log("creando el registro " + record.id + "en la base de datos " + db_name);
       return databases[db_name].insert(record, callback);
     },
 

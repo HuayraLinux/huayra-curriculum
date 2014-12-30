@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  padding-top: 10px;
 }
 
 .zoom-label {
@@ -25,4 +26,42 @@ input {
 
 .tutorial p {
   font-size: 15px;
+}
+
+.botones {
+  margin-bottom: 20px;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+  -moz-animation: rotation 2s infinite linear;
 }

@@ -1,0 +1,44 @@
+<div class="botones">
+  <button {{action 'regresar'}} class='btn btn-success'>Regresar</button>
+</div>
+
+<div class="row">
+
+
+  <div class="col-md-12 col-xs-12">
+
+    La cantidad de elementos es {{cantidad_de_elementos}}.
+
+    <table class='table table-bordered'>
+    {{#if model}}
+      <thead>
+        <th> Id </th>
+        <th> Nombre </th>
+        <th> Apellido </th>
+        <th> Acciones </th>
+      </thead>
+
+      <tbody>
+        {{#each c in model}}
+          <tr>
+            <td> {{c.id}} </td>
+            <td> {{c.nombre}} </td>
+            <td> {{c.apellido}} </td>
+            <td>
+              <button {{action 'abrir' c}} class='btn btn-success'>Abrir</button>
+              <button {{action 'borrar' c}} class='btn btn-danger'>Borrar</button>
+            </td>
+          </tr>
+        {{else}}
+
+        {{/each}}
+      </tbody>
+    {{else}}
+      <tr>
+        <td colspan=4>Uh, parece que no hay ningún curriculum creado aún.</td>
+      </tr>
+    {{/if}}
+  </table>
+
+  </div>
+</div>

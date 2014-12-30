@@ -8,7 +8,7 @@
         imprimir o modificar desde open-office.</p>
 
       {{#if guardando}}
-        <button disabled class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button> (generando...)
+        <button disabled class='btn btn-success'><i class='fa fa-refresh rotate'></i> Guardar archivo odt</button>
       {{else}}
         <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button>
       {{/if}}
@@ -17,6 +17,5 @@
   </div>
 
 </div>
-
 
 <input id='fileDialog' type="file" nwsaveas="curriculum.odt" style="display: none"/>

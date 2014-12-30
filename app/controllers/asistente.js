@@ -5,8 +5,20 @@ export default Ember.Controller.extend({
 
   actions: {
     cancelar: function() {
-      this.transitionToRoute('presentacion');
+      var model = this.get('model');
+
+      if (model.get('nombre') === undefined) {
+        model.deleteRecord();
+        model.save();
+      }
+
       this.set('paso_actual', 1);
+      this.transitionToRoute('presentacion');
+    },
+    guardar: function() {
+      this.get('model').save();
+      this.set('paso_actual', 1);
+      this.transitionToRoute('presentacion');
     }
   }
 });

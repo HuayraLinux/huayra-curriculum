@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('detalle', {path:'/detalle/:id'})
   this.route('create');
   this.route('presentacion');
+  this.route('abrir');
 });
 
 export default Router;

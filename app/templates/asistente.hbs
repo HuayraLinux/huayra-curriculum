@@ -1,7 +1,8 @@
-{{huayra-pasos paso_actual=paso_actual alcambiar=cambiar_paso}}
+<div class='botones'>
+  <button {{action 'cancelar'}} class='btn btn-warning'>Cancelar</button>
+  <button {{action 'guardar'}} class='btn btn-success'>Guardar y regresar</button>
+</div>
 
-<p>
-  <button {{action 'cancelar'}} class='btn btn-warning'>Cancelar y regresar</button>
-</p>
+{{huayra-pasos paso_actual=paso_actual alcambiar=cambiar_paso}}
 
 {{outlet}}

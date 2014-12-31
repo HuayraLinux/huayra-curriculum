@@ -4,6 +4,9 @@ Changelog
 Beta 2014-12-31
 ---------------
 
+- Arreglo menor en el orden de los comandos para generar el changelog.
+  [Hugo Ruscitti]
+
 - Release 0.0.3. [Hugo Ruscitti]
 
 0.0.3 (2014-12-31)

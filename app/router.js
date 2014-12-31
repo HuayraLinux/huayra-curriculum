@@ -21,7 +21,7 @@ Router.map(function() {
   this.route('acercade');
   //this.route('detalle', {pathURL: 'detalle/:id'});
 
-  this.route('detalle', {path:'/detalle/:id'})
+  this.route('detalle', {path:'/detalle/:id'});
   this.route('create');
   this.route('presentacion');
   this.route('abrir');

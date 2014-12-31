@@ -1,9 +1,10 @@
+import Ember from 'ember';
 var ChildProcess = require('child_process');
 var tmp = require('temporary');
 
 
 export default function conversor() {
-  var proceso = undefined;
+  var proceso;
   var comando = 'python generar_documento.py ';
 
   function ejecutar(ruta_plantilla, parametros, destino) {
@@ -15,7 +16,7 @@ export default function conversor() {
         proceso = undefined;
 
         if (err) {
-          reject(stderr)
+          reject(stderr);
         } else {
           resolve(stdout);
         }
@@ -33,5 +34,5 @@ export default function conversor() {
   }
 
 
-  return {ejecutar: ejecutar}
+  return {ejecutar: ejecutar};
 }

@@ -18,6 +18,6 @@ Curriculum.reopen({
       length: {minimum: 3}
     }
   }
-})
+});
 
 export default Curriculum;

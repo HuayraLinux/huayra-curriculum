@@ -13,16 +13,16 @@ export default function db(application, models, log_enabled) {
     if (log_enabled) {
       console.log("DB " + message);
     }
-  };
+  }
 
   function create_database(name) {
     var db_path = path.join(prefix, application, name + '.nedb');
     log("Opening file: " + db_path);
 
     var db = new Datastore({filename: db_path, autoload: true});
-    log('Opening ' + name + " database.")
+    log('Opening ' + name + " database.");
     return db;
-  };
+  }
 
   /* Genera todas las bases de datos en base a los modelos. */
   for (var i=0; i<models.length; i++) {
@@ -34,7 +34,7 @@ export default function db(application, models, log_enabled) {
      * Lista todos los modelos que conoce.
      */
     list: function() {
-      return models
+      return models;
     },
 
     /*

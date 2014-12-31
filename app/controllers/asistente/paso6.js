@@ -16,6 +16,7 @@ function chooseFile(name, callback) {
 
 export default Ember.Controller.extend({
   guardando: false,
+  mensaje: '',
 
   actions: {
     guardarODT: function() {
@@ -27,14 +28,22 @@ export default Ember.Controller.extend({
       conversor().ejecutar('plantillas/cv_1.ott.odt', datos_template, ruta_destino)
         .then(function(d) {
           controller.set('guardando', false);
+
           chooseFile('#fileDialog', function(data) {
-            fs.renameSync(ruta_destino, data);
-            alert("Se ha generado el archivo " + data);
+
+            try {
+              fs.renameSync(ruta_destino, data);
+              controller.set('mensaje', "Se ha generado el archivo " + data);
+            } catch (e) {
+              console.log(e);
+              controller.set('mensaje', "Lo siento, no se pudo generar el archivo " + data + ". ¿Tal vez sea un problema de permisos?");
+            }
+
           });
         })
-        .catch(function(E) {
-          console.log(E)
+        .catch(function(error) {
           controller.set('guardando', false);
+          controller.set('mensaje', error);
         });
     }
   }

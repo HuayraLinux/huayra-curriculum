@@ -13,6 +13,15 @@
         <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button>
       {{/if}}
 
+      <br/>
+      <br/>
+      
+      {{#if mensaje}}
+        <div class="alert alert-warning">
+          {{mensaje}}
+        </div>
+      {{/if}}
+
     </div>
   </div>
 

@@ -4,9 +4,9 @@
     "window",
     "-Promise",
     "document",
+    "$",
     "window",
     "WowENV",
-    "moment",
     "require"
   ],
   "browser": true,

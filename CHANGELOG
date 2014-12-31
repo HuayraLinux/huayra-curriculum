@@ -1,0 +1,60 @@
+Changelog
+=========
+
+Beta 2014-12-31
+---------------
+
+- Mostrando el mensaje de éxito o error al generar el documento odt y
+  otros arreglos de sintaxis. [Hugo Ruscitti]
+
+- Haciendo que la vista para explorar curriculums se actualice
+  periódicamente. [Hugo Ruscitti]
+
+- Agregando el campo fecha y momentjs para que se visualice de forma
+  relativa. [Hugo Ruscitti]
+
+- Implementando la navegación en los curriculums anteriores. [Hugo
+  Ruscitti]
+
+- Actualizando. [Hugo Ruscitti]
+
+0.0.2 (2014-12-29)
+------------------
+
+- Release 0.0.2. [Hugo Ruscitti]
+
+- Agregando botón para abrir las devtools. [Hugo Ruscitti]
+
+0.0.1 (2014-12-29)
+------------------
+
+- Creando paquete debian. [Hugo Ruscitti]
+
+- Reparando el estado del controlador de ruta, que mostraba un paso
+  incorrecto. [Hugo Ruscitti]
+
+- Implementando la generación de plantillas desde un CV. [Hugo Ruscitti]
+
+- Agregando los formularios iniciales. [Hugo Ruscitti]
+
+- Agregando indicador del paso actual en el timeline. [Hugo Ruscitti]
+
+- Agregando indicador de versión. [Hugo Ruscitti]
+
+- Creando pantalla principal y comenzando a crear el asistente. [Hugo
+  Ruscitti]
+
+- Implementando la base de datos nedb. [Hugo Ruscitti]
+
+- Implementación básica usando FixtureAdapter. [Hugo Ruscitti]
+
+- Actualizando REAME y Makefile. [Hugo Ruscitti]
+
+- Create README.md. [Hugo Ruscitti]
+
+- Agregando los archivos iniciales desde hugoruscitti/node-webkit-ember-
+  seed. [Hugo Ruscitti]
+
+- Initial commit. [Héctor Sanchez]
+
+

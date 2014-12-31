@@ -47,11 +47,15 @@ version:
 	@echo "make ver_sync"
 
 ver_sync:
-	git commit -am 'release ${VERSION}'
 	git tag '${VERSION}'
+	make changelog
+	git commit -am 'release ${VERSION}'
 	git push
 	git push --all
 	git push --tags
+
+changelog:
+	gitchangelog > CHANGELOG
 
 server:
 	ember server

@@ -1,7 +1,7 @@
 N=[0m
 V=[01;32m
 
-VERSION=0.0.4
+VERSION=0.0.5
 NAME=huayra-curriculum
 
 all:

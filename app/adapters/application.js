@@ -31,7 +31,6 @@ export default DS.RESTAdapter.extend({
     var promise = new Ember.RSVP.Promise(function(resolve, reject) {
       db.insert(collection, doc, function(err, newDoc) {
 
-
         if (err) {
           reject(err);
         } else {

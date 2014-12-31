@@ -47,9 +47,9 @@ version:
 	@echo "make ver_sync"
 
 ver_sync:
-	git tag '${VERSION}'
 	make changelog
 	git commit -am 'release ${VERSION}'
+	git tag '${VERSION}'
 	git push
 	git push --all
 	git push --tags
@@ -71,4 +71,4 @@ rename:
 	sed 's/huayra-curriculum/${NAME}/g' tests/index.html > __tmp; mv __tmp tests/index.html
 
 
-.PHONY: dist
+.PHONY: dist changelog

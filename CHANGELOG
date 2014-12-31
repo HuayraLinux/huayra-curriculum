@@ -4,6 +4,13 @@ Changelog
 Beta 2014-12-31
 ---------------
 
+- Release 0.0.3. [Hugo Ruscitti]
+
+0.0.3 (2014-12-31)
+------------------
+
+- Agregando comandos para generar un changelog. [Hugo Ruscitti]
+
 - Mostrando el mensaje de éxito o error al generar el documento odt y
   otros arreglos de sintaxis. [Hugo Ruscitti]
 

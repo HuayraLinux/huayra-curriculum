@@ -47,9 +47,9 @@ version:
 	@echo "make ver_sync"
 
 ver_sync:
+	git tag '${VERSION}'
 	make changelog
 	git commit -am 'release ${VERSION}'
-	git tag '${VERSION}'
 	git push
 	git push --all
 	git push --tags

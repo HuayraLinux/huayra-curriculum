@@ -7,7 +7,13 @@ if (is_nodewebkit) {
     try {
       return window.ember_require(module);
     } catch (e) {
-      return window.node_require(module);
+      console.log("Falla pedirle a ember el modulo " + module, e);
+      try {
+        return window.node_require(module);
+      } catch (e) {
+        alert(e.message);
+        return {};
+      }
     }
   }
 }

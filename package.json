@@ -36,9 +36,11 @@
     "nedb": "^1.0.1",
     "ember-idx-forms": "^0.5.1",
     "ember-validations": "~ 2.0.0-alpha.1",
-    "odt": "^1.1.0",
-    "temporary": "0.0.8"
+    "temporary": "0.0.8",
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.5",
+    "grunt-node-webkit-builder": "^1.0.0",
+    "moment": "^2.8.4"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

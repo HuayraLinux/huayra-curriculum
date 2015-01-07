@@ -3,6 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
+app.import('app/styles/huayra-pasos.css');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

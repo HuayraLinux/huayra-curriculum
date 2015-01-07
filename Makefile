@@ -64,7 +64,7 @@ publicar_sync:
 
 test_mac: build
 	@echo "Cuidado - se está usando la version de nodewebkit del sistema."
-	open -a /Applications/node-webkit.app dist
+	open -a /Applications/node-webkit.app --args /Users/hugoruscitti/proyectos/huayra-curriculum/dist
 
 test_linux: build
 	nw dist

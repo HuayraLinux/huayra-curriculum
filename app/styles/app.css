@@ -29,7 +29,14 @@ input {
 }
 
 .botones {
-  margin-bottom: 20px;
+  padding: 10px;
+  border-top: 1px solid rgb(200, 200, 200);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(230, 230, 230);
+  z-index: 100;
 }
 
 
@@ -64,4 +71,8 @@ input {
   animation: rotation 2s infinite linear;
   -webkit-animation: rotation 2s infinite linear;
   -moz-animation: rotation 2s infinite linear;
+}
+
+.container-fluid {
+  margin-bottom: 60px;
 }

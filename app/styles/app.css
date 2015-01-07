@@ -92,3 +92,9 @@ input, textarea /*.contenteditable?*/ {
   -ms-user-select:text;
   user-select:text;
 }
+
+.abrir-mensaje {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 4em;
+}

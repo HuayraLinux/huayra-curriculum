@@ -7,10 +7,9 @@
 
   <div class="col-md-12 col-xs-12">
 
-    La cantidad de elementos es {{cantidad_de_elementos}}.
 
-    <table class='table table-bordered'>
     {{#if model}}
+    <table class='table table-bordered'>
       <thead>
         <th> Id </th>
         <th> Nombre </th>
@@ -35,12 +34,10 @@
 
         {{/each}}
       </tbody>
-    {{else}}
-      <tr>
-        <td colspan=4>Uh, parece que no hay ningún curriculum creado aún.</td>
-      </tr>
-    {{/if}}
   </table>
+    {{else}}
+        <p class='abrir-mensaje'>Uh, parece que no hay ningún curriculum creado aún.</p>
+    {{/if}}
 
   </div>
 </div>

@@ -1,3 +1,9 @@
+huayra-curriculum (0.0.6) unstable; urgency=low
+
+  * Actualizando a la version 0.0.6 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 07 Jan 2015 20:19:11 +0100
+
 huayra-curriculum (0.0.2-1) unstable; urgency=low
 
   * Arreglo menor y re-compilación.

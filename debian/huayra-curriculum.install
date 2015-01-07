@@ -1,6 +1,9 @@
 dist/* usr/share/huayra-curriculum/dist
 bin/huayra-curriculum usr/bin/
 
-node_modules/* usr/share/huayra-curriculum/node_modules
+node_modules/nedb/* /usr/share/huayra-curriculum/node_modules/nedb
+node_modules/moment/* /usr/share/huayra-curriculum/node_modules/moment
+node_modules/temporary/* /usr/share/huayra-curriculum/node_modules/temporary
+
 debian/huayra-curriculum.desktop /usr/share/applications
 debian/huayra-curriculum.svg /usr/share/icons/hicolor/scalable/apps

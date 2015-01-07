@@ -1,0 +1,18 @@
+<div class="stepwizard">
+
+  <div class="stepwizard-row">
+
+    {{#each p in pasos}}
+      <div class="stepwizard-step">
+        {{#if p.activo}}
+          <button type="button" class="btn btn-primary btn-circle">{{p.numero}}</button>
+        {{else}}
+          <button type="button" {{action 'change' p.paso}} class="btn btn-default btn-circle">{{p.numero}}</button>
+        {{/if}}
+        <p>{{p.texto}}</p>
+      </div>
+    {{/each}}
+
+  </div>
+
+</div>

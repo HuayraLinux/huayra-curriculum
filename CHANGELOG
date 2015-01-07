@@ -1,8 +1,19 @@
 Changelog
 =========
 
-Beta 2014-12-31
----------------
+0.0.6 (2015-01-07)
+------------------
+
+- Arreglos menores. [Hugo Ruscitti]
+
+- Arreglo menor. [Hugo Ruscitti]
+
+- Arreglos menores en la hoja de estilo. [Hugo Ruscitti]
+
+- Moviendo los controles de navegación al pie de la ventana. [Hugo
+  Ruscitti]
+
+- Comenzando a automatizar la publicación de binarios. [Hugo Ruscitti]
 
 - Agregando una imagen preliminar de la aplicación al archivo README.
   [Hugo Ruscitti]

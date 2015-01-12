@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import conversor from '../../utils/conversor';
+var fs = require('fs');
 
 window.conversor = conversor;
 
@@ -7,7 +8,7 @@ window.conversor = conversor;
 function chooseFile(name, callback) {
   var chooser = $(name);
 
-  chooser.change(function(evt) {
+  chooser.change(function() {
     callback.call(this, $(this).val());
   });
 
@@ -26,7 +27,7 @@ export default Ember.Controller.extend({
       var datos_template = this.get('model').serialize();
 
       conversor().ejecutar('plantillas/cv_1.ott.odt', datos_template, ruta_destino)
-        .then(function(d) {
+        .then(function() {
           controller.set('guardando', false);
 
           chooseFile('#fileDialog', function(data) {

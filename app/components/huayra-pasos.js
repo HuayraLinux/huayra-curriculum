@@ -18,14 +18,14 @@ export default Ember.Component.extend({
      * en el item que coincide con el 'paso_actual'.
      */
     this.get('pasos').forEach(function(i) {
-      Ember.set(i, 'activo', (i.numero == paso_actual));
-    })
+      Ember.set(i, 'activo', (i.numero === paso_actual));
+    });
 
   }.observes('paso_actual').on('init'),
 
   actions: {
     change: function(paso) {
-      this.sendAction('alcambiar', paso);
+      this.sendAction('alcambiar', paso, this.get('modelo'));
     }
   }
 });

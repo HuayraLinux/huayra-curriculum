@@ -10,9 +10,12 @@ export default Ember.ArrayController.extend({
     regresar: function() {
       this.transitionToRoute('presentacion');
     },
-    borrar: function(curriculum) {
-      curriculum.deleteRecord();
-      curriculum.save();
+    borrar: function(curriculum_id) {
+      this.store.findById('curriculum', curriculum_id).
+        then(function(c) {
+          c.set('eliminado', true);
+          c.save();
+        });
     },
     abrir: function(curriculum) {
       this.transitionToRoute('asistente.paso1', curriculum);

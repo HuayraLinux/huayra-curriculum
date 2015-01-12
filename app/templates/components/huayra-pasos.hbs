@@ -7,7 +7,7 @@
         {{#if p.activo}}
           <button type="button" class="btn btn-primary btn-circle">{{p.numero}}</button>
         {{else}}
-          <button type="button" {{action 'change' p.paso}} class="btn btn-default btn-circle">{{p.numero}}</button>
+          <button type="button" {{action 'change' p.numero}} class="btn btn-default btn-circle">{{p.numero}}</button>
         {{/if}}
         <p>{{p.texto}}</p>
       </div>

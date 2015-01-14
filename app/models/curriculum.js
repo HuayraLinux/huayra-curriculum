@@ -9,17 +9,9 @@ var Curriculum = DS.Model.extend({
   direccion: DS.attr('string'),
   telefono: DS.attr('string'),
   email: DS.attr('string'),
-  fecha: DS.attr('date')
-});
-
-
-Curriculum.reopen({
-  validations: {
-    nombre: {
-      presence: true,
-      length: {minimum: 3}
-    }
-  }
+  fecha: DS.attr('date'),
+  
+  estudios: DS.hasMany('estudio', {async:true}),
 });
 
 export default Curriculum;

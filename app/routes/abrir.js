@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    // TODO: filtrar los elementos para dejar solamente los que tienen {eliminado: false}
     return this.store.find('curriculum');
   },
 

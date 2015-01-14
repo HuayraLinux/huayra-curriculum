@@ -14,25 +14,20 @@
         <th> Nombre </th>
         <th> Apellido </th>
         <th> Fecha </th>
-        <th> eliminado</th>
         <th> Acciones </th>
       </thead>
 
       <tbody>
         {{#each c in model}}
-          {{#if c.eliminado}}
-          {{else}}
-            <tr>
-              <td> {{c.nombre}} </td>
-              <td> {{c.apellido}} </td>
-              <td> {{huayra-fecha c.fecha}} </td>
-              <td> {{c.eliminado}} </td>
-              <td>
-                <button {{action 'abrir' c}} class='btn btn-success'>Abrir</button>
-                <button {{action 'borrar' c.id}} class='btn btn-danger'>Borrar</button>
-              </td>
-            </tr>
-          {{/if}}
+          <tr>
+            <td> {{c.nombre}} </td>
+            <td> {{c.apellido}} </td>
+            <td> {{huayra-fecha c.fecha}} </td>
+            <td>
+              <button {{action 'abrir' c}} class='btn btn-success'>Abrir</button>
+              <button {{action 'borrar' c.id}} class='btn btn-danger'>Borrar</button>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
   </table>

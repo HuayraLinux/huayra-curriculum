@@ -13,8 +13,7 @@ export default Ember.ArrayController.extend({
     borrar: function(curriculum_id) {
       this.store.findById('curriculum', curriculum_id).
         then(function(c) {
-          c.set('eliminado', true);
-          c.save();
+          c.destroyRecord();
         });
     },
     abrir: function(curriculum) {

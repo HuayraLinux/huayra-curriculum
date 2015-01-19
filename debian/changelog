@@ -1,3 +1,10 @@
+huayra-curriculum (0.0.7) unstable; urgency=low
+
+  * Implementando localstorage.
+  * Agregando modelo para cargar estudios cursados.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 19 Jan 2015 15:26:43 +0100
+
 huayra-curriculum (0.0.6) unstable; urgency=low
 
   * Actualizando a la version 0.0.6 

@@ -1,6 +1,18 @@
 Changelog
 =========
 
+0.0.7 (2015-01-14)
+------------------
+
+- Agregando modelo de datos para incluir información de estudios
+  cursados. [Hugo Ruscitti]
+
+- Implementando localstorage. [Hugo Ruscitti]
+
+- Cambiando el motor de base de datos a pouchdb. [Hugo Ruscitti]
+
+- Release 0.0.6. [Hugo Ruscitti]
+
 0.0.6 (2015-01-07)
 ------------------
 

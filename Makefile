@@ -1,7 +1,7 @@
 N=[0m
 V=[01;32m
 
-VERSION=0.0.6
+VERSION=0.0.7
 NAME=huayra-curriculum
 RELEASE_FOLDER=/Users/hugoruscitti/Dropbox/releases/huayra-curriculum
 

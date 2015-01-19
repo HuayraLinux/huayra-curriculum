@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 
   tick: function() {
     this.store.find('curriculum');
-    console.log("Actualizando automáticamente la vista abrir (cada 30 segundos...)");
+    //console.log("Actualizando automáticamente la vista abrir (cada 30 segundos...)");
     return Ember.run.later(this, this.tick, 30 * 1000);
   }.on('init'),
 });

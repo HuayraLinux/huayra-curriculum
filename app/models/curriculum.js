@@ -1,6 +1,8 @@
 import DS from 'ember-data';
 
 var Curriculum = DS.Model.extend({
+  rev: DS.attr('string'),
+
   nombre: DS.attr('string'),
   apellido: DS.attr('string'),
 
@@ -8,16 +10,8 @@ var Curriculum = DS.Model.extend({
   telefono: DS.attr('string'),
   email: DS.attr('string'),
   fecha: DS.attr('date'),
-});
-
-
-Curriculum.reopen({
-  validations: {
-    nombre: {
-      presence: true,
-      length: {minimum: 3}
-    }
-  }
+  
+  estudios: DS.hasMany('estudio', {async:true}),
 });
 
 export default Curriculum;

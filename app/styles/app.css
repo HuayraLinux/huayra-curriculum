@@ -98,3 +98,9 @@ input, textarea /*.contenteditable?*/ {
   text-align: center;
   margin-top: 4em;
 }
+
+.bloque {
+  border: 1px solid rgb(224, 224, 244);
+  padding: 13px;
+  margin-bottom: 20px;
+}

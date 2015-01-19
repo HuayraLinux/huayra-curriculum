@@ -7,7 +7,9 @@
     "$",
     "window",
     "WowENV",
-    "require"
+    "require",
+    "EmberPouch",
+    "PouchDB"
   ],
   "browser": true,
   "boss": true,

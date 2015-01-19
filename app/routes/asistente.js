@@ -8,6 +8,10 @@ export default Ember.Route.extend({
     avanzar: function(paso, modelo) {
       this.get('controller').set('paso_actual', paso);
       this.transitionTo('asistente.paso' + paso, modelo);
+    },
+    cambiar_paso: function(paso, model) {
+      this.get('controller').set('paso_actual', paso);
+      this.transitionTo('asistente.paso' + paso, model);
     }
   }
 });

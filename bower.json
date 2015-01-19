@@ -15,6 +15,7 @@
     "qunit": "~1.15.0",
     "momentjs": "~2.8.4",
     "ember-cli-moment-shim": "~0.0.2",
-    "moment": "~2.8.4"
+    "moment": "~2.8.4",
+    "ember-localstorage-adapter": "~0.5.0"
   }
 }

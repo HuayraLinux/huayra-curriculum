@@ -5,5 +5,5 @@ export default DS.Model.extend({
   egreso: DS.attr('string'),
   descripcion: DS.attr('string'),
 
-  curriculum: DS.belongsTo('curriculum'),
+  curriculum: DS.belongsTo('curriculum', {async: true}),
 });

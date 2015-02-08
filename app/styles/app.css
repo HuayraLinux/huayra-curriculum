@@ -104,3 +104,10 @@ input, textarea /*.contenteditable?*/ {
   padding: 13px;
   margin-bottom: 20px;
 }
+
+
+#modalNuevoEstudio {
+  background-color: hsla(0, 0%, 0%, 0.75) !important;
+  padding: 10px !important;
+  z-index: 200 !important;
+}

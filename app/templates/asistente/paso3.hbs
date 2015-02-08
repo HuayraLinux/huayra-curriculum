@@ -11,33 +11,38 @@
 
 
     <div>
+
       {{#each estudio in model.estudios}}
-
-        <div class='bloque'>
-          <button {{action "remove" estudio}}>X</button>
-          {{#em-form model=estudio submit_button=false}}
-            {{em-input property="ingreso" label="Ingreso" placeholder="¿Cuando comenzó tu estudio?"}}
-
-            {{em-input property="egreso" label="Egreso" placeholder="¿Cuando concluyó?, ¿o está en curso?"}}
-            {{em-input property="descripcion" label="Descripción" placeholder="¿Cuando comenzó tu estudio?"}}
-          {{/em-form}}
-        </div>
-
+        <p>Escuela asd (2014 - 2015) {{estudio.id}} <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
       {{else}}
         <p>No hay estudios cargados</p>
       {{/each}}
 
-      <hr/>
-      <button {{action "CrearEstudio"}} class='btn btn-sm btn-success'>+ Agregar</button>
-
+      <button {{action "CrearEstudio"}} class='btn btn-sm btn-sm btn-success'>+ Agregar</button>
     </div>
 
 
+    {{#modal-trigger controls="modalNuevoEstudio"}}
+      + Agregar
+    {{/modal-trigger}}
+
+    {{#modal-container id="modalNuevoEstudio"}}
+      {{#modal-title}}Estudio cursado{{/modal-title}}
+
+            {{#em-form model=estudio submit_button=false}}
+              {{em-input property="ingreso" label="Ingreso" placeholder="¿Cuando comenzó tu estudio?"}}
+
+              {{em-input property="egreso" label="Egreso" placeholder="¿Cuando concluyó?, ¿o está en curso?"}}
+              {{em-input property="descripcion" label="Descripción" placeholder="¿Cuando comenzó tu estudio?"}}
+            {{/em-form}}
+
+      {{#modal-trigger class='btn btn-success'}}Guardar{{/modal-trigger}}
+    {{/modal-container}}
 
     <button {{action 'avanzar' 4 model}} class='btn btn-success'><a class='fs fa-right'></a> Siguiente</button>
+
   </div>
 </div>
-
 
 
 

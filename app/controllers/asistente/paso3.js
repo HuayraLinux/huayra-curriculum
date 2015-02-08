@@ -5,15 +5,15 @@ export default Ember.Controller.extend({
     CrearEstudio: function() {
       var estudios = this.get('model.estudios');
       var estudio = this.store.createRecord('estudio', {
-
       });
 
       estudios.pushObject(estudio);
-      this.get('model').save();
       estudio.save();
+      this.get('model').save();
     },
-    remove: function(estudio) {
+    eliminar: function(estudio) {
       estudio.destroyRecord();
+      this.get('model').save();
     }
   }
 });

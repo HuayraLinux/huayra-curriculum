@@ -101,5 +101,6 @@ rename:
 	sed 's/huayra-curriculum/${NAME}/g' config/environment.js > __tmp; mv __tmp config/environment.js
 	sed 's/huayra-curriculum/${NAME}/g' tests/index.html > __tmp; mv __tmp tests/index.html
 
+ejecutar_mac: test_mac
 
 .PHONY: dist changelog

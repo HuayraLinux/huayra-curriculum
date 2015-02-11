@@ -1,14 +1,12 @@
 import Ember from 'ember';
-var tmp = require('temporary');
+var fs = require('fs');
 var Docxtemplater = require('docxtemplater');
 
 
 export default function conversor() {
-  var proceso;
-  var comando = 'python generar_documento.py ';
 
   function ejecutar(ruta_plantilla, parametros, destino) {
-    var promise = new Ember.RSVP.Promise(function(resolve, reject) {
+    var promise = new Ember.RSVP.Promise(function(resolve) {
 
       console.log("Me llegan los parametros", parametros);
 

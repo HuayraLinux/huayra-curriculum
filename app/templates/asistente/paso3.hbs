@@ -13,31 +13,50 @@
     <div>
 
       {{#each estudio in model.estudios}}
-        <p>Escuela asd (2014 - 2015) {{estudio.id}} <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
+        <p>{{estudio.descripcion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
       {{else}}
         <p>No hay estudios cargados</p>
       {{/each}}
 
-      <button {{action "CrearEstudio"}} class='btn btn-sm btn-sm btn-success'>+ Agregar</button>
+      {{#modal-trigger class='btn btn-sm btn-success' controls="modalNuevoEstudio"}}
+        + Agregar
+      {{/modal-trigger}}
     </div>
 
 
-    {{#modal-trigger controls="modalNuevoEstudio"}}
-      + Agregar
-    {{/modal-trigger}}
 
-    {{#modal-container id="modalNuevoEstudio"}}
-      {{#modal-title}}Estudio cursado{{/modal-title}}
+    {{#modal-form
+      id="modalNuevoEstudio"
+      on-submit="submitForm"
+      on-cancel="restoreModel"
+    }}
 
-            {{#em-form model=estudio submit_button=false}}
-              {{em-input property="ingreso" label="Ingreso" placeholder="¿Cuando comenzó tu estudio?"}}
+    {{#modal-title}}<h4>Registrar un estudio</h4>{{/modal-title}}
 
-              {{em-input property="egreso" label="Egreso" placeholder="¿Cuando concluyó?, ¿o está en curso?"}}
-              {{em-input property="descripcion" label="Descripción" placeholder="¿Cuando comenzó tu estudio?"}}
-            {{/em-form}}
+      <div>
+        <label class="ember-view control-label">Desde</label>
+        {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
+      </div>
 
-      {{#modal-trigger class='btn btn-success'}}Guardar{{/modal-trigger}}
-    {{/modal-container}}
+      <div>
+        <label class="ember-view control-label">Hasta</label>
+        {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
+      </div>
+
+      <div>
+        <label class="ember-view control-label">Descripción</label>
+        {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción o nombre del establecimiento"}}{{/input}}
+      </div>
+
+      <hr/>
+
+      <fieldset>
+          {{#modal-trigger class='btn btn-warning'}}Cancelar{{/modal-trigger}}
+          <button class='btn btn-success' type="submit">Crear Registro</button>
+      </fieldset>
+
+    {{/modal-form}}
+
 
     <button {{action 'avanzar' 4 model}} class='btn btn-success'><a class='fs fa-right'></a> Siguiente</button>
 

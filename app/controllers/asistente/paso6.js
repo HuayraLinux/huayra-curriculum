@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
       var ruta_destino = 'hola.odt';
       var datos_template = this.get('model').serialize();
 
-      conversor().ejecutar('plantillas/cv_1.ott.odt', datos_template, ruta_destino)
+      conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
         .then(function() {
           controller.set('guardando', false);
 

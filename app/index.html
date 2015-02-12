@@ -19,6 +19,15 @@
       }
     </script>
 
+  <script>
+    process.on('uncaughtException', function (err) {
+      console.log(err);
+    });
+  </script>
+
+
+
+
     {{content-for 'head'}}
 
     <!-- AGREGADOS POR EMBERCLI -->

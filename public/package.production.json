@@ -4,10 +4,10 @@
   "version": "0.0.7",
   "window": {
     "title": "huayra-curriculum",
-    "width": 800,
-    "height": 600,
-    "min_width": 800,
-    "min_height": 600,
+    "width": 850,
+    "height": 500,
+    "min_width": 850,
+    "min_height": 500,
     "toolbar": true,
     "position": "center"
   }

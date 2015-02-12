@@ -12,17 +12,23 @@
 
     <div>
 
-      {{#each estudio in model.estudios}}
-        <p>{{estudio.descripcion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
-      {{else}}
-        <p>No hay estudios cargados</p>
-      {{/each}}
+      <div class='form-group'>
+        <label class="ember-view control-label">Estudios cursados</label>
+
+        {{#each estudio in model.estudios}}
+          <p>{{estudio.descripcion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
+        {{else}}
+          <p>No hay estudios cargados</p>
+        {{/each}}
+
+      </div>
 
       {{#modal-trigger class='btn btn-sm btn-success' controls="modalNuevoEstudio"}}
         + Agregar
       {{/modal-trigger}}
     </div>
 
+    <div>
 
 
     {{#modal-form
@@ -33,17 +39,17 @@
 
     {{#modal-title}}<h4>Registrar un estudio</h4>{{/modal-title}}
 
-      <div>
+      <div class='form-group'>
         <label class="ember-view control-label">Desde</label>
         {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
       </div>
 
-      <div>
+      <div class='form-group'>
         <label class="ember-view control-label">Hasta</label>
         {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
       </div>
 
-      <div>
+      <div class='form-group'>
         <label class="ember-view control-label">Descripción</label>
         {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción o nombre del establecimiento"}}{{/input}}
       </div>
@@ -58,7 +64,7 @@
     {{/modal-form}}
 
 
-    <button {{action 'avanzar' 4 model}} class='btn btn-success'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 4 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
 
   </div>
 </div>

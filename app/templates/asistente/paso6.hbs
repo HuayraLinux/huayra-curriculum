@@ -4,18 +4,18 @@
     <div class='hero-unit'>
       <h3>¡Listo!</h3>
 
-      <p>Ya tenemos armado tu CV en formato .odt, listo para
+      <p>Ya se generó tu curriculum en un formato docx, listo para
         imprimir o modificar desde open-office.</p>
 
       {{#if guardando}}
         <button disabled class='btn btn-success'><i class='fa fa-refresh rotate'></i> Guardar archivo odt</button>
       {{else}}
-        <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar archivo odt</button>
+        <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar el archivo generado</button>
       {{/if}}
 
       <br/>
       <br/>
-      
+
       {{#if mensaje}}
         <div class="alert alert-warning">
           {{mensaje}}
@@ -27,4 +27,4 @@
 
 </div>
 
-<input id='fileDialog' type="file" nwsaveas="curriculum.odt" style="display: none"/>
+<input id='fileDialog' type="file" nwsaveas="cv.docx" style="display: none"/>

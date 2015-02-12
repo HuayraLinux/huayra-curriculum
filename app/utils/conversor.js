@@ -1,33 +1,31 @@
 import Ember from 'ember';
-var ChildProcess = require('child_process');
-var tmp = require('temporary');
+var fs = require('fs');
+var Docxtemplater = require('docxtemplater');
 
 
 export default function conversor() {
-  var proceso;
-  var comando = 'python generar_documento.py ';
 
   function ejecutar(ruta_plantilla, parametros, destino) {
-    var promise = new Ember.RSVP.Promise(function(resolve, reject) {
+    var promise = new Ember.RSVP.Promise(function(resolve) {
 
       console.log("Me llegan los parametros", parametros);
 
-      function on_done(err, stdout, stderr) {
-        proceso = undefined;
+      var content = fs.readFileSync(ruta_plantilla, "binary");
+      var doc = new Docxtemplater(content);
 
-        if (err) {
-          reject(stderr);
-        } else {
-          resolve(stdout);
-        }
-      }
+      parametros.products = [
+        {name: "name uno", reference: "reference", title: "title 1"},
+        {name: "name dos", reference: "reference", title: "title 2"}
+      ];
 
-      var file = new tmp.File();
-      file.writeFileSync(JSON.stringify(parametros));
-      comando += ruta_plantilla + " " + file.path + " " + destino;
+      doc.setData(parametros);
 
-      console.log("Se ejecuta el comando", comando);
-      proceso = ChildProcess.exec(comando, {cwd: ''}, on_done);
+      doc.render();
+
+      var buf = doc.getZip().generate({type:"nodebuffer"});
+
+      fs.writeFileSync(destino, buf);
+      resolve({destino: destino});
     });
 
     return promise;

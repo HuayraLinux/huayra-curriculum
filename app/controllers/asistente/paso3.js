@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  mingreso: "20",
-  megreso: "20",
-  mdescripcion: "una descripcion",
+  mingreso: "",
+  megreso: "",
+  mdescripcion: "",
 
   actions: {
     eliminar: function(estudio) {

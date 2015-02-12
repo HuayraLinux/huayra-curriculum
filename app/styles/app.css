@@ -111,3 +111,13 @@ input, textarea /*.contenteditable?*/ {
   padding: 10px !important;
   z-index: 200 !important;
 }
+
+.modal-form {
+  overflow: hidden;
+}
+
+.siguiente {
+  position: fixed;
+  bottom: 67px;
+  right: 10px;
+}

@@ -1,7 +1,7 @@
 dist/* usr/share/huayra-curriculum/dist
 bin/huayra-curriculum usr/bin/
 
-node_modules/nedb/* /usr/share/huayra-curriculum/node_modules/nedb
+node_modules/docxtemplater/* /usr/share/huayra-curriculum/node_modules/docxtemplater
 node_modules/moment/* /usr/share/huayra-curriculum/node_modules/moment
 node_modules/temporary/* /usr/share/huayra-curriculum/node_modules/temporary
 

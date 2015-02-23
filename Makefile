@@ -47,7 +47,7 @@ to_develop:
 _compilar: to_production
 	@echo "$(V)Limpiando el directorio destino: ./webkitbuilds ...$(N)"
 	@rm -r -f ./webkitbuilds
-	@./node_modules/grunt-cli/bin/grunt nodewebkit > /dev/null
+	@./node_modules/grunt-cli/bin/grunt nodewebkit 
 
 publicar: _compilar
 	@echo "Limpiando el directorio destino..."

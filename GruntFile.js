@@ -8,8 +8,8 @@ grunt.initConfig({
         buildDir: './webkitbuilds',
     },  
     src: ['./dist/**/*',
-          'node_modules/nedb/**/*',
           'node_modules/moment/**/*',
+          'node_modules/docxtemplater/**/*',
           'node_modules/temporary/**/*',
           ] 
   },  

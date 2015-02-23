@@ -1,15 +1,32 @@
 Changelog
 =========
 
-0.0.7 (2015-01-14)
+0.0.8 (2015-02-23)
 ------------------
 
-- Agregando modelo de datos para incluir información de estudios
-  cursados. [Hugo Ruscitti]
+- Implementando serializado de estudios cursados para la pantilla y
+  otros arreglos. [Hugo Ruscitti]
 
-- Implementando localstorage. [Hugo Ruscitti]
+- Reparando el crash cuando una exception se produce. [Hugo Ruscitti]
 
-- Cambiando el motor de base de datos a pouchdb. [Hugo Ruscitti]
+- Merge. [Hugo Ruscitti]
+
+- Aplicando dialogos modales a estudios cursados. [Hugo Ruscitti]
+
+- Merge branch 'master' of https://github.com/HuayraLinux/huayra-
+  curriculum. [Hugo Ruscitti]
+
+- Comenzando a implementar el dialogo modal. [Hugo Ruscitti]
+
+- Arreglo menor para mostrar el paso actual por mas que reinicio la
+  aplicación. [Hugo Ruscitti]
+
+- Actualizando paquete. [Hugo Ruscitti]
+
+- Merge branch 'master' of https://github.com/HuayraLinux/huayra-
+  curriculum. [Hugo Ruscitti]
+
+- Actualizando paquete debian a la version 0.0.6. [Hugo Ruscitti]
 
 - Release 0.0.6. [Hugo Ruscitti]
 

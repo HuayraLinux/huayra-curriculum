@@ -23,8 +23,19 @@ export default Ember.Controller.extend({
     guardarODT: function() {
       this.set('guardando', true);
       var controller = this;
-      var ruta_destino = 'hola.odt';
+      var ruta_destino = '/tmp/_temporal.docx';
       var datos_template = this.get('model').serialize();
+
+      function serializar_estudio(e) {
+        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion');
+      }
+
+      datos_template.coleccion_estudios = {};
+
+      if (this.get('model.estudios').get('length') > 0) {
+        var relacionados = this.get('model.estudios').map(serializar_estudio);
+        datos_template.coleccion_estudios.estudios = relacionados;
+      }
 
       conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
         .then(function() {

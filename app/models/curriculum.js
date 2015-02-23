@@ -10,8 +10,10 @@ var Curriculum = DS.Model.extend({
   telefono: DS.attr('string'),
   email: DS.attr('string'),
   fecha: DS.attr('date'),
-  
-  estudios: DS.hasMany('estudio', {async:true}),
+
+  intereses: DS.attr('string'),
+
+  estudios: DS.hasMany('estudio', {async: true}),
 });
 
 export default Curriculum;

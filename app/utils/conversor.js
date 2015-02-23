@@ -13,13 +13,7 @@ export default function conversor() {
       var content = fs.readFileSync(ruta_plantilla, "binary");
       var doc = new Docxtemplater(content);
 
-      parametros.products = [
-        {name: "name uno", reference: "reference", title: "title 1"},
-        {name: "name dos", reference: "reference", title: "title 2"}
-      ];
-
       doc.setData(parametros);
-
       doc.render();
 
       var buf = doc.getZip().generate({type:"nodebuffer"});

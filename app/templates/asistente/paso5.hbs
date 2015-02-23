@@ -3,17 +3,16 @@
   <div class="tutorial col-md-6 col-xs-6">
     <h4>Paso 5</h4>
 
-
-    <p>primer.</p>
+    <p>...</p>
 
   </div>
 
   <div class="col-md-6 col-xs-6">
-    Formulario: {{model}}
+    {{#em-form model=model submit_button=false}}
+      {{em-input property="intereses" label="Intereses" placeholder="Un breve texto"}}
+    {{/em-form}}
 
     <button {{action 'avanzar' 6 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
-
-
   </div>
 </div>
 

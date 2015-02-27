@@ -1,14 +1,52 @@
 Changelog
 =========
 
+0.0.10 (2015-02-27)
+-------------------
+
+- Arreglos finales de plantilla [Ignacio Juan Martín Benedetti]
+
+- actualizando plantilla. [Hugo Ruscitti]
+
+- merge [Hugo Ruscitti]
+
+- Textos nuevos [Ignacio Juan Martín Benedetti]
+
+- Merge branch 'master' of github.com:HuayraLinux/huayra-curriculum
+  [Ignacio Juan Martín Benedetti]
+
+- Nuevo modelo para experiencias [Ignacio Juan Martín Benedetti]
+
+- actualizando plantilla [Hugo Ruscitti]
+
+- actualizando plantilla [Hugo Ruscitti]
+
+- Ignorar .swp de vim [Ignacio Juan Martín Benedetti]
+
+- Se agrega al paso 3 la institución [Ignacio Juan Martín Benedetti]
+
+- Campo nuevo: institución [Ignacio Juan Martín Benedetti]
+
+- Arreglo en el llamado a ember desde make watch [Alumno]
+
+- actualizando changelog [Hugo Ruscitti]
+
+- actualizando paquete. [Hugo Ruscitti]
+
+- arreglo menor. [Hugo Ruscitti]
+
+- merge [Hugo Ruscitti]
+
+- release 0.0.9 [Hugo Ruscitti]
+
 0.0.9 (2015-02-23)
 ------------------
 
-- Arreglo menor. [Hugo Ruscitti]
+- arreglo menor. [Hugo Ruscitti]
 
-- Arreglos menones. [Hugo Ruscitti]
+- arreglos menones. [Hugo Ruscitti]
 
-- Release 0.0.8. [Hugo Ruscitti]
+- release 0.0.8 [Hugo Ruscitti]
 
 0.0.8 (2015-02-23)
 ------------------
@@ -18,12 +56,19 @@ Changelog
 
 - Reparando el crash cuando una exception se produce. [Hugo Ruscitti]
 
-- Merge. [Hugo Ruscitti]
+- merge [Hugo Ruscitti]
 
-- Aplicando dialogos modales a estudios cursados. [Hugo Ruscitti]
+- Arreglo menor. [Hugo Ruscitti]
+
+- Cambiando la forma de generar los documentos (ahora usando docx) [Hugo
+  Ruscitti]
+
+- aplicando dialogos modales a estudios cursados. [Hugo Ruscitti]
 
 - Merge branch 'master' of https://github.com/HuayraLinux/huayra-
-  curriculum. [Hugo Ruscitti]
+  curriculum [Hugo Ruscitti]
+
+- Arreglo menor. [Hugo Ruscitti]
 
 - Comenzando a implementar el dialogo modal. [Hugo Ruscitti]
 
@@ -33,18 +78,30 @@ Changelog
 - Actualizando paquete. [Hugo Ruscitti]
 
 - Merge branch 'master' of https://github.com/HuayraLinux/huayra-
-  curriculum. [Hugo Ruscitti]
+  curriculum [Hugo Ruscitti]
 
-- Actualizando paquete debian a la version 0.0.6. [Hugo Ruscitti]
+- release 0.0.7 [Hugo Ruscitti]
 
-- Release 0.0.6. [Hugo Ruscitti]
+- Actualizando paquete debian a la version 0.0.6 [Hugo Ruscitti]
+
+0.0.7 (2015-01-14)
+------------------
+
+- Agregando modelo de datos para incluir información de estudios
+  cursados. [Hugo Ruscitti]
+
+- Implementando localstorage. [Hugo Ruscitti]
+
+- Cambiando el motor de base de datos a pouchdb. [Hugo Ruscitti]
+
+- release 0.0.6 [Hugo Ruscitti]
 
 0.0.6 (2015-01-07)
 ------------------
 
 - Arreglos menores. [Hugo Ruscitti]
 
-- Arreglo menor. [Hugo Ruscitti]
+- arreglo menor. [Hugo Ruscitti]
 
 - Arreglos menores en la hoja de estilo. [Hugo Ruscitti]
 
@@ -56,22 +113,22 @@ Changelog
 - Agregando una imagen preliminar de la aplicación al archivo README.
   [Hugo Ruscitti]
 
-- Release 0.0.5. [Hugo Ruscitti]
+- release 0.0.5 [Hugo Ruscitti]
 
 0.0.5 (2014-12-31)
 ------------------
 
-- Arreglo menor. [Hugo Ruscitti]
+- arreglo menor. [Hugo Ruscitti]
 
 0.0.4 (2014-12-31)
 ------------------
 
-- Release 0.0.4. [Hugo Ruscitti]
+- release 0.0.4 [Hugo Ruscitti]
 
 - Arreglo menor en el orden de los comandos para generar el changelog.
   [Hugo Ruscitti]
 
-- Release 0.0.3. [Hugo Ruscitti]
+- release 0.0.3 [Hugo Ruscitti]
 
 0.0.3 (2014-12-31)
 ------------------
@@ -90,12 +147,12 @@ Changelog
 - Implementando la navegación en los curriculums anteriores. [Hugo
   Ruscitti]
 
-- Actualizando. [Hugo Ruscitti]
+- Actualizando [Hugo Ruscitti]
 
 0.0.2 (2014-12-29)
 ------------------
 
-- Release 0.0.2. [Hugo Ruscitti]
+- release 0.0.2 [Hugo Ruscitti]
 
 - Agregando botón para abrir las devtools. [Hugo Ruscitti]
 
@@ -122,13 +179,30 @@ Changelog
 
 - Implementación básica usando FixtureAdapter. [Hugo Ruscitti]
 
-- Actualizando REAME y Makefile. [Hugo Ruscitti]
+- actualizando REAME y Makefile [Hugo Ruscitti]
 
-- Create README.md. [Hugo Ruscitti]
+- Create README.md [Hugo Ruscitti]
 
-- Agregando los archivos iniciales desde hugoruscitti/node-webkit-ember-
-  seed. [Hugo Ruscitti]
+- agregando los archivos iniciales desde hugoruscitti/node-webkit-ember-
+  seed [Hugo Ruscitti]
 
-- Initial commit. [Héctor Sanchez]
+- actualizando a ember-cli 0.1.4 [Hugo Ruscitti]
+
+- agregando el comando 'bower install' al archivo Makefile. [Hugo
+  Ruscitti]
+
+- Agregando captura de errores para node-webkit. [Hugo Ruscitti]
+
+- Creando el archivo README inicial. [Hugo Ruscitti]
+
+- creando comando para cambiar el nombre del proyecto. [Hugo Ruscitti]
+
+- Integrando node-webkit y el modo livereload. [Hugo Ruscitti]
+
+- Commit inicial con ember-cli y Makefile. [Hugo Ruscitti]
+
+- Initial commit [Hugo Ruscitti]
+
+- Initial commit [Héctor Sanchez]
 
 

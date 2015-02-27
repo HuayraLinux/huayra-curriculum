@@ -18,6 +18,7 @@ export default Ember.Controller.extend({
       var estudio = this.store.createRecord('estudio', {
         ingreso: this.get('mingreso'),
         egreso: this.get('megreso'),
+        institucion: this.get('minstitucion'),
         descripcion: this.get('mdescripcion'),
       });
 
@@ -27,6 +28,7 @@ export default Ember.Controller.extend({
 
       this.set('mingreso', '');
       this.set('megreso', '');
+      this.set('minstitucion', '');
       this.set('mdescripcion', '');
     },
 

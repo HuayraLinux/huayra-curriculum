@@ -27,7 +27,7 @@ export default Ember.Controller.extend({
       var datos_template = this.get('model').serialize();
 
       function serializar_estudio(e) {
-        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion');
+        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'institucion');
       }
 
       datos_template.coleccion_estudios = {};

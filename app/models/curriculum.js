@@ -14,6 +14,8 @@ var Curriculum = DS.Model.extend({
   intereses: DS.attr('string'),
 
   estudios: DS.hasMany('estudio', {async: true}),
+
+  experiencias: DS.hasMany('experiencia', {async: true}),
 });
 
 export default Curriculum;

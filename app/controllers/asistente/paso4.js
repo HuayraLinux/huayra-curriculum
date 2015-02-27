@@ -3,33 +3,33 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   mingreso: "",
   megreso: "",
-  minstitucion: "",
+  mempleador: "",
   mdescripcion: "",
 
   actions: {
-    eliminar: function(estudio) {
-      estudio.destroyRecord();
+    eliminar: function(experiencia) {
+      experiencia.destroyRecord();
       this.get('model').save();
     },
 
     /* Destinadas al modal */
     submitForm: function() {
 
-      var estudios = this.get('model.estudios');
-      var estudio = this.store.createRecord('estudio', {
+      var experiencias = this.get('model.experiencias');
+      var experiencia = this.store.createRecord('experiencia', {
         ingreso: this.get('mingreso'),
         egreso: this.get('megreso'),
-        institucion: this.get('minstitucion'),
+        empleador: this.get('mempleador'),
         descripcion: this.get('mdescripcion'),
       });
 
-      estudios.pushObject(estudio);
-      estudio.save();
+      experiencias.pushObject(experiencia);
+      experiencia.save();
       this.get('model').save();
 
       this.set('mingreso', '');
       this.set('megreso', '');
-      this.set('minstitucion', '');
+      this.set('mempleador', '');
       this.set('mdescripcion', '');
     },
 

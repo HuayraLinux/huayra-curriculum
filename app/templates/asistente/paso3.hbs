@@ -16,7 +16,7 @@
         <label class="ember-view control-label">Estudios cursados</label>
 
         {{#each estudio in model.estudios}}
-          <p>{{estudio.descripcion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
+          <p>{{estudio.descripcion}} en {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
         {{else}}
           <p>No hay estudios cargados</p>
         {{/each}}
@@ -50,8 +50,13 @@
       </div>
 
       <div class='form-group'>
+        <label class="ember-view control-label">Institución</label>
+        {{#input class='ember-text-field form-control' value=minstitucion placeholder="Nombre del establecimiento"}}{{/input}}
+      </div>
+
+      <div class='form-group'>
         <label class="ember-view control-label">Descripción</label>
-        {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción o nombre del establecimiento"}}{{/input}}
+        {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
       </div>
 
       <hr/>

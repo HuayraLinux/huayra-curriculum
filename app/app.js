@@ -14,4 +14,7 @@ var App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 Ember.my_app = App;
 
+var inflector = Ember.Inflector.inflector;
+inflector.irregular("experiencia", "experiencias");
+
 export default App;

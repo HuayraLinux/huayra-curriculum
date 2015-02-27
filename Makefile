@@ -27,7 +27,7 @@ build:
 	./node_modules/ember-cli/bin/ember build
 
 watch:
-	ember build --watch
+	./node_modules/ember-cli/bin/ember build --watch
 
 actualizar:
 	git pull
@@ -47,7 +47,7 @@ to_develop:
 _compilar: to_production
 	@echo "$(V)Limpiando el directorio destino: ./webkitbuilds ...$(N)"
 	@rm -r -f ./webkitbuilds
-	@./node_modules/grunt-cli/bin/grunt nodewebkit 
+	@./node_modules/grunt-cli/bin/grunt nodewebkit
 
 publicar: _compilar
 	@echo "Limpiando el directorio destino..."

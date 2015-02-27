@@ -37,6 +37,17 @@ export default Ember.Controller.extend({
         datos_template.coleccion_estudios.estudios = relacionados;
       }
 
+      function serializar_experiencia(e) {
+        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'empleador');
+      }
+
+      datos_template.coleccion_experiencias = {};
+
+      if (this.get('model.experiencias').get('length') > 0) {
+        var relacionados = this.get('model.experiencias').map(serializar_experiencia);
+        datos_template.coleccion_experiencias.experiencias = relacionados;
+      }
+
       conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
         .then(function() {
           controller.set('guardando', false);

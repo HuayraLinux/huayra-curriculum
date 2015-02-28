@@ -21,10 +21,12 @@ export default Ember.Controller.extend({
 
   actions: {
     guardarODT: function() {
-      this.set('guardando', true);
       var controller = this;
       var ruta_destino = '/tmp/_temporal.docx';
       var datos_template = this.get('model').serialize();
+
+      console.log("1", datos_template);
+      this.set('guardando', true);
 
       function serializar_estudio(e) {
         return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'institucion');
@@ -37,6 +39,8 @@ export default Ember.Controller.extend({
         datos_template.coleccion_estudios.estudios = relacionados;
       }
 
+      console.log("2", datos_template);
+
       function serializar_experiencia(e) {
         return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'empleador');
       }
@@ -44,11 +48,14 @@ export default Ember.Controller.extend({
       datos_template.coleccion_experiencias = {};
 
       if (this.get('model.experiencias').get('length') > 0) {
-        var relacionados = this.get('model.experiencias').map(serializar_experiencia);
-        datos_template.coleccion_experiencias.experiencias = relacionados;
+        var relacionados2 = this.get('model.experiencias').map(serializar_experiencia);
+        datos_template.coleccion_experiencias.experiencias = relacionados2;
       }
 
+      console.log("3", datos_template);
+
       setTimeout(function() {
+        console.log("4", datos_template);
 
         conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
           .then(function() {

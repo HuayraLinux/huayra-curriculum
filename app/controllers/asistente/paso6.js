@@ -48,26 +48,30 @@ export default Ember.Controller.extend({
         datos_template.coleccion_experiencias.experiencias = relacionados;
       }
 
-      conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
-        .then(function() {
-          controller.set('guardando', false);
+      setTimeout(function() {
 
-          chooseFile('#fileDialog', function(data) {
+        conversor().ejecutar('plantillas/cv.docx', datos_template, ruta_destino)
+          .then(function() {
+            controller.set('guardando', false);
 
-            try {
-              fs.renameSync(ruta_destino, data);
-              controller.set('mensaje', "Se ha generado el archivo " + data);
-            } catch (e) {
-              console.log(e);
-              controller.set('mensaje', "Lo siento, no se pudo generar el archivo " + data + ". ¿Tal vez sea un problema de permisos?");
-            }
+            chooseFile('#fileDialog', function(data) {
 
+              try {
+                fs.renameSync(ruta_destino, data);
+                controller.set('mensaje', "Se ha generado el archivo " + data);
+              } catch (e) {
+                console.log(e);
+                controller.set('mensaje', "Lo siento, no se pudo generar el archivo " + data + ". ¿Tal vez sea un problema de permisos?");
+              }
+
+            });
+          })
+          .catch(function(error) {
+            controller.set('guardando', false);
+            controller.set('mensaje', error);
           });
-        })
-        .catch(function(error) {
-          controller.set('guardando', false);
-          controller.set('mensaje', error);
-        });
+      }, 2000);
+
     }
   }
 });

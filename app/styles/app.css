@@ -21,7 +21,9 @@ input {
 }
 
 .version {
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .tutorial p {
@@ -120,4 +122,22 @@ input, textarea /*.contenteditable?*/ {
   position: fixed;
   bottom: 67px;
   right: 10px;
+}
+
+.contenedor-devtools {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.devtools {
+  cursor: pointer;
+}
+
+
+.p-version {
+  position: absolute;
+  right: 0;
+  left: -200px;
+  text-align: right;
 }

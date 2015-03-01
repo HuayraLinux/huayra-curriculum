@@ -1,5 +1,15 @@
 <div>
 
-<button onclick='abrir_devtools()' class='btn btn-warning btn-xs'><i class='fa fa-cog'></i></button>
+  <img {{bind-attr src=imageURL}} alt="" />
+
 &nbsp;
-  Versión: {{version}}</div>
+  Versión: {{version}}
+
+
+{{#if infoURL}}
+<p class='p-version'>
+  <a {{action "abrir_link"}} class='link-version'>(existe actualización)</a>
+</p>
+{{/if}}
+
+</div>

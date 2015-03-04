@@ -5,4 +5,4 @@ Exec=/usr/bin/huayra-curriculum
 Terminal=false
 Type=Application
 Icon=huayra-curriculum
-Categories=GNOME;GTK;Huayra;Network;
+Categories=GNOME;GTK;Huayra;

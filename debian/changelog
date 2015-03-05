@@ -1,4 +1,12 @@
-huayra-curriculum (0.0.11-1) unstable; urgency=low
+huayra-curriculum (0.0.13) unstable; urgency=low
+
+  * Cambiados los textos de la última pantalla
+  * Cambiado el alto de la ventana para que entreguen bien las ventanas
+    modales
+
+ -- Gonzalo Gluzman <dggluz@gmail.com>  Thu, 05 Mar 2015 14:39:52 -0300
+
+huayra-curriculum (0.0.12) unstable; urgency=low
 
   * actualizacion menor.
 

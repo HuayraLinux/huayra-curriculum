@@ -4,11 +4,11 @@
     <div class='hero-unit'>
       <h3>¡Listo!</h3>
 
-      <p>Ya se generó tu curriculum en un formato docx, listo para
-        imprimir o modificar desde open-office.</p>
+      <p>Ya se generó tu currículum y está listo para
+        imprimir o modificar desde LibreOffice Writer.</p>
 
       {{#if guardando}}
-        <button disabled class='btn btn-success'><i class='fa fa-refresh rotate'></i> Guardar archivo odt</button>
+        <button disabled class='btn btn-success'><i class='fa fa-refresh rotate'></i> Guardando...</button>
       {{else}}
         <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar el archivo generado</button>
       {{/if}}

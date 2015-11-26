@@ -6,7 +6,7 @@ NAME=huayra-curriculum
 RELEASE_FOLDER=/Users/hugoruscitti/Dropbox/releases/huayra-curriculum
 
 all:
-	@echo "Comando disponibles"
+	@echo "Comando disponibles, versión $(VERSION)"
 	@echo ""
 	@echo "  $(V)actualizar$(N)  Actualiza el repositorio e instala las dependencias."
 	@echo ""

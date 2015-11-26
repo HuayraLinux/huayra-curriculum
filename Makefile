@@ -71,7 +71,7 @@ test_linux: build
 
 version:
 	# patch || minor
-	@bumpversion patch --current-version ${VERSION} public/package.json public/package.develop.json public/package.production.json Makefile app/components/huayra-version.js --list 
+	@bumpversion minor --current-version ${VERSION} public/package.json public/package.develop.json public/package.production.json Makefile app/components/huayra-version.js --list 
 	make build
 	@echo "Es recomendable escribir el comando que genera los tags y sube todo a github:"
 	@echo ""

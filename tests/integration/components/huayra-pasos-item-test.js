@@ -5,20 +5,8 @@ moduleForComponent('huayra-pasos-item', 'Integration | Component | huayra pasos 
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{huayra-pasos-item}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#huayra-pasos-item}}
-      template block text
-    {{/huayra-pasos-item}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+test('Imprime el texto del paso', function(assert) {
+  this.set('paso', {texto: 'demo'});
+  this.render(hbs`{{huayra-pasos-item paso=paso}}`);
+  assert.equal(this.$().text().trim(), 'demo');
 });

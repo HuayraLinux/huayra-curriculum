@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import {service} from '../service';
 
 export default Ember.Component.extend({
   version: "0.1.0",
@@ -6,6 +7,7 @@ export default Ember.Component.extend({
   infoURL: '',
   imageURL: "imagenes/version/procesando.gif",
   src: '',
+  versionService: service('version'),
 
   didInsertElement() {
 
@@ -30,29 +32,25 @@ export default Ember.Component.extend({
       return 0;
     }
 
-    var self = this;
+    this.get("versionService").getVersion(this.get("url"))
+      .then((data) => {
+        var current_version = data.current_version;
+        var value = compare(this.get('version'), current_version);
 
-      $.getJSON(self.get('url')).
-        done(function(response) {
-          console.log(response);
-          var current_version = response.current_version;
-          var value = compare(self.get('version'), current_version);
+        console.log("Comparacion de versiones", this.get('version'), current_version, value);
 
-
-          console.log("Comparacion de versiones", self.get('version'), current_version, value);
-
-          if (value >= 0) {
-            self.set('imageURL', "imagenes/version/actualizado.png");
-          } else {
-            self.set('imageURL', "imagenes/version/actualizacion.png");
-            self.set('infoURL', response.info_url);
-          }
-
-        }).
-        fail(function(error) {
-          self.set('imageURL', "imagenes/version/invisible.png");
-          console.log("ERROR", error);
-        });
+        if (value >= 0) {
+          this.set('imageURL', "imagenes/version/actualizado.png");
+        } else {
+          this.set('imageURL', "imagenes/version/actualizacion.png");
+          this.set('infoURL', data.info_url);
+        }
+      })
+      .catch(() => {
+        if (!(this.get('isDestroyed') || this.get('isDestroying'))) {
+          this.set('imageURL', "imagenes/version/invisible.png");
+        }
+      });
 
   },
 

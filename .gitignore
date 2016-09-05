@@ -20,3 +20,4 @@ testem.log
 
 cache
 webkitbuilds
+.DS_Store

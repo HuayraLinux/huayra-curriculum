@@ -1,3 +1,10 @@
+huayra-curriculum (0.2.1) unstable; urgency=low
+
+  * Arreglos menores en los scripts de compilación.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 05 Sep 2016 16:27:17 -0300
+
+
 huayra-curriculum (0.2.0) unstable; urgency=low
 
   * Migrando a ember 2.6 y electron.

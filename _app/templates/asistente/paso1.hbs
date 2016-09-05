@@ -1,0 +1,32 @@
+<div class="row">
+
+  <div class="tutorial col-md-6 col-xs-6">
+    <h4>Datos Personales</h4>
+
+    <p>Lo primero que necesitamos es especificar
+      tus datos personales, dado que van a servirle
+      a tu futuro empleador para conocer cómo contactarte.
+    </p>
+
+    <p>Asegurate de especificar un número de teléfono
+      de contacto, si es tu propio celular mejor.</p>
+
+  </div>
+
+  <div class="col-md-6 col-xs-6">
+    {{#em-form model=model submit_button=false}}
+      {{em-input property="nombre" label="Tu nombre" placeholder="Ingresá un nombre o más..."}}
+      {{em-input property="apellido" label="Tu apellido" placeholder="Ingresá tu apellido o más..."}}
+
+      {{em-input property="telefono" label="Teléfono o Celular" placeholder="Teléfono completo..."}}
+    {{/em-form}}
+
+    <button {{action 'avanzar' 2 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+
+  </div>
+</div>
+
+
+
+
+{{outlet}}

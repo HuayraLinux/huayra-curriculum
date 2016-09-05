@@ -1,20 +1,20 @@
+
 import Ember from 'ember';
-import Resolver from 'ember/resolver';
-import loadInitializers from 'ember/load-initializers';
+import Resolver from './resolver';
+import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
+
+let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
-var App = Ember.Application.extend({
+App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver
+  Resolver
 });
 
 loadInitializers(App, config.modulePrefix);
-Ember.my_app = App;
-
-var inflector = Ember.Inflector.inflector;
-inflector.irregular("experiencia", "experiencias");
+Ember.Inflector.inflector.irregular('experiencia', 'experiencias');
 
 export default App;

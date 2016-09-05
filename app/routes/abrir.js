@@ -1,13 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
-    return this.store.find('curriculum');
-  },
+  moment: Ember.inject.service(),
 
-  tick: function() {
-    this.store.find('curriculum');
-    //console.log("Actualizando automáticamente la vista abrir (cada 30 segundos...)");
-    return Ember.run.later(this, this.tick, 30 * 1000);
-  }.on('init'),
+  model: function() {
+    this.get('moment').changeLocale('es');
+    return this.store.findAll('curriculum');
+  },
 });

@@ -8,11 +8,11 @@
   </div>
 
   <div class="col-md-6 col-xs-6">
-    {{#em-form model=model submit_button=false}}
+    {{#em-form model=model submit_button=false submitButton=false}}
       {{em-input property="intereses" label="Intereses" placeholder="Un breve texto"}}
     {{/em-form}}
 
-    <button {{action 'avanzar' 6 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 6 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
   </div>
 </div>
 

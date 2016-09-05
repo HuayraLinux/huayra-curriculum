@@ -21,7 +21,7 @@
 
 {{#if model}}
 
-  {{#each p in model}}
+  {{#each model as |p|}}
     <tr>
       <td>{{p.nombre}}</td>
       <td>{{p.apellido}}</td>

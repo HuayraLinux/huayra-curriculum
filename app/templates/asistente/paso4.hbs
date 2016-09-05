@@ -14,7 +14,7 @@
       <div class='form-group'>
         <label class="ember-view control-label">Experiencias</label>
 
-        {{#each experiencia in model.experiencias}}
+        {{#each model.experiencias as |experiencia|}}
           <p>{{experiencia.descripcion}} en {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}}) <button {{action "eliminar" experiencia}} class='btn btn-xs btn-danger'>borrar</button></p>
         {{else}}
           <p>No hay experiencias cargadas</p>
@@ -22,57 +22,53 @@
 
       </div>
 
-      {{#modal-trigger class='btn btn-sm btn-success' controls="modalNuevoEstudio"}}
-        + Agregar
-      {{/modal-trigger}}
+
+      {{#ember-remodal
+        openButton='+ Agregar'
+        buttonClasses="btn btn-sm btn-success"
+        forService=true
+      }}
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Desde</label>
+          {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Hasta</label>
+          {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Empleador</label>
+          {{#input class='ember-text-field form-control' value=mempleador placeholder="Nombre del establecimiento"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Descripción</label>
+          {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
+        </div>
+
+        <hr/>
+
+        <fieldset>
+            <button class='btn btn-success' {{action "submitForm"}}>Crear Registro</button>
+        </fieldset>
+
+
+      {{/ember-remodal}}
+
     </div>
 
     <div>
 
 
-    {{#modal-form
-      id="modalNuevoEstudio"
-      on-submit="submitForm"
-      on-cancel="restoreModel"
-    }}
-
-    {{#modal-title}}<h4>Registrar una experiencia</h4>{{/modal-title}}
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Desde</label>
-        {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Hasta</label>
-        {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Empleador</label>
-        {{#input class='ember-text-field form-control' value=mempleador placeholder="Nombre del establecimiento"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Descripción</label>
-        {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
-      </div>
-
-      <hr/>
-
-      <fieldset>
-          {{#modal-trigger class='btn btn-warning'}}Cancelar{{/modal-trigger}}
-          <button class='btn btn-success' type="submit">Crear Registro</button>
-      </fieldset>
-
-    {{/modal-form}}
 
 
-
-    <button {{action 'avanzar' 5 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 5 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
 
 
   </div>
 </div>
-
+</div>
 {{outlet}}

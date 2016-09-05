@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   megreso: "",
   minstitucion: "",
   mdescripcion: "",
+  remodal: Ember.inject.service(),
 
   actions: {
     eliminar: function(estudio) {
@@ -14,7 +15,6 @@ export default Ember.Controller.extend({
 
     /* Destinadas al modal */
     submitForm: function() {
-
       var estudios = this.get('model.estudios');
       var estudio = this.store.createRecord('estudio', {
         ingreso: this.get('mingreso'),
@@ -31,9 +31,8 @@ export default Ember.Controller.extend({
       this.set('megreso', '');
       this.set('minstitucion', '');
       this.set('mdescripcion', '');
+      this.get('remodal').close();
     },
 
-    restoreModel: function() {
-    }
   }
 });

@@ -1,13 +1,11 @@
 <div class="row">
 
   <div class="tutorial col-md-6 col-xs-6">
+
     <h4>Paso 3</h4>
 
-    <p>En esta sección es importante poner los detalles referidos a los estudios que realizaste. Cuándo comenzaste, cuándo finalizaste, el nombre del colegio.
-    </p>
-    <p>
-En la Descripción te sugerimos que pongas el nivel educativo y la orientación.
-    </p>
+    <p>En esta sección es importante poner los detalles referidos a los estudios que realizaste. Cuándo comenzaste, cuándo finalizaste, el nombre del colegio.</p>
+    <p>En la Descripción te sugerimos que pongas el nivel educativo y la orientación.</p>
     <p>Por ejemplo: Nivel Secundario con Orientación en Ciencias Sociales y Humanidades.</p>
 
   </div>
@@ -20,7 +18,7 @@ En la Descripción te sugerimos que pongas el nivel educativo y la orientación.
       <div class='form-group'>
         <label class="ember-view control-label">Estudios cursados</label>
 
-        {{#each estudio in model.estudios}}
+        {{#each model.estudios as |estudio|}}
           <p>{{estudio.descripcion}} en {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
         {{else}}
           <p>No hay estudios cargados</p>
@@ -28,57 +26,49 @@ En la Descripción te sugerimos que pongas el nivel educativo y la orientación.
 
       </div>
 
-      {{#modal-trigger class='btn btn-sm btn-success' controls="modalNuevoEstudio"}}
-        + Agregar
-      {{/modal-trigger}}
+      {{#ember-remodal
+        openButton='+ Agregar'
+        buttonClasses="btn btn-sm btn-success"
+        forService=true
+      }}
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Desde</label>
+          {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Hasta</label>
+          {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Institución</label>
+          {{#input class='ember-text-field form-control' value=minstitucion placeholder="Nombre del establecimiento"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Descripción</label>
+          {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
+        </div>
+
+        <hr/>
+
+        <fieldset>
+            <button class='btn btn-success' {{action "submitForm"}}>Crear Registro</button>
+        </fieldset>
+
+        {{/ember-remodal}}
+
     </div>
 
     <div>
 
-
-    {{#modal-form
-      id="modalNuevoEstudio"
-      on-submit="submitForm"
-      on-cancel="restoreModel"
-    }}
-
-    {{#modal-title}}<h4>Registrar un estudio</h4>{{/modal-title}}
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Desde</label>
-        {{#input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Hasta</label>
-        {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Institución</label>
-        {{#input class='ember-text-field form-control' value=minstitucion placeholder="Nombre del establecimiento"}}{{/input}}
-      </div>
-
-      <div class='form-group'>
-        <label class="ember-view control-label">Descripción</label>
-        {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
-      </div>
-
-      <hr/>
-
-      <fieldset>
-          {{#modal-trigger class='btn btn-warning'}}Cancelar{{/modal-trigger}}
-          <button class='btn btn-success' type="submit">Crear Registro</button>
-      </fieldset>
-
-    {{/modal-form}}
-
-
-    <button {{action 'avanzar' 4 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 4 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
 
   </div>
 </div>
 
-
+</div>
 
 {{outlet}}

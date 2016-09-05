@@ -17,12 +17,12 @@ Ejemplo: Teodoro Fels y San Martín - Ezeiza - Buenos Aires
 
   <div class="col-md-6 col-xs-6">
 
-    {{#em-form model=model submit_button=false}}
+    {{#em-form model=model submit_button=false submitButton=false}}
       {{em-input property="email" label="Email" placeholder="¿Cual es tu e-mail?"}}
       {{em-input property="direccion" label="Dirección de tu domicilio" placeholder="Dirección"}}
     {{/em-form}}
 
-    <button {{action 'avanzar' 3 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 3 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
 
 
   </div>

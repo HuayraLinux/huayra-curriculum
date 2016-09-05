@@ -1,5 +1,5 @@
 <div class="botones">
-  <button {{action 'regresar'}} class='btn btn-warning'><i class='fa fa-arrow-left'></i> Regresar</button>
+  <button {{action 'regresar'}} id="regresar" class='btn btn-warning'><i class='fa fa-arrow-left'></i> Regresar</button>
 </div>
 
 <div class="row">
@@ -18,11 +18,11 @@
       </thead>
 
       <tbody>
-        {{#each c in model}}
+        {{#each model as |c|}}
           <tr>
             <td> {{c.nombre}} </td>
             <td> {{c.apellido}} </td>
-            <td> {{huayra-fecha c.fecha}} </td>
+            <td> {{moment-from-now date c.fecha}} </td>
             <td>
               <button {{action 'abrir' c}} class='btn btn-success'>Abrir</button>
               <button {{action 'borrar' c.id}} class='btn btn-danger'>Borrar</button>

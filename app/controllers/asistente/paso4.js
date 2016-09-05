@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   megreso: "",
   mempleador: "",
   mdescripcion: "",
+  remodal: Ember.inject.service(),
 
   actions: {
     eliminar: function(experiencia) {
@@ -31,9 +32,7 @@ export default Ember.Controller.extend({
       this.set('megreso', '');
       this.set('mempleador', '');
       this.set('mdescripcion', '');
+      this.get('remodal').close();
     },
-
-    restoreModel: function() {
-    }
   }
 });

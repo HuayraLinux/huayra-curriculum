@@ -14,14 +14,14 @@
   </div>
 
   <div class="col-md-6 col-xs-6">
-    {{#em-form model=model submit_button=false}}
+    {{#em-form model=model submit_button=false submitButton=false}}
       {{em-input property="nombre" label="Tu nombre" placeholder="Ingresá un nombre o más..."}}
       {{em-input property="apellido" label="Tu apellido" placeholder="Ingresá tu apellido o más..."}}
 
       {{em-input property="telefono" label="Teléfono o Celular" placeholder="Teléfono completo..."}}
     {{/em-form}}
 
-    <button {{action 'avanzar' 2 model}} class='btn btn-success siguiente'><a class='fs fa-right'></a> Siguiente</button>
+    <button {{action 'avanzar' 2 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
 
   </div>
 </div>

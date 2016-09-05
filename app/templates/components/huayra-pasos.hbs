@@ -1,15 +1,9 @@
 <div class="stepwizard">
 
   <div class="stepwizard-row">
-
-    {{#each p in pasos}}
+    {{#each pasos as |p|}}
       <div class="stepwizard-step">
-        {{#if p.activo}}
-          <button type="button" class="btn btn-primary btn-circle">{{p.numero}}</button>
-        {{else}}
-          <button type="button" {{action 'change' p.numero}} class="btn btn-default btn-circle">{{p.numero}}</button>
-        {{/if}}
-        <p>{{p.texto}}</p>
+        {{huayra-pasos-item paso=p change="change" paso_actual_como_numero=paso_actual}}
       </div>
     {{/each}}
 

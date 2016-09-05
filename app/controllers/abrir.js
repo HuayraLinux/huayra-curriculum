@@ -1,17 +1,22 @@
 import Ember from 'ember';
 
-export default Ember.ArrayController.extend({
+export default Ember.Controller.extend({
+  date: null,
 
-  cantidad_de_elementos: function() {
-      return this.get('model').get('length');
-  }.property('model.@each'),
+  cuandoInicia: Ember.on("init", function() {
+    this.set('date', new Date());
+  }),
+
+  cantidad_de_elementos: Ember.computed('model.length', function() {
+    return this.get('model').get('length');
+  }),
 
   actions: {
     regresar: function() {
       this.transitionToRoute('presentacion');
     },
     borrar: function(curriculum_id) {
-      this.store.findById('curriculum', curriculum_id).
+      this.store.findRecord('curriculum', curriculum_id).
         then(function(c) {
           c.destroyRecord();
         });

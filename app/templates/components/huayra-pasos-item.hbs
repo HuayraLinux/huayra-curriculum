@@ -1,0 +1,7 @@
+{{#if estaActivo}}
+  <button type="button" class="btn btn-primary btn-circle">{{paso.numero}}</button>
+{{else}}
+  <button type="button" {{action 'onChange' paso.numero}} class="btn btn-default btn-circle">{{paso.numero}}</button>
+{{/if}}
+
+<p>{{paso.texto}}</p>

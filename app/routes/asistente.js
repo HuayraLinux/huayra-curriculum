@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
-    return this.store.find('curriculum', params.asistente_id);
+    return this.store.findAll('curriculum', params.asistente_id);
   },
 
   actions: {
@@ -19,8 +19,8 @@ export default Ember.Route.extend({
     avanzar: function(paso, modelo) {
       this.transitionTo('asistente.paso' + paso, modelo);
     },
-    cambiar_paso: function(paso, model) {
-      this.transitionTo('asistente.paso' + paso, model);
+    cambiar_paso: function(paso, modelo) {
+      this.transitionTo('asistente.paso' + paso, modelo);
     }
   }
 });

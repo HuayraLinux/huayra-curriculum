@@ -1,0 +1,18 @@
+{{huayra-presentacion}}
+
+<h1>Create</h1>
+
+<p>
+<label>Nombre: {{input value=nombre}}</label>
+</p>
+
+<p>
+<label>Apellido: {{input value=apellido}}</label>
+</p>
+
+<p>
+<button {{action 'cancel'}} class='btn btn-info'><span class='glyphicon glyphicon-chevron-left'></span> Cancelar</button>
+<button {{action 'save'}} class='btn btn-success'><span class='glyphicon glyphicon-plus-sign'></span> Crear</button>
+</p>
+
+{{outlet}}

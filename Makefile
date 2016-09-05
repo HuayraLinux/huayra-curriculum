@@ -8,19 +8,20 @@ RELEASE_FOLDER=/Users/hugoruscitti/Dropbox/releases/huayra-curriculum
 all:
 	@echo "Comando disponibles, versión $(VERSION)"
 	@echo ""
-	@echo "  $(V)actualizar$(N)  Actualiza el repositorio e instala las dependencias."
+	@echo "  $(V)actualizar$(N)       Actualiza el repositorio e instala las dependencias."
 	@echo ""
-	@echo "  $(V)version$(N)     Genera la informacion de versión actualizada."
-	@echo "  $(V)ver_sync$(N)    Sube la nueva version al servidor."
+	@echo "  $(V)version_patch$(N)    Genera la informacion de versión actualizada."
+	@echo "  $(V)version_minor$(N)    Genera la informacion de versión actualizada."
+	@echo "  $(V)ver_sync$(N)         Sube la nueva version al servidor."
 	@echo ""
-	@echo "  $(V)server$(N)         Prueba la aplicación en el navegador."
-	@echo "  $(V)build$(N)          Genera los archivos compilados."
-	@echo "  $(V)watch$(N)          Genera los archivos compilados de forma contínua."
-	@echo "  $(V)publicar$(N)       Genera los archivos compilados de forma contínua."
-	@echo "  $(V)publicar_sync$(N)  Copia todo lo generado a dropbox."
+	@echo "  $(V)server$(N)           Prueba la aplicación en el navegador."
+	@echo "  $(V)build$(N)            Genera los archivos compilados."
+	@echo "  $(V)watch$(N)            Genera los archivos compilados de forma contínua."
+	@echo "  $(V)publicar$(N)         Genera los archivos compilados de forma contínua."
+	@echo "  $(V)publicar_sync$(N)    Copia todo lo generado a dropbox."
 	@echo ""
-	@echo "  $(V)test_mac$(N)    Prueba la aplicación sobre OSX"
-	@echo "  $(V)test_linux$(N)  Prueba la aplicación sobre Linux"
+	@echo "  $(V)test_mac$(N)         Prueba la aplicación sobre OSX"
+	@echo "  $(V)test_linux$(N)       Prueba la aplicación sobre Linux"
 	@echo ""
 
 build:
@@ -68,9 +69,15 @@ test_mac: build
 test_linux: build
 	nw dist
 
-version:
-	# patch || minor
+version_patch:
+	@bumpversion patch --current-version ${VERSION} public/package.json public/package.develop.json public/package.production.json Makefile app/components/huayra-version.js --list 
+	make _post_version
+
+version_minor:
 	@bumpversion minor --current-version ${VERSION} public/package.json public/package.develop.json public/package.production.json Makefile app/components/huayra-version.js --list 
+	make _post_version
+
+_post_version:
 	make build
 	@echo "Es recomendable escribir el comando que genera los tags y sube todo a github:"
 	@echo ""

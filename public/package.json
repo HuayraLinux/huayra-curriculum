@@ -1,7 +1,7 @@
 {
   "main": "./index.html",
   "name": "huayra-curriculum",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "window": {
     "title": "huayra-curriculum",
     "width": 865,

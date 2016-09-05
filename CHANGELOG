@@ -1,6 +1,31 @@
 Changelog
 =========
 
+0.2.1 (2016-09-05)
+------------------
+
+- Arreglo menor en los comandos para incrementar version. [Hugo
+  Ruscitti]
+
+- Agregando git a las dependencias para empaquetar. [Hugo Ruscitti]
+
+- Actualizando comandos para invocar a ember. [Hugo Ruscitti]
+
+- Cambiando path para acceder a node de forma local. [Hugo Ruscitti]
+
+- Cambiando url para acceder a nodejs. [Hugo Ruscitti]
+
+- Agregando wget como dependencia. [Hugo Ruscitti]
+
+- Merge branch 'master' of github.com:HuayraLinux/huayra-curriculum.
+  [Hugo Ruscitti]
+
+- Update README.md. [Hugo Ruscitti]
+
+- Probando generar la versión 0.2.0. [Hugo Ruscitti]
+
+- Release 0.2.0. [Hugo Ruscitti]
+
 0.2.0 (2016-09-05)
 ------------------
 

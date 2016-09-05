@@ -1,0 +1,147 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.zoom-label {
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+[data-ember-action] {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid rgb(226, 226, 226) !important;
+  padding: 6px !important;
+  border-bottom: 0 !important;
+}
+
+.version {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.tutorial p {
+  font-size: 15px;
+}
+
+.botones {
+  padding: 10px;
+  border-top: 1px solid rgb(200, 200, 200);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(230, 230, 230);
+  z-index: 100;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+  -moz-animation: rotation 2s infinite linear;
+}
+
+.container-fluid {
+  margin-bottom: 60px;
+}
+
+* {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+input, textarea /*.contenteditable?*/ {
+  -webkit-touch-callout:default;
+  -webkit-user-select:text;
+  -moz-user-select:text;
+  -ms-user-select:text;
+  user-select:text;
+}
+
+.abrir-mensaje {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 4em;
+}
+
+.bloque {
+  border: 1px solid rgb(224, 224, 244);
+  padding: 13px;
+  margin-bottom: 20px;
+}
+
+
+#modalNuevoEstudio {
+  background-color: hsla(0, 0%, 0%, 0.75) !important;
+  padding: 10px !important;
+  z-index: 200 !important;
+}
+
+.modal-form {
+  overflow: hidden;
+}
+
+.siguiente {
+  position: fixed;
+  bottom: 67px;
+  right: 10px;
+}
+
+.contenedor-devtools {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.devtools {
+  cursor: pointer;
+}
+
+
+.p-version {
+  position: absolute;
+  right: 0;
+  left: -200px;
+  text-align: right;
+}
+
+
+.ember-remodal {
+}

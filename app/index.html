@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="utf-8">
+    <title>huayra-curriculum</title>
+    <meta name="description" content="">
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- AGREGADOS PARA NODEWEBKIT -->
+    <script src='reemplazar-require-paso-1.js'></script>
+    <!-- <script src='capturar-excepciones.js'></script> -->
+
+    <script charset="utf-8">
+      function abrir_devtools() {
+        require('nw.gui').Window.get().showDevTools();
+      }
+    </script>
+
+
+    {{content-for 'head'}}
+
+    <!-- AGREGADOS POR EMBERCLI -->
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/huayra-curriculum.css">
+
+  </head>
+  <body>
+    {{content-for 'body'}}
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/huayra-curriculum.js"></script>
+
+
+    <!-- AGREGADOS PARA NODEWEBKIT -->
+    <script src='reemplazar-require-paso-2.js'></script>
+    <script src='livereload.js'></script>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{{huayra-presentancion}}
+
+
+
+<p>Lista de Curriculums creados:</p>
+
+{{huayra-pasos paso=1}}
+
+<p>
+<button {{action 'crearNuevo'}} class='btn btn-success'>Crear</button>
+
+{{#link-to 'create' class='btn btn-info'}}Crear con asistente{{/link-to}}
+</p>
+
+<table class='table table-bordered'>
+  <tr>
+    <th> Nombre </th>
+    <th> Apellido </th>
+    <th> Acciones </th>
+  </tr>
+
+{{#if model}}
+
+  {{#each model as |p|}}
+    <tr>
+      <td>{{p.nombre}}</td>
+      <td>{{p.apellido}}</td>
+      <td>
+          <button {{action 'ver' p}} class='btn btn-info'>Ver</button>
+          <button {{action 'actualizar' p}} class='btn btn-warning'>Actualizar</button>
+          <button {{action 'eliminar' p}} class='btn btn-danger'>Eliminar</button>
+      </td>
+    </tr>
+  {{/each}}
+
+{{else}}
+
+  <tr>
+    <td colspan=3>
+      No hay <em>curriculums</em> creados.
+    </td>
+  </tr>
+
+{{/if}}
+
+
+
+
+
+</table>
+
+{{outlet}}

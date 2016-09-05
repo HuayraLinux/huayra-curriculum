@@ -1,3 +1,10 @@
+huayra-curriculum (0.2.0) unstable; urgency=low
+
+  * Migrando a ember 2.6 y electron.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 05 Sep 2016 15:43:23 -0300
+
+
 huayra-curriculum (0.1.0) unstable; urgency=low
 
   * Reparando el notificador de versión nuevamente...

@@ -24,13 +24,12 @@ all:
 	@echo ""
 
 build:
-	./node_modules/ember-cli/bin/ember build
+	ember build
 
 watch:
-	./node_modules/ember-cli/bin/ember build --watch
+	ember build --watch
 
 actualizar:
-	git pull
 	npm install
 	bower install
 

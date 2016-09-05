@@ -27,7 +27,7 @@ override_dh_install:
 	dh_install
 
 override_dh_auto_configure:
-	wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.xz
+	wget http://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.xz
 	tar xf node-v4.5.0-linux-x64.tar.xz
 	node -v
 	npm -v

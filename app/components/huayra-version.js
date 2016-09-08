@@ -2,7 +2,7 @@ import Ember from 'ember';
 import {service} from '../service';
 
 export default Ember.Component.extend({
-  version: "0.2.1",
+  version: "0.2.2",
   mostrarDialog: false,
   infoURL: '',
   imageURL: "imagenes/version/procesando.gif",

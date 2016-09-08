@@ -43,11 +43,12 @@
     "ember-remodal": "2.0.0",
     "ember-resolver": "^2.0.3",
     "ember-validations": "2.0.0-alpha.5",
-    "loader.js": "^4.0.1",
-    "moment": "2.14.1",
-    "temporary": "0.0.8"
+    "loader.js": "^4.0.1"
   },
   "dependencies": {
+    "nwjs-hack": "iglosiggio/nwjs-hack",
+    "moment": "2.14.1",
+    "temporary": "0.0.8",
     "docxtemplater": "^2.1.5"
   }
 }

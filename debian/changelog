@@ -1,3 +1,9 @@
+huayra-curriculum (0.2.2) unstable; urgency=medium
+
+  * Hint de WM_CLASS para gnome3
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Thu, 08 Sep 2016 15:54:50 -0300
+
 huayra-curriculum (0.2.1) unstable; urgency=low
 
   * Arreglos menores en los scripts de compilación.

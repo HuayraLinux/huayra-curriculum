@@ -4,6 +4,7 @@ bin/huayra-curriculum usr/bin/
 node_modules/docxtemplater/* /usr/share/huayra-curriculum/node_modules/docxtemplater
 node_modules/moment/* /usr/share/huayra-curriculum/node_modules/moment
 node_modules/temporary/* /usr/share/huayra-curriculum/node_modules/temporary
+node_modules/nwjs-hack/* /usr/share/huayra-curriculum/node_modules/nwjs-hack
 
 debian/huayra-curriculum.desktop /usr/share/applications
 debian/huayra-curriculum.svg /usr/share/icons/hicolor/scalable/apps

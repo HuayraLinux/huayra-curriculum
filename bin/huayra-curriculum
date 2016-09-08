@@ -1,2 +1,2 @@
 #!/bin/bash
-nw /usr/share/huayra-curriculum/dist
+exec nw /usr/share/huayra-curriculum/dist $@

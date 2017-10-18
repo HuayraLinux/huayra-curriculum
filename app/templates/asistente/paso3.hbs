@@ -5,8 +5,8 @@
     <h4>Paso 3</h4>
 
     <p>En esta sección es importante poner los detalles referidos a los estudios que realizaste. Cuándo comenzaste, cuándo finalizaste, el nombre del colegio.</p>
-    <p>En la Descripción te sugerimos que pongas el nivel educativo y la orientación.</p>
-    <p>Por ejemplo: Nivel Secundario con Orientación en Ciencias Sociales y Humanidades.</p>
+    <p>En la descripción te sugerimos que pongas el nivel educativo y la orientación.</p>
+    <p>Por ejemplo: Bachillerato con orientación en Ciencias Sociales y Humanidades.</p>
 
   </div>
 
@@ -39,7 +39,7 @@
 
         <div class='form-group'>
           <label class="ember-view control-label">Hasta</label>
-          {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}{{/input}}
+          {{#input class='ember-text-field form-control' value=megreso placeholder="Fecha de finalización"}}{{/input}}
         </div>
 
         <div class='form-group'>
@@ -48,8 +48,13 @@
         </div>
 
         <div class='form-group'>
-          <label class="ember-view control-label">Descripción</label>
-          {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Descripción"}}{{/input}}
+          <label class="ember-view control-label">Título</label>
+          {{#input class='ember-text-field form-control' value=mdescripcion placeholder="Título o certificación obtenida"}}{{/input}}
+        </div>
+
+        <div class='form-group'>
+          <label class="ember-view control-label">Notas</label>
+          {{textarea class='ember-text-field form-control' value=mdetalle placeholder="Promedio, especializaciones, diplomas obtenidos u otra información relevante"}}
         </div>
 
         <hr/>

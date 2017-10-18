@@ -3,23 +3,25 @@
   <div class="tutorial col-md-6 col-xs-6">
     <h4>Paso 2</h4>
 
-    <p>La dirección de <em>email</em> se utiliza mucho
-    dentro de algunas empresas, asegurate te tener una dirección
-    que puedas revisar con frecuencia.</p>
+    <p>La dirección de <em>email</em> es muy utilizada para comunicación formal,
+       asegurate de tener una que puedas revisar con frecuencia.</p>
 
-    <p>La dirección de tu domicilio no es muy importante en sí, pero sirve para darse una idea de la distancia al lugar de trabajo. No es obligatorio poner la numeración exacta de la calle. Te recomendamos poner el barrio donde vives.
-    </p>
-      <p>
-Ejemplo: Teodoro Fels y San Martín - Ezeiza - Buenos Aires
-      </p>
+    <p>La dirección de tu domicilio no es muy importante en sí, pero sirve para
+       darse una idea de la distancia al lugar de trabajo. No es obligatorio poner
+       la numeración exacta de la calle. Te recomendamos poner el barrio donde vivís.</p>
+
+    <p>La descripción personal es un espacio para que te explayes y describas tus
+       capacidades a grandes rasgos y/o objetivos laborales.</p>
 
   </div>
 
   <div class="col-md-6 col-xs-6">
 
     {{#em-form model=model submit_button=false submitButton=false}}
-      {{em-input property="email" label="Email" placeholder="¿Cual es tu e-mail?"}}
-      {{em-input property="direccion" label="Dirección de tu domicilio" placeholder="Dirección"}}
+      {{em-input property="email" label="Email" placeholder="yo@ejemplo.com"}}
+      {{em-input property="direccion" label="Dirección de tu domicilio" placeholder="Teodoro Fels y San Martín, Ezeiza, Buenos Aires"}}
+      {{em-input property="nacimiento" label="Fecha de nacimiento" placeholder="DD/MM/AAAA"}}
+      {{em-text property="descripcion" label="Descripción personal" placeholder="Soy una persona responsable y predispuesta al trabajo en equipo. Busco desempeñarme en un puesto part-time que me permita continuar con mis estudios."}}
     {{/em-form}}
 
     <button {{action 'avanzar' 3 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>

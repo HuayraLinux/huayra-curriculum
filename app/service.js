@@ -1,12 +1,6 @@
 import Ember from 'ember';
 
-let inNWJS = false;
-
-try {
-    inNWJS = (typeof require('nw.gui') !== "undefined");
-} catch (e){
-    inNWJS = false;
-}
+const inNWJS = (window.nwDispatcher !== undefined);
 
 /* Este módulo implementa una inyección de dependencia
  * muy similar a ember.inject.service(), pero con un selector
@@ -29,7 +23,4 @@ function service(nombre) {
   return Ember.inject.service(modulo);
 }
 
-export {
-	service,
-	inNWJS
-};
+export {service, inNWJS};

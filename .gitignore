@@ -17,6 +17,9 @@ npm-debug.log
 testem.log
 *.pyc
 *.swp
+typings
+
+*.docx
 
 cache
 webkitbuilds

@@ -8,14 +8,10 @@
     <link href="bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
 
-
-    <!-- AGREGADOS PARA NODEWEBKIT -->
-    <script src='reemplazar-require-paso-1.js'></script>
-    <!-- <script src='capturar-excepciones.js'></script> -->
-
     <script charset="utf-8">
       function abrir_devtools() {
-        require('nw.gui').Window.get().showDevTools();
+        /* TODO: electron */
+        // require('nw.gui').Window.get().showDevTools();
       }
     </script>
 
@@ -32,11 +28,5 @@
 
     <script src="assets/vendor.js"></script>
     <script src="assets/huayra-curriculum.js"></script>
-
-
-    <!-- AGREGADOS PARA NODEWEBKIT -->
-    <script src='reemplazar-require-paso-2.js'></script>
-    <script src='livereload.js'></script>
-
   </body>
 </html>

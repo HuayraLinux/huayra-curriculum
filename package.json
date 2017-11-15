@@ -1,6 +1,7 @@
 {
   "name": "huayra-curriculum",
   "version": "0.2.2",
+  "main": "main.js",
   "description": "Small description for huayra-curriculum goes here",
   "private": true,
   "directories": {

@@ -17,9 +17,10 @@ export default Ember.Component.extend({
   },
 
   cambiarZoom: function() {
-    var gui = require('nw.gui');
-    var win = gui.Window.get();
+    /* TODO: electron */
+    // var gui = require('nw.gui');
+    // var win = gui.Window.get();
 
-    win.zoomLevel = (this.get('zoom') - 100) / 10;
+    // win.zoomLevel = (this.get('zoom') - 100) / 10;
   }.observes('zoom')
 });

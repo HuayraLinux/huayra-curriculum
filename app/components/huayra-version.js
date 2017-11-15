@@ -56,7 +56,8 @@ export default Ember.Component.extend({
 
   actions: {
     abrir_link: function() {
-      var gui = require('nw.gui');
+      /* TODO: electron */
+      //var gui = require('nw.gui');
       gui.Shell.openExternal(this.get('infoURL'));
     }
   }

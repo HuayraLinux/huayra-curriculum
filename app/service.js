@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const inNWJS = (window.nwDispatcher !== undefined);
+const inElectron = (window.process !== undefined);
 
 /* Este módulo implementa una inyección de dependencia
  * muy similar a ember.inject.service(), pero con un selector
@@ -12,8 +12,8 @@ const inNWJS = (window.nwDispatcher !== undefined);
 function service(nombre) {
   let modulo;
 
-  if (inNWJS) {
-    modulo = `${nombre}-nwjs`;
+  if (inElectron) {
+    modulo = `${nombre}-electron`;
   } else {
     modulo = `${nombre}-browser`;
   }
@@ -23,4 +23,4 @@ function service(nombre) {
   return Ember.inject.service(modulo);
 }
 
-export {service, inNWJS};
+export {service, inElectron};

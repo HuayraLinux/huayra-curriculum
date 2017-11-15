@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>huayra-curriculum</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
+    {{content-for "head"}}
 
     <script charset="utf-8">
       function abrir_devtools() {
         /* TODO: electron */
         // require('nw.gui').Window.get().showDevTools();
       }
+      window.requireNode = require;
     </script>
+    <link integrity="" rel="stylesheet" href="assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="assets/huayra-curriculum.css">
 
-
-    {{content-for 'head'}}
-
-    <!-- AGREGADOS POR EMBERCLI -->
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/huayra-curriculum.css">
-
+    {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for 'body'}}
+    {{content-for "body"}}
 
     <script src="assets/vendor.js"></script>
     <script src="assets/huayra-curriculum.js"></script>
+
+    {{content-for "body-footer"}}
   </body>
 </html>

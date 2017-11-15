@@ -7,7 +7,6 @@ Aplicativo para generar un Curriculum Vitae
 
 ![](imagenes/preview.png)
 
-
 Iniciar en modo desarrollo
 ---------------------------
 

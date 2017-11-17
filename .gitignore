@@ -20,8 +20,6 @@ testem.log
 *.swp
 typings
 
-*.docx
-
 cache
 webkitbuilds
 .DS_Store

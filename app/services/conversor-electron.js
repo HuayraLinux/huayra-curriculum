@@ -10,7 +10,8 @@ function carpeta_documentos() {
   return new Promise((accept, reject) => {
     exec('xdg-user-dir DOCUMENTS', (err, folder) => {
       if(err) reject(err);
-      // Las carpetas que hacen personas con buen corazón no llevan saltos de línea, las aplicaciones de consola sí
+      // Las carpetas que hacen personas con buen corazón no llevan saltos de línea
+      // las aplicaciones de consola sí
       else accept(folder.replace('\n', ''));
     });
   });
@@ -52,7 +53,7 @@ export default Ember.Service.extend({
   },
 
   seleccionarDirectorioYMover(rutaTemporal) {
-    return carpeta_documentos().then(documentos => {
+    return carpeta_documentos().then(documentos => new Promise((accept, reject) => {
       dialog.showSaveDialog(
         {
           title: 'Exportar currículum',
@@ -62,13 +63,13 @@ export default Ember.Service.extend({
         (rutaFinal) => {
           try {
             fs.renameSync(rutaTemporal, rutaFinal);
-            resolve(rutaFinal);
+            accept(rutaFinal);
           } catch (e) {
             let msg = `Lo siento, no se pudo generar el archivo ${rutaFinal}. ¿Tal vez sea un problema de permisos?`;
             reject(msg);
           }
         }
-      );
-    });
+      )
+    }));
   },
 });

@@ -8,9 +8,9 @@
         imprimir o modificar desde LibreOffice Writer.</p>
 
       {{#if guardando}}
-        <button disabled class="btn btn-success"><i class="fa fa-refresh rotate"></i> Guardando...</button>
+        <button disabled class="btn btn-success">{{fa-icon "refresh" rotate=true}} Guardando...</button>
       {{else}}
-        <button {{action "guardarODT"}} class="btn btn-success"><i class="fa fa-download"></i> Guardar el archivo generado</button>
+        <button {{action "guardarODT"}} class="btn btn-success">{{fa-icon "download"}} Guardar el archivo generado</button>
       {{/if}}
 
       <br/>

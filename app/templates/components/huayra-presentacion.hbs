@@ -34,16 +34,20 @@ box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 .barra-botones {
   margin-top: 40px;
 }
+
+.barra-botones .btn {
+  margin-left: 1em;
+}
 </style>
 
 <div class="row">
-  <div class='col-md-2 col-xs-2'>&nbsp;</div>
+  <div class="col-md-2 col-xs-2">&nbsp;</div>
   <div class="col-md-8 col-xs-8">
 
     <div class="box">
 
       <div class="box-icon">
-        <img src='imagenes/huayra-cv.png'>
+        <img src="imagenes/huayra-cv.png">
       </div>
 
       <div class="info">
@@ -56,13 +60,29 @@ box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           prácticas, algunos trucos y plantillas para guiarte
           paso a paso.</p>
 
-        <div class='barra-botones'>
-          <button {{action 'alabrir'}} id="abrir" class='btn btn-warning'>Abrir uno existente</button>
-          <button {{action 'alCrear'}} id="crear" class="btn btn-success">Crear un curriculum nuevo</button>
+        <div class="barra-botones">
+          <button {{action verModal   "que-es-un-cv"}} class="btn">¿Qué es un currículum?</button>
+          <button {{action sendAction "alabrir"}}      class="btn btn-warning">Abrir uno existente</button>
+          <button {{action sendAction "alcrear"}}      class="btn btn-success">Crear un curriculum nuevo</button>
         </div>
 
       </div>
     </div>
   </div>
-  <div class='col-md-2 col-xs-2'>&nbsp;</div>
+  <div class="col-md-2 col-xs-2">&nbsp;</div>
+  {{#ember-remodal forService=true name="que-es-un-cv"}}
+    <div class="info">
+      <h4>¿Qué es un currículum?</h4>
+      <p>El CV es la primera impresión que el empleador (sea una organización, una
+         institución o un particular) tendrá acerca tuyo. En esta presentación,
+         deberías mostrar, de manera ordenada y sintética, los saberes y
+         experiencias más representativos de tu perfil.</p>
+      <p>Si pensás postularte a distintos puestos de trabajo, te servirá redactar
+         más de un CV y adaptar aquellos puntos que quieras resaltar de tu
+         experiencia, adaptándolo según el perfil requerido en cada caso.</p>
+      <p>Si bien ningún CV es igual a otro, con esta herramienta podrás armar un
+         modelo "base" al que puedas incorporar o quitar datos, según el puesto
+         que busques en cada ocasión.</p>
+    </div>
+  {{/ember-remodal}}
 </div>

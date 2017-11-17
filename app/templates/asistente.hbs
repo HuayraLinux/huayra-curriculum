@@ -5,9 +5,9 @@
 <div class='botones'>
   <button {{action 'guardar'}} class='btn btn-success'>Guardar y regresar</button>
     <button {{action "siguiente"}} class="btn btn-success siguiente" disabled={{noHaySiguiente}}>
-      Siguiente
+      Siguiente {{fa-icon "arrow-right"}} 
     </button>
     <button {{action "anterior"}} class="btn btn-success anterior" disabled={{noHayAnterior}}>
-      Anterior
+      {{fa-icon "arrow-left"}} Anterior
     </button>
 </div>

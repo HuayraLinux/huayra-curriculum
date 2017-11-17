@@ -55,7 +55,6 @@ export default Ember.Controller.extend({
       this.transitionToRoute(nuevaRuta);
     },
     cambiarPaso(paso) {
-      //const paso = this.get('pasos').find(paso => paso.nombre === nuevoPaso);
       this.transitionToRoute(paso.ruta);
     }
   }

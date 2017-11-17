@@ -1,7 +1,13 @@
-{{huayra-pasos paso_actual=paso_actual alcambiar='cambiar_paso' modelo=model}}
+{{huayra-pasos pasos=pasos num-paso-actual=numPasoActual al-cambiar='cambiarPaso'}}
 
 {{outlet}}
 
 <div class='botones'>
   <button {{action 'guardar'}} class='btn btn-success'>Guardar y regresar</button>
+    <button {{action "siguiente"}} class="btn btn-success siguiente" disabled={{noHaySiguiente}}>
+      Siguiente
+    </button>
+    <button {{action "anterior"}} class="btn btn-success anterior" disabled={{noHayAnterior}}>
+      Anterior
+    </button>
 </div>

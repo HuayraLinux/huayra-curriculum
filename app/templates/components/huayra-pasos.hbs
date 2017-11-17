@@ -1,12 +1,10 @@
 <div class="stepwizard">
-
   <div class="stepwizard-row">
-    {{#each pasos as |p|}}
+    {{#each pasos as |paso num-paso|}}
       <div class="stepwizard-step">
-        {{huayra-pasos-item paso=p change="change" paso_actual_como_numero=paso_actual}}
+        {{huayra-pasos-item paso=paso seleccionado=(eq num-paso-actual num-paso)
+                            cambiar-paso=(action sendAction "al-cambiar")}}
       </div>
     {{/each}}
-
   </div>
-
 </div>

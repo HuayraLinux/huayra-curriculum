@@ -1,16 +1,16 @@
 <div class="row">
 
   <div class="tutorial col-md-12 col-xs-12">
-    <div class='hero-unit'>
+    <div class="hero-unit">
       <h3>¡Listo!</h3>
 
       <p>Ya se generó tu currículum y está listo para
         imprimir o modificar desde LibreOffice Writer.</p>
 
       {{#if guardando}}
-        <button disabled class='btn btn-success'><i class='fa fa-refresh rotate'></i> Guardando...</button>
+        <button disabled class="btn btn-success"><i class="fa fa-refresh rotate"></i> Guardando...</button>
       {{else}}
-        <button {{action 'guardarODT'}} class='btn btn-success'><i class='fa fa-download'></i> Guardar el archivo generado</button>
+        <button {{action "guardarODT"}} class="btn btn-success"><i class="fa fa-download"></i> Guardar el archivo generado</button>
       {{/if}}
 
       <br/>

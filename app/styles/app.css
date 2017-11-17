@@ -118,10 +118,9 @@ input, textarea /*.contenteditable?*/ {
   overflow: hidden;
 }
 
-.siguiente {
-  position: fixed;
-  bottom: 67px;
-  right: 10px;
+.siguiente, .anterior {
+  float: right;
+  margin-left: 2em;
 }
 
 .contenedor-devtools {

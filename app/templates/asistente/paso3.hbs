@@ -15,11 +15,11 @@
 
     <div>
 
-      <div class='form-group'>
+      <div class="form-group">
         <label class="ember-view control-label">Estudios cursados</label>
 
         {{#each model.estudios as |estudio|}}
-          <p>{{estudio.descripcion}} en {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class='btn btn-xs btn-danger'>borrar</button></p>
+          <p>{{estudio.descripcion}} en {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class="btn btn-xs btn-danger">borrar</button></p>
         {{else}}
           <p>No hay estudios cargados</p>
         {{/each}}
@@ -27,53 +27,45 @@
       </div>
 
       {{#ember-remodal
-        openButton='+ Agregar'
+        openButton="+ Agregar"
         buttonClasses="btn btn-sm btn-success"
         forService=true
       }}
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Desde</label>
-          {{input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}
+          {{input class="ember-text-field form-control" value=mingreso placeholder="Fecha de inicio"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Hasta</label>
-          {{input class='ember-text-field form-control' value=megreso placeholder="Fecha de finalización"}}
+          {{input class="ember-text-field form-control" value=megreso placeholder="Fecha de finalización"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Institución</label>
-          {{input class='ember-text-field form-control' value=minstitucion placeholder="Nombre del establecimiento"}}
+          {{input class="ember-text-field form-control" value=minstitucion placeholder="Nombre del establecimiento"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Título</label>
-          {{input class='ember-text-field form-control' value=mdescripcion placeholder="Título o certificación obtenida"}}
+          {{input class="ember-text-field form-control" value=mdescripcion placeholder="Título o certificación obtenida"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Notas</label>
-          {{textarea class='ember-text-field form-control' value=mdetalle placeholder="Promedio, especializaciones, diplomas obtenidos u otra información relevante"}}
+          {{textarea class="ember-text-field form-control" value=mdetalle placeholder="Promedio, especializaciones, diplomas obtenidos u otra información relevante"}}
         </div>
 
         <hr/>
 
         <fieldset>
-            <button class='btn btn-success' {{action "submitForm"}}>Crear Registro</button>
+            <button class="btn btn-success" {{action "submitForm"}}>Crear Registro</button>
         </fieldset>
 
         {{/ember-remodal}}
-
     </div>
-
-    <div>
-
-    <button {{action 'avanzar' 4 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
-
   </div>
-</div>
-
 </div>
 
 {{outlet}}

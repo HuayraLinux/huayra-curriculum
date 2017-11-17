@@ -11,11 +11,11 @@
   <div class="col-md-6 col-xs-6">
      <div>
 
-      <div class='form-group'>
+      <div class="form-group">
         <label class="ember-view control-label">Experiencias</label>
 
         {{#each model.experiencias as |experiencia|}}
-          <p>{{experiencia.descripcion}} en {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}}) <button {{action "eliminar" experiencia}} class='btn btn-xs btn-danger'>borrar</button></p>
+          <p>{{experiencia.descripcion}} en {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}}) <button {{action "eliminar" experiencia}} class="btn btn-xs btn-danger">borrar</button></p>
         {{else}}
           <p>No hay experiencias cargadas</p>
         {{/each}}
@@ -24,56 +24,45 @@
 
 
       {{#ember-remodal
-        openButton='+ Agregar'
+        openButton="+ Agregar"
         buttonClasses="btn btn-sm btn-success"
         forService=true
       }}
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Desde</label>
-          {{input class='ember-text-field form-control' value=mingreso placeholder="Fecha de inicio"}}
+          {{input class="ember-text-field form-control" value=mingreso placeholder="Fecha de inicio"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Hasta</label>
-          {{input class='ember-text-field form-control' value=megreso placeholder="Fecha de egreso"}}
+          {{input class="ember-text-field form-control" value=megreso placeholder="Fecha de egreso"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Lugar de trabajo</label>
-          {{input class='ember-text-field form-control' value=mempleador placeholder="Nombre de la organización dónde te desempeñaste"}}
+          {{input class="ember-text-field form-control" value=mempleador placeholder="Nombre de la organización dónde te desempeñaste"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Puesto/función</label>
-          {{input class='ember-text-field form-control' value=mdescripcion placeholder="Nombre del puesto"}}
+          {{input class="ember-text-field form-control" value=mdescripcion placeholder="Nombre del puesto"}}
         </div>
 
-        <div class='form-group'>
+        <div class="form-group">
           <label class="ember-view control-label">Tareas realizadas</label>
-          {{textarea class='ember-text-field form-control' value=mdetalle placeholder="**BUSCAR EJEMPLOS**"}}
+          {{textarea class="ember-text-field form-control" value=mdetalle placeholder="**BUSCAR EJEMPLOS**"}}
         </div>
 
         <hr/>
 
         <fieldset>
-            <button class='btn btn-success' {{action "submitForm"}}>Crear Registro</button>
+            <button class="btn btn-success" {{action "submitForm"}}>Crear Registro</button>
         </fieldset>
 
 
       {{/ember-remodal}}
-
     </div>
-
-    <div>
-
-
-
-
-    <button {{action 'avanzar' 5 model}} class='btn btn-success siguiente' id="siguiente"><a class='fs fa-right'></a> Siguiente</button>
-
-
   </div>
-</div>
 </div>
 {{outlet}}

@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
     {numero: 1, ruta: 'asistente.paso1', nombre: 'Datos Personales 1'},
     {numero: 2, ruta: 'asistente.paso2', nombre: 'Datos Personales 2'},
     {numero: 3, ruta: 'asistente.paso3', nombre: 'Formación'},
-    {numero: 4, ruta: 'asistente.paso4', nombre: 'Experiencia'},
+    {numero: 4, ruta: 'asistente.paso4', nombre: 'Experiencia laboral'},
     {numero: 5, ruta: 'asistente.paso5', nombre: 'Intereses'},
     {numero: 6, ruta: 'asistente.paso6', nombre: 'Finalizando...'},
   ],

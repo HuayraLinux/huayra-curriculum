@@ -1,20 +1,23 @@
 <div class="row">
-
   <div class="tutorial col-md-6 col-xs-6">
     <h4>Paso 5</h4>
 
-    <p>A las personas que van a mirar tu CV les interesa saber cuáles son tus intereses y las cosas que te gustan hacer. Por ejemplo: "Me interesa leer", "Me gustan mucho los deportes en equipo", etc.</p>
+    <p>Esta sección es fundamental, especialmente cuando no se
+       tiene mucha experiencia laboral. Se trata de agregar
+       cuestiones como el dominio de idiomas, el manejo de
+       algunos programas de la PC y otras habilidades, tanto
+       manuales como físicas. Conviene incluir datos que sean
+       acordes con el puesto o con la institución en la que
+       presentes el CV.</p>
 
   </div>
 
   <div class="col-md-6 col-xs-6">
     {{#validated-form model=model as |f|}}
-      {{f.input type="label" name="intereses" label="Intereses" placeholder="Un breve texto"}}
+      {{f.input type="label" name="idiomas"     label="Idiomas"     placeholder=""}}
+      {{f.input type="label" name="habilidades" label="Habilidades" placeholder="¿Utilizás maquinarias o herramientas específicas de algún oficio, especialidad profesional o rama de actividad?"}}
+      {{f.input type="label" name="informática" label="Informática" placeholder="Detallá los sistemas, herramientas y utilitarios que manejás"}}
+      {{f.input type="label" name="otros"       label="Otros"       placeholder="Indica si tenés licencias especiales (autos, libreta sanitaria, etc.), publicaciones,  vehiculo propio/disponibilidad para viajar o cualquier otro dato relevante."}}
     {{/validated-form}}
   </div>
 </div>
-
-
-
-
-{{outlet}}

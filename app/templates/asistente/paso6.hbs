@@ -1,28 +1,31 @@
 <div class="row">
+  <div class="tutorial col-md-6 col-xs-6">
+    <h4>Paso 6</h4>
 
-  <div class="tutorial col-md-12 col-xs-12">
-    <div class="hero-unit">
-      <h3>¡Listo!</h3>
+    <p>El objetivo personal no es un dato obligatorio pero se
+       puede agregar para ordenar la lectura priorizando
+       intereses, experiencias o saberes.</p>
 
-      <p>Ya se generó tu currículum y está listo para
-        imprimir o modificar desde LibreOffice Writer.</p>
+    <p>En el objetivo podés mencionar, las ganas de aprender y
+       desarrollarte en una rama de actividad, las
+       posibilidades de viajar o de horarios, tu voluntad de
+       progresar en un área determinada, la contribución que
+       podés aportar o alguna característica que creas
+       relevante mencionar</p>
 
-      {{#if guardando}}
-        <button disabled class="btn btn-success">{{fa-icon "refresh" rotate=true}} Guardando...</button>
-      {{else}}
-        <button {{action "guardarODT"}} class="btn btn-success">{{fa-icon "download"}} Guardar el archivo generado</button>
-      {{/if}}
-
-      <br/>
-      <br/>
-
-      {{#if mensaje}}
-        <div class="alert alert-warning">
-          {{mensaje}}
-        </div>
-      {{/if}}
-
-    </div>
+    <p class="tip-vaca">¡Si tu CV no requiere de foto u
+       objetivos personales, ¡pasá directamente al próximo
+       paso!</p>
   </div>
 
+  <div class="col-md-6 col-xs-6">
+    {{#validated-form model=model as |f|}}
+      {{f.input type="textarea" name="intereses" label="Objetivo personal" placeholder=""}}
+    {{/validated-form}}
+  </div>
 </div>
+
+
+
+
+{{outlet}}

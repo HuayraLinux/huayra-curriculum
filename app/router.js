@@ -16,11 +16,11 @@ Router.map(function() {
     this.route('paso4');
     this.route('paso5');
     this.route('paso6');
+    this.route('exportar');
   });
 
   this.route('curriculum');
   this.route('acercade');
-  //this.route('detalle', {pathURL: 'detalle/:id'});
 
   this.route('detalle', {path:'/detalle/:id'});
   this.route('create');

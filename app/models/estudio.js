@@ -5,7 +5,7 @@ export default DS.Model.extend({
   egreso:      DS.attr('string'),
   institucion: DS.attr('string'),
   descripcion: DS.attr('string'),
-  notas:       DS.arrt('string'),
+  notas:       DS.attr('string'),
 
   curriculum: DS.belongsTo('curriculum', {async: true}),
 });

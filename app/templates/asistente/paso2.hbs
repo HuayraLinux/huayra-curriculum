@@ -3,25 +3,30 @@
   <div class="tutorial col-md-6 col-xs-6">
     <h4>Paso 2</h4>
 
-    <p>La dirección de <em>email</em> es muy utilizada para comunicación formal,
-       asegurate de tener una que puedas revisar con frecuencia.</p>
+    <p>La dirección de correo electrónico es muy utilizada en
+       determinados espacios laborales.</p> 
 
-    <p>La dirección de tu domicilio no es muy importante en sí, pero sirve para
-       darse una idea de la distancia al lugar de trabajo. No es obligatorio poner
-       la numeración exacta de la calle. Te recomendamos poner el barrio donde vivís.</p>
+    <p>El domicilio es un dato que sirve para dar una idea de
+       la distancia al lugar de trabajo. No es obligatorio
+       poner la numeración exacta de la calle, podés poner el
+       barrio o zona dónde vivís.</p>
 
-    <p>La descripción personal es un espacio para que te explayes y describas tus
-       capacidades a grandes rasgos y/o objetivos laborales.</p>
+    <p>No es imprescindible incluir fecha de nacimiento, DNI,
+       estado civil o hijos, excepto sea solicitada
+       expresamente.</p>
+
+    <p class="tip-vaca">Si tu e-mail no es muy formal, crea una
+      nueva casilla (con tu nombre y apellido, por ejemplo) y
+      asegurate de revisarla con frecuencia!</p>
 
   </div>
 
   <div class="col-md-6 col-xs-6">
 
     {{#validated-form model=model as |f|}}
-      {{f.input type="label" name="email"       label="Email"                     placeholder="yo@ejemplo.com"}}
-      {{f.input type="label" name="direccion"   label="Dirección de tu domicilio" placeholder="Teodoro Fels y San Martín, Ezeiza, Buenos Aires"}}
-      {{f.input type="label" name="nacimiento"  label="Fecha de nacimiento"       placeholder="DD/MM/AAAA"}}
-      {{f.input type="text"  name="descripcion" label="Descripción personal"      placeholder="Soy una persona responsable y predispuesta al trabajo en equipo. Busco desempeñarme en un puesto part-time que me permita continuar con mis estudios."}}
+      {{f.input type="label" name="email"       label="Email"                     placeholder="usuario@ejemplo.com"}}
+      {{f.input type="label" name="direccion"   label="Dirección de tu domicilio" placeholder="San Martín y Teodoro Fels, Ezeiza, Buenos Aires"}}
+      {{f.input type="label" name="nacimiento"  label="Fecha de nacimiento"       placeholder="dd/mm/aaaa"}}
     {{/validated-form}}
   </div>
 </div>

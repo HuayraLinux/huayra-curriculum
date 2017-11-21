@@ -60,9 +60,8 @@ export default Ember.Controller.extend({
 
       if(this.get('porTerminar')) {
         this.get('remodal').open('antes-de-exportar');
-      } else {
-        this.transitionToRoute(nuevaRuta);
       }
+      this.transitionToRoute(nuevaRuta);
     },
     anterior() {
       const pasoAnterior = this.get('numPasoActual') - 1;
@@ -85,7 +84,7 @@ export default Ember.Controller.extend({
     },
     exportar() {
       this.get('remodal').close('antes-de-exportar');
-      this.transitionToRoute('asistente.exportar');
+      //this.transitionToRoute('asistente.exportar');
     }
   }
 });

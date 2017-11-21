@@ -4,8 +4,7 @@ import {computed} from '@ember/object';
 
 export default Ember.Component.extend({
   remodal: service(),
-  verModal: computed('remodal', function() {
-    const remodal = this.get('remodal');
-    return remodal.open.bind(remodal);
-  })
+  verModal(...args) {
+    return this.get('remodal').open(...args);
+  }
 });

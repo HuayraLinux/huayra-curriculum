@@ -4,10 +4,19 @@
 
     <h4>Paso 3</h4>
 
-    <p>En esta sección es importante poner los detalles referidos a los estudios que realizaste. Cuándo comenzaste, cuándo finalizaste, el nombre del colegio.</p>
-    <p>En la descripción te sugerimos que pongas el nivel educativo y la orientación.</p>
-    <p>Por ejemplo: Bachillerato con orientación en Ciencias Sociales y Humanidades.</p>
-
+    <p>En esta sección enumerá los estudios cursados:
+       primarios, secundarios, terciarios, universitarios.
+       Aclará año de egreso, título obtenido y establecimiento
+       donde los realizaste. Los menos relevantes pueden
+       omitirse, por ejemplo, si estás cursando en la facultad
+       no es indispensable que menciones los estudios
+       primarios. Si sos graduado reciente o estudiante
+       avanzado y/o tenés un buen promedio, agregálo en la
+       sección de notas.</p>
+    
+    <p class="tip-vaca">¡Detallá también todos los cursos,
+       talleres, pasantías o seminarios relacionados con el
+       puesto de trabajo!</p>
   </div>
 
   <div class="col-md-6 col-xs-6">
@@ -34,12 +43,12 @@
 
         <div class="form-group">
           <label class="ember-view control-label">Desde</label>
-          {{input class="ember-text-field form-control" value=mingreso placeholder="Fecha de inicio"}}
+          {{input class="ember-text-field form-control" value=mingreso placeholder="mes/año"}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Hasta</label>
-          {{input class="ember-text-field form-control" value=megreso placeholder="Fecha de finalización"}}
+          {{input class="ember-text-field form-control" value=megreso placeholder="mes/año"}}
         </div>
 
         <div class="form-group">
@@ -54,7 +63,7 @@
 
         <div class="form-group">
           <label class="ember-view control-label">Notas</label>
-          {{textarea class="ember-text-field form-control" value=mdetalle placeholder="Promedio, especializaciones, diplomas obtenidos u otra información relevante"}}
+          {{textarea class="ember-text-field form-control" value=mdetalle placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
         </div>
 
         <hr/>
@@ -63,7 +72,7 @@
             <button class="btn btn-success" {{action "submitForm"}}>Crear Registro</button>
         </fieldset>
 
-        {{/ember-remodal}}
+      {{/ember-remodal}}
     </div>
   </div>
 </div>

@@ -84,9 +84,8 @@ export default Ember.Controller.extend({
       this.transitionToRoute(ruta);
     },
     exportar() {
-      this.get('remodal').close('antes-de-exportar').then(() => {
-        this.transitionToRoute('asistente.exportar');
-      });
+      this.get('remodal').close('antes-de-exportar');
+      this.transitionToRoute('asistente.exportar');
     }
   }
 });

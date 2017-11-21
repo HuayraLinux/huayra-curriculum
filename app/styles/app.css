@@ -246,4 +246,9 @@ input, textarea /*.contenteditable?*/ {
 }
 
 .tip-vaca {
+  border-radius: 30px;
+  background-color: #c9c9c9;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  margin: 0.5em;
+  text-align: center;
 }

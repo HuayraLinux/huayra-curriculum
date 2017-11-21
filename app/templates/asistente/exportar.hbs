@@ -4,8 +4,11 @@
     <div class="hero-unit">
       <h3>¡Listo!</h3>
 
-      <p>Ya se generó tu currículum y está listo para
-        imprimir o modificar desde LibreOffice Writer.</p>
+      <p>Ya se generó tu currículum y está listo para guardar,
+         imprimir o modificar desde LibreOffice Writer.</p>
+
+      <p>Ponele un nombre a tu archivo que facilite
+         identificarlo.</p>
 
       {{#if guardando}}
         <button disabled class="btn btn-success">{{fa-icon "refresh" rotate=true}} Guardando...</button>
@@ -21,6 +24,10 @@
           {{mensaje}}
         </div>
       {{/if}}
+
+      <p class="tip-vaca">Te recomendamos nombrarlo como
+         <em>CV_NombreyApellido.docx</em> para facilitar su
+         identificación</p>
 
     </div>
   </div>

@@ -1,20 +1,27 @@
 import DS from 'ember-data';
 
-var Curriculum = DS.Model.extend({
+const Curriculum = DS.Model.extend({
   rev: DS.attr('string'),
+  fecha: DS.attr('date'),
 
   nombre:   DS.attr('string'),
   apellido: DS.attr('string'),
+  telefono: DS.attr('string'),
 
-  direccion: DS.attr('string'),
-  telefono:  DS.attr('string'),
-  email:     DS.attr('string'),
-  fecha:     DS.attr('date'),
+  email:      DS.attr('string'),
+  direccion:  DS.attr('string'),
+  nacimiento: DS.attr('string'),
 
-  intereses: DS.attr('string'),
+  estudios: DS.hasMany('estudio'),
 
-  estudios:     DS.hasMany('estudio', {async: true, embedded: 'always'}),
-  experiencias: DS.hasMany('experiencia', {async: true, embedded: 'always'}),
+  experiencias: DS.hasMany('experiencia'),
+  
+  idiomas:     DS.attr('string'),
+  habilidades: DS.attr('string'),
+  informatica: DS.attr('string'),
+  otros:       DS.attr('string'),
+  
+  objetivo: DS.attr('string'),
 });
 
 export default Curriculum;

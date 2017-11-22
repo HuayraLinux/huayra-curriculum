@@ -10,31 +10,19 @@ export default Ember.Controller.extend({
 
   actions: {
     guardarODT: function() {
-      var ruta_destino = '/tmp/_temporal.docx';
-      var datos_template = this.get('model').serialize();
-
+      const ruta_destino = '/tmp/_temporal.docx';
+      const datos_template = this.get('model').serialize();
+      
       this.set('guardando', true);
-
-      function serializar_estudio(e) {
-        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'institucion');
+      
+      const estudios = this.get('model.estudios');
+      if (estudios.get('length') > 0) {
+        datos_template.estudios = estudios.map(e => e.serialize());
       }
 
-      datos_template.coleccion_estudios = {};
-
-      if (this.get('model.estudios').get('length') > 0) {
-        var relacionados = this.get('model.estudios').map(serializar_estudio);
-        datos_template.coleccion_estudios.estudios = relacionados;
-      }
-
-      function serializar_experiencia(e) {
-        return e.getProperties('id', 'ingreso', 'egreso', 'descripcion', 'empleador');
-      }
-
-      datos_template.coleccion_experiencias = {};
-
-      if (this.get('model.experiencias').get('length') > 0) {
-        var relacionados2 = this.get('model.experiencias').map(serializar_experiencia);
-        datos_template.coleccion_experiencias.experiencias = relacionados2;
+      const experiencias = this.get('model.experiencias');
+      if (experiencias.get('length') > 0) {
+        datos_template.experiencias = experiencias.map(e => e.serialize());
       }
 
       this.get('conversor')

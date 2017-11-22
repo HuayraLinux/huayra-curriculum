@@ -27,6 +27,7 @@ function sanitizar_parametros(parametros) {
   parametros.email = parametros.email || "";
   parametros.intereses = parametros.intereses || "";
   parametros.telefono = parametros.telefono || "";
+  parametros.idiomas = parametros.idiomas || "";
 }
 
 export default Ember.Service.extend({

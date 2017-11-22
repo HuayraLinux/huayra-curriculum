@@ -34,47 +34,43 @@
 
       </div>
 
+      <button {{action "abrirNuevaExperiencia"}}class="btn btn-sm btn-success">+Agregar</button>
 
-      {{#ember-remodal
-        openButton="+ Agregar"
-        buttonClasses="btn btn-sm btn-success"
-        forService=true
-      }}
-
+      {{#ember-remodal forService=true name="experiencia-laboral"}}
         <div class="form-group">
           <label class="ember-view control-label">Desde</label>
-          {{input class="ember-text-field form-control" value=mingreso placeholder="mm/aaaa"}}
+          {{input class="ember-text-field form-control" value=experiencia.ingreso placeholder="mm/aaaa"}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Hasta</label>
-          {{input class="ember-text-field form-control" value=megreso placeholder="mm/aaaa"}}
+          {{input class="ember-text-field form-control" value=experiencia.egreso placeholder="mm/aaaa"}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Empleador</label>
-          {{input class="ember-text-field form-control" value=mempleador placeholder="organización, institución o particular"}}
+          {{input class="ember-text-field form-control" value=experiencia.empleador placeholder="organización, institución o particular"}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Descripción del Puesto o Función</label>
-          {{input class="ember-text-field form-control" value=mdescripcion placeholder=""}}
+          {{input class="ember-text-field form-control" value=experiencia.descripcion placeholder=""}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Tareas a cargo</label>
-          {{textarea class="ember-text-field form-control" value=mdetalle placeholder=""}}
+          {{textarea class="ember-text-field form-control" value=experiencia.detalle placeholder=""}}
         </div>
 
         <div class="form-group">
           <label class="ember-view control-label">Referencias</label>
-          {{textarea class="ember-text-field form-control" value=mreferencia placeholder="Marca/nombre del empleador - contacto"}}
+          {{textarea class="ember-text-field form-control" value=experiencia.referencia placeholder="Marca/nombre del empleador - contacto"}}
         </div>
 
         <hr/>
 
         <fieldset>
-            <button class="btn btn-success" {{action "submitForm"}}>Crear Registro</button>
+            <button class="btn btn-success" {{action "guardarNuevaExperiencia" experiencia}}>Crear Registro</button>
         </fieldset>
 
 

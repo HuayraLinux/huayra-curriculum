@@ -1,40 +1,29 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  mingreso:     '',
-  megreso:      '',
-  minstitucion: '',
-  mdescripcion: '',
-  mnotas:       '',
   remodal: Ember.inject.service(),
 
   actions: {
-    eliminar: function(estudio) {
+    eliminar(estudio) {
       estudio.destroyRecord();
       this.get('model').save();
     },
 
+    abrirNuevoEstudio() {
+      this.set('estudio', {});
+      this.get('remodal').open('estudio');
+    },
+
     /* Destinadas al modal */
-    submitForm: function() {
-      var estudios = this.get('model.estudios');
-      var estudio = this.store.createRecord('estudio', {
-        ingreso:     this.get('mingreso'),
-        egreso:      this.get('megreso'),
-        institucion: this.get('minstitucion'),
-        descripcion: this.get('mdescripcion'),
-        notas:       this.get('mnotas'),
-      });
+    guardarNuevoEstudio(datos) {
+      const estudios = this.get('model.estudios');
+      const estudio = this.store.createRecord('estudio', datos);
 
       estudios.pushObject(estudio);
       estudio.save();
-      this.get('model').save();
 
-      this.set('mingreso',     '');
-      this.set('megreso',      '');
-      this.set('minstitucion', '');
-      this.set('mdescripcion', '');
-      this.set('mnotas',       '');
-      this.get('remodal').close();
+      this.get('model').save();
+      this.get('remodal').close('estudio');
     },
 
   }

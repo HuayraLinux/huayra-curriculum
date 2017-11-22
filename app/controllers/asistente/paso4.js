@@ -1,41 +1,28 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  mingreso:     '',
-  megreso:      '',
-  mempleador:   '',
-  mdescripcion: '',
-  mreferencia:  '',
   remodal: Ember.inject.service(),
 
   actions: {
-    eliminar: function(experiencia) {
+    eliminar(experiencia) {
       experiencia.destroyRecord();
       this.get('model').save();
     },
 
-    /* Destinadas al modal */
-    submitForm: function() {
+    abrirNuevaExperiencia() {
+      this.set('experiencia', {});
+      this.get('remodal').open('experiencia-laboral');
+    },
 
-      var experiencias = this.get('model.experiencias');
-      var experiencia = this.store.createRecord('experiencia', {
-        ingreso:     this.get('mingreso'),
-        egreso:      this.get('megreso'),
-        empleador:   this.get('mempleador'),
-        descripcion: this.get('mdescripcion'),
-        referencia:  this.get('mreferencia'),
-      });
+    /* Destinadas al modal */
+    guardarNuevaExperiencia(datos) {
+      const experiencias = this.get('model.experiencias');
+      const experiencia = this.store.createRecord('experiencia', datos);
 
       experiencias.pushObject(experiencia);
       experiencia.save();
       this.get('model').save();
-
-      this.set('mingreso',     '');
-      this.set('megreso',      '');
-      this.set('mempleador',   '');
-      this.set('mdescripcion', '');
-      this.set('mreferencia',  '');
-      this.get('remodal').close();
+      this.get('remodal').close('experiencia-laboral');
     },
   }
 });

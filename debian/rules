@@ -21,18 +21,11 @@ PATH := node-v4.5.0-linux-x64/bin:./node_modules/.bin:$(PATH)
 %:
 	dh $@ 
 
-override_dh_shlibdeps:
-	@echo "..."
-
-override_dh_install:
-	dh_install
+#override_dh_shlibdeps:
+#	@echo "..."
 
 override_dh_auto_configure:
-	wget http://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.xz
-	tar xf node-v4.5.0-linux-x64.tar.xz
-	npm install bower --save
-	node -v
-	npm -v
-	make actualizar
-	make build
+	npm install bower
+	npm install
+	nodejs node_modules/.bin/emberjs build
 	dh_auto_configure

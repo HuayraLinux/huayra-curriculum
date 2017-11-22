@@ -1,8 +1,19 @@
 <div class="row">
-  <div class="tutorial col-md-6 col-xs-6">
+  <h1 class="seccion"><img src="assets/imagenes/ed.png"></h1>
+  <div class="datos">
+    <div class="form-group">
+      <label class="ember-view control-label">Estudios cursados</label>
 
-    <h4>Paso 3</h4>
+      {{#each model.estudios as |estudio|}}
+        <p>{{estudio.descripcion}} - {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class="btn btn-xs btn-danger">borrar</button></p>
+      {{else}}
+        <p>No hay estudios cargados</p>
+      {{/each}}
+    </div>
+    <button {{action "abrirNuevoEstudio"}} class="btn btn-sm btn-success">+Agregar</button>
+  </div>
 
+  <div class="tutorial">
     <p>En esta sección enumerá los estudios cursados:
        primarios, secundarios, terciarios, universitarios.
        Aclará año de egreso, título obtenido y establecimiento
@@ -13,63 +24,43 @@
        avanzado y/o tenés un buen promedio, agregálo en la
        sección de notas.</p>
     
-    <p class="tip-vaca">¡Detallá también todos los cursos,
+    <p class="tip-vaca"><div class="tip-vaca image" ></div>¡Detallá también todos los cursos,
        talleres, pasantías o seminarios relacionados con el
        puesto de trabajo!</p>
   </div>
-
-  <div class="col-md-6 col-xs-6">
-
-
-    <div>
-
-      <div class="form-group">
-        <label class="ember-view control-label">Estudios cursados</label>
-
-        {{#each model.estudios as |estudio|}}
-          <p>{{estudio.descripcion}} - {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}}) <button {{action "eliminar" estudio}} class="btn btn-xs btn-danger">borrar</button></p>
-        {{else}}
-          <p>No hay estudios cargados</p>
-        {{/each}}
-
-      </div>
-      <button {{action "abrirNuevoEstudio"}} class="btn btn-sm btn-success">+Agregar</button>
-
-      {{#ember-remodal forService=true name="estudio"}}
-        <div class="form-group">
-          <label class="ember-view control-label">Desde</label>
-          {{input class="ember-text-field form-control" value=estudio.ingreso placeholder="mes/año"}}
-        </div>
-
-        <div class="form-group">
-          <label class="ember-view control-label">Hasta</label>
-          {{input class="ember-text-field form-control" value=estudio.egreso placeholder="mes/año"}}
-        </div>
-
-        <div class="form-group">
-          <label class="ember-view control-label">Institución</label>
-          {{input class="ember-text-field form-control" value=estudio.institucion placeholder="Nombre del establecimiento"}}
-        </div>
-
-        <div class="form-group">
-          <label class="ember-view control-label">Título</label>
-          {{input class="ember-text-field form-control" value=estudio.descripcion placeholder="Título o certificación obtenida"}}
-        </div>
-
-        <div class="form-group">
-          <label class="ember-view control-label">Notas</label>
-          {{textarea class="ember-text-field form-control" value=estudio.notas placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
-        </div>
-
-        <hr/>
-
-        <fieldset>
-            <button class="btn btn-success" {{action "guardarNuevoEstudio" estudio}}>Crear Registro</button>
-        </fieldset>
-
-      {{/ember-remodal}}
-    </div>
-  </div>
 </div>
+
+{{#ember-remodal forService=true name="estudio"}}
+  <div class="form-group">
+    <label class="ember-view control-label">Desde</label>
+    {{input class="ember-text-field form-control" value=estudio.ingreso placeholder="mes/año"}}
+  </div>
+
+  <div class="form-group">
+    <label class="ember-view control-label">Hasta</label>
+    {{input class="ember-text-field form-control" value=estudio.egreso placeholder="mes/año"}}
+  </div>
+
+  <div class="form-group">
+    <label class="ember-view control-label">Institución</label>
+    {{input class="ember-text-field form-control" value=estudio.institucion placeholder="Nombre del establecimiento"}}
+  </div>
+
+  <div class="form-group">
+    <label class="ember-view control-label">Título</label>
+    {{input class="ember-text-field form-control" value=estudio.descripcion placeholder="Título o certificación obtenida"}}
+  </div>
+
+  <div class="form-group">
+    <label class="ember-view control-label">Notas</label>
+    {{textarea class="ember-text-field form-control" value=estudio.notas placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
+  </div>
+
+  <hr/>
+
+  <fieldset>
+      <button class="btn btn-success" {{action "guardarNuevoEstudio" estudio}}>Crear Registro</button>
+  </fieldset>
+{{/ember-remodal}}
 
 {{outlet}}

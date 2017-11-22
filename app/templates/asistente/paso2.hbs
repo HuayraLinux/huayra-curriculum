@@ -1,7 +1,14 @@
 <div class="row">
-  <div class="tutorial col-md-6 col-xs-6">
-    <h4>Paso 2</h4>
+  <h1 class="seccion"><img src="assets/imagenes/dp-2.png"></h1>
+  <div class="datos">
+    {{#validated-form model=model as |f|}}
+      {{f.input type="label" name="email"       label="Tu email"	placeholder="usuario@ejemplo.com"}}
+      {{f.input type="label" name="direccion"   label="Tu domicilio"	placeholder="San Martín y Teodoro Fels"}}
+      {{f.input type="label" name="nacimiento"  label="Fecha de nacimiento"	placeholder="dd/mm/aaaa"}}
+    {{/validated-form}}
+  </div>
 
+  <div class="tutorial">
     <p>La dirección de correo electrónico es muy utilizada en
        determinados espacios laborales.</p> 
 
@@ -14,19 +21,11 @@
        estado civil o hijos, excepto sea solicitada
        expresamente.</p>
 
-    <p class="tip-vaca">Si tu e-mail no es muy formal, crea una
+    <p class="tip-vaca"><div class="tip-vaca image" ></div>Si tu e-mail no es muy formal, crea una
       nueva casilla (con tu nombre y apellido, por ejemplo) y
       asegurate de revisarla con frecuencia!</p>
 
   </div>
-
-  <div class="col-md-6 col-xs-6">
-
-    {{#validated-form model=model as |f|}}
-      {{f.input type="label" name="email"       label="Email"                     placeholder="usuario@ejemplo.com"}}
-      {{f.input type="label" name="direccion"   label="Dirección de tu domicilio" placeholder="San Martín y Teodoro Fels, Ezeiza, Buenos Aires"}}
-      {{f.input type="label" name="nacimiento"  label="Fecha de nacimiento"       placeholder="dd/mm/aaaa"}}
-    {{/validated-form}}
-  </div>
 </div>
+
 {{outlet}}

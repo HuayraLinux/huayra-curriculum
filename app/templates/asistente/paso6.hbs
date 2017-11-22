@@ -1,7 +1,12 @@
 <div class="row">
-  <div class="tutorial col-md-6 col-xs-6">
-    <h4>Paso 6</h4>
+  <h1 class="seccion"><img src="assets/imagenes/op.png"></h1>
+  <div class="datos">
+    {{#validated-form model=model as |f|}}
+      {{f.input type="textarea" id="inter" name="objetivo" label="Objetivo personal" placeholder=""}}
+    {{/validated-form}}
+  </div>
 
+  <div class="tutorial">
     <p>El objetivo personal no es un dato obligatorio pero se
        puede agregar para ordenar la lectura priorizando
        intereses, experiencias o saberes.</p>
@@ -13,19 +18,10 @@
        podés aportar o alguna característica que creas
        relevante mencionar</p>
 
-    <p class="tip-vaca">¡Si tu CV no requiere de foto u
+    <p class="tip-vaca"><div class="tip-vaca image" ></div>¡Si tu CV no requiere de foto u
        objetivos personales, ¡pasá directamente al próximo
        paso!</p>
   </div>
-
-  <div class="col-md-6 col-xs-6">
-    {{#validated-form model=model as |f|}}
-      {{f.input type="textarea" name="objetivo" label="Objetivo personal" placeholder=""}}
-    {{/validated-form}}
-  </div>
 </div>
-
-
-
 
 {{outlet}}

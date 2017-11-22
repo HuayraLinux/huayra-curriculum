@@ -1,6 +1,18 @@
 <div class="row">
-  <div class="tutorial col-md-6 col-xs-6">
-    <h4>Paso 5</h4>
+
+    <h1 class="seccion"><img src="assets/imagenes/dc.png"></h1>
+  <div class="datos">
+    {{#validated-form model=model as |f|}}
+      {{f.input type="textarea" name="idiomas"     label="Idiomas"     placeholder=""}}
+      {{f.input type="textarea" name="habilidades" label="Habilidades" placeholder="¿Utilizás maquinarias o herramientas específicas de algún oficio, especialidad profesional o rama de actividad?"}}
+      {{f.input type="textarea" name="informática" label="Informática" placeholder="Detallá los sistemas, herramientas y utilitarios que manejás"}}
+      {{f.input type="textarea" name="otros"       label="Otros"       placeholder="Indica si tenés licencias especiales (autos, libreta sanitaria, etc.), publicaciones,  vehiculo propio/disponibilidad para viajar o cualquier otro dato relevante."}}
+    {{/validated-form}}
+  </div>
+
+
+  <div class="tutorial">
+
 
     <p>Esta sección es fundamental, especialmente cuando no se
        tiene mucha experiencia laboral. Se trata de agregar
@@ -12,12 +24,4 @@
 
   </div>
 
-  <div class="col-md-6 col-xs-6">
-    {{#validated-form model=model as |f|}}
-      {{f.input type="label" name="idiomas"     label="Idiomas"     placeholder=""}}
-      {{f.input type="label" name="habilidades" label="Habilidades" placeholder="¿Utilizás maquinarias o herramientas específicas de algún oficio, especialidad profesional o rama de actividad?"}}
-      {{f.input type="label" name="informática" label="Informática" placeholder="Detallá los sistemas, herramientas y utilitarios que manejás"}}
-      {{f.input type="label" name="otros"       label="Otros"       placeholder="Indica si tenés licencias especiales (autos, libreta sanitaria, etc.), publicaciones,  vehiculo propio/disponibilidad para viajar o cualquier otro dato relevante."}}
-    {{/validated-form}}
-  </div>
 </div>

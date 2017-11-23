@@ -1,7 +1,5 @@
-{{#if seleccionado}}
-  <button type="button" class="btn btn-primary btn-circle">{{paso.numero}}</button>
-{{else}}
-  <button type="button" {{action sendAction 'cambiar-paso' paso}} class="btn btn-default btn-circle-small">{{paso.numero}}</button>
-{{/if}}
-
+<button type="button" {{action sendAction 'cambiar-paso' paso}}
+	class="btn {{if seleccionado "btn-primary btn-circle" "btn-default btn-circle-small"}}">
+	  {{paso.numero}}
+</button>
 <p>{{paso.nombre}}</p>

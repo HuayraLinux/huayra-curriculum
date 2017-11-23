@@ -55,12 +55,15 @@ div.final {
 	width: 80%;
 	margin: auto;
 	padding: 10px;
+	position: relative;
+	min-height: 280px;
 }
 
 
 div.tutorial {
 	background-color: #d2ffbb;  /* verde agua */
 	border-radius: 8px;
+	top:-20px;
 	width: 50%;
 	float: right;
 	margin-right: 8px;
@@ -68,18 +71,21 @@ div.tutorial {
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
+	min-height: 330px;
+	position:relative;
 }
 
 
 div.datos {
 	position: relative;
+	top:-20px;
 	left:20px;
 	color: white;
 	background-color: #8eb54f; /* verde musgo */
 	border-radius: 8px;
 	float: left;
 	width: 45%;
-	min-height: 300px;
+	min-height: 330px;
 	padding: 8px;
 	border-style: solid;
 	border-color: black;
@@ -246,15 +252,16 @@ textarea#inter-input-objetivo {
 }
 
 .stepwizard-row:before {
-  top: 14px;
-  bottom: 0;
+  top: 24px;
+  left: 0;
+  bottom: 0px;
   position: absolute;
   content: " ";
   width: 100%;
-  height: 1px;
+  height: 8px;
   background-color: #ccc;
-  z-order: 0;
-
+  z-index: 0;
+ 
 }
 
 .stepwizard-step {
@@ -264,6 +271,25 @@ textarea#inter-input-objetivo {
 }
 
 .btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 25px;
+}
+
+.btn-primary {
+	background-color: #e2bb1f;
+	background-image: none;
+	font-size: 1.4em;
+	font-weight: bold;
+
+}
+
+
+.btn-circle-small {
   width: 30px;
   height: 30px;
   text-align: center;
@@ -272,7 +298,6 @@ textarea#inter-input-objetivo {
   line-height: 1.428571429;
   border-radius: 15px;
 }
-
 
 /* Pasteado desde huayra-presentacion */
 .box {
@@ -323,8 +348,7 @@ textarea#inter-input-objetivo {
 
 p.tip-vaca {
 
-	color: black;
-	font-family: sans-serif;
+	color: #293d50;
 
 }
 .tip-vaca {
@@ -335,6 +359,8 @@ p.tip-vaca {
 	margin: 15px;
 	border-style: solid;
 	border-width: 1px;
+	position: absolute;
+	bottom: 0px;
 
 }
 

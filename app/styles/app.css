@@ -4,6 +4,10 @@ html, body {
   padding-top: 10px;
 }
 
+.form-group p {
+	margin:0 0 1em 1em;
+}
+
 .zoom-label {
   width: 40px;
   text-align: center;
@@ -45,7 +49,6 @@ h1.seccion {
 }
 
 label {
-	margin-left: 10px;
 	margin-top: 5px;
 }
 
@@ -299,6 +302,16 @@ textarea#inter-input-objetivo {
   border-radius: 15px;
 }
 
+.btn-danger {
+	background-image: url("imagenes/delete.png");
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	box-shadow: none;
+	margin-left: 6px;
+	
+}
+
 /* Pasteado desde huayra-presentacion */
 .box {
   border-radius: 3px;
@@ -361,6 +374,7 @@ p.tip-vaca {
 	border-width: 1px;
 	position: absolute;
 	bottom: 0px;
+	left: 0px;	
 
 }
 

@@ -314,6 +314,7 @@ textarea#inter-input-objetivo {
   line-height: 0.428571429;
   border-radius: 18px;
   box-shadow: none;
+  transition-duration: 0.2s;
 }
 
 .btn-primary {

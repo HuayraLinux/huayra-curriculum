@@ -18,17 +18,29 @@ html, body {
   cursor: pointer;
 }
 
-input {
+input, .form-group input, .form-group textarea{
 	border: 1px solid rgb(226, 226, 226) !important;
-/*  padding: 6px !important; */
+	padding: 6px !important;
 
 /*  border-bottom: 0 !important; */
 	float: right;
 	width: 100%;
 	text-align: right;
-	color: #2d312d;
-	border-radius: 6px;
-	box-shadow: 1px 1px 5px #a0a0a0 inset;
+	color: #2d312d !important;
+	border-radius: 6px !important;
+	box-shadow: 1px 1px 5px #a0a0a0 inset !important; 
+}
+
+.form-group input {
+	font-size: 10pt !important;
+	height: 30px;
+	
+}
+
+.form-group textarea, .form-group textarea:focus {
+	font-size: 10pt !important;
+	height: 80px;
+	resize: none;
 }
 
 .version {
@@ -54,6 +66,13 @@ label {
 	margin-top: 5px;
 }
 
+.form-group label {
+	display: inherit;
+	text-align: left;
+	margin-left: 10px;
+}
+
+
 div.final {
 	background-color: #d2ffbb;  /* verde agua */
 	border-radius: 8px;
@@ -64,6 +83,27 @@ div.final {
 	min-height: 280px;
 }
 
+div.abrir {
+	padding: 30px;
+	width: 80%;
+	margin: auto;
+}
+
+.abrir p {
+	font-size: 15px;
+	line-height:1.16em;
+}
+
+div.inicio {
+/*	background-color: #d2ffbb;  /* verde agua */
+	border-radius: 8px;
+	width: 80%;
+	margin: auto;
+	padding: 0px 8px 8px 8px;
+	position: relative;
+	min-height: 280px;
+	min-width: 250px
+}
 
 div.tutorial {
 /*	background-color: #d2ffbb;   verde agua */
@@ -164,7 +204,7 @@ input, textarea /*.contenteditable?*/ {
   user-select:text;
 }
 
-textarea, textarea:focus {
+.datos textarea, .datos textarea:focus {
 	position: relative;
 	left: 9px;
 	padding-left: 10px;
@@ -235,6 +275,22 @@ textarea#inter-input-objetivo {
 
 
 .ember-remodal {
+}
+/* Lista de curriculums */
+
+table.lista-cvs  {
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c1c1c1;
+	box-shadow: 2px 5px 12px #bdbdbd;
+}
+
+th {
+	text-align: center;
+	background-color: #c1c1c1;
+	color: white;
+	padding: 6px;
 }
 
 /* Botoncitos del wizard
@@ -371,7 +427,7 @@ textarea#inter-input-objetivo {
 /* Pasteado desde huayra-presentacion */
 .box {
   border-radius: 3px;
-  padding: 10px 25px;
+  padding: 0px 25px 10px;
   text-align: right;
   display: block;
   margin-top: 90px;
@@ -428,7 +484,7 @@ p.tip-vaca {
 	margin: 15px;
 	border-style: solid;
 	border-width: 1px;
-	position: absolute;
+	position: relative;
 	bottom: 0px;
 	left: 0px;	
 
@@ -440,7 +496,7 @@ p.tip-vaca {
 	background-color: transparent;
 	border: none;
 	position: relative;
-	top:0px;
+	top:-10px;
 	left: 0px;
 	background-size: 70px 70px;
 	background-repeat: no-repeat;
@@ -448,6 +504,13 @@ p.tip-vaca {
 	height: 70px;
 	margin: 0px;
 }
+
+.alert-warning {
+	background-color: #ff4646;
+	margin-bottom: 15px;
+
+}
+
 
 .stepwizard-step button {
 	transition: all .4s;

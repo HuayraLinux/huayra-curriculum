@@ -31,14 +31,22 @@
 </div>
 
 {{#ember-remodal forService=true name="estudio"}}
-<!--
+
   {{#validated-form model=estudio as |f|}}
+
+<h1 class="seccion"><img src="assets/imagenes/ed.png"></h1>
+<div class="form-group">
+
     {{f.input type="label" name="ingreso"     label="Desde"       placeholder="mm/aa"}}
     {{f.input type="label" name="egreso"      label="Hasta"       placeholder="mm/aa"}}
     {{f.input type="label" name="institucion" label="Institucion" placeholder="Nombre del establecimiento"}}
     {{f.input type="label" name="descripcion" label="Título"      placeholder="Título o certificación obtenida"}}
--->
-<h1 class="seccion"><img src="assets/imagenes/ed.png"></h1>
+
+</div>
+
+<!--
+
+
   <div class="form-group">
     <label class="ember-view control-label">Desde</label>
     {{input class="form-control" value=estudio.ingreso placeholder="mes/año"}}
@@ -55,15 +63,18 @@
     <label class="ember-view control-label">Título</label>
     {{input class="ember-text-field form-control" value=estudio.descripcion placeholder="Título o certificación obtenida"}}
   </div>
->>>>>>> Stashed changes
+-->
 
+  <div class="form-group">
     {{f.input type="textarea" name="notas" label="Notas" placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
+	</div>
+{{/validated-form}}
 
   
 <!--  <fieldset>-->
       <button class="btn btn-success" {{action "guardarNuevoEstudio" estudio}}>Crear Registro</button>
 <!--  </fieldset>-->
->>>>>>> Stashed changes
+
 {{/ember-remodal}}
 
 {{outlet}}

@@ -34,6 +34,7 @@ input, .form-group input, .form-group textarea{
 .form-group input {
 	font-size: 10pt !important;
 	height: 30px;
+	outline: none;
 	
 }
 
@@ -41,6 +42,8 @@ input, .form-group input, .form-group textarea{
 	font-size: 10pt !important;
 	height: 80px;
 	resize: none;
+	outline: none;
+	margin-bottom: 5px;
 }
 
 .version {

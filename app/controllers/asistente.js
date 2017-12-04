@@ -50,6 +50,7 @@ export default Ember.Controller.extend({
 
   actions: {
     guardar: function() {
+      this.set('model.fecha', new Date());
       this.get('model').save();
       this.transitionToRoute('presentacion');
     },

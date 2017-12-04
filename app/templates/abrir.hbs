@@ -10,18 +10,16 @@
     {{#if model}}
     <table class="table lista-cvs">
       <thead>
-        <th> Nombre </th>
-        <th> Apellido </th>
-        <th> Fecha </th>
-        <th> Acciones </th>
+        <th>Nombre</th>
+        <th>Última modificación</th>
+        <th></th>
       </thead>
 
       <tbody>
         {{#each model as |c|}}
           <tr>
-            <td> {{c.nombre}} </td>
-            <td> {{c.apellido}} </td>
-            <td> {{moment-from-now date c.fecha}} </td>
+            <td>{{c.apellido}}, {{c.nombre}}</td>
+            <td>{{moment-from-now c.fecha}}</td>
             <td>
               <button {{action "abrir" c}} class="btn btn-success">Abrir</button>
               <button {{action "borrar" c.id}} class="btn btn-danger">Borrar</button>

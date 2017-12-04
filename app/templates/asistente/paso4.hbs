@@ -7,13 +7,15 @@
       <label class="ember-view control-label">Experiencias laborales</label>
 
       {{#each model.experiencias as |experiencia|}}
-        <p>{{experiencia.descripcion}} - {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}}) <button {{action "eliminar" experiencia}} class="btn btn-xs btn-danger">""</button></p>
+        <p>{{experiencia.descripcion}} - {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}})
+           <button {{action "eliminar" experiencia}} class="btn btn-xs btn-danger">""</button>
+           <button {{action "abrir" experiencia}} class="btn btn-xs btn-info">Editar</button></p>
       {{else}}
         <p>No hay experiencias cargadas</p>
       {{/each}}
     </div>
 
-    <button {{action "abrirNuevaExperiencia"}} class="btn btn-sm btn-success">+Agregar</button>
+    <button {{action "abrir"}} class="btn btn-sm btn-success">+Agregar</button>
   </div>
 
   <div class="tutorial">
@@ -36,41 +38,21 @@
 </div>
 
 {{#ember-remodal forService=true name="experiencia-laboral"}}
+  {{#validated-form model     = experiencia
+                    on-submit = (action "guardar")
+                    as |f|}}
+    <h1 class="seccion"><img src="assets/imagenes/el.png"></h1>
+    <div class="form-group">
+      {{f.input type="label" name="ingreso"       label="Desde"     placeholder="mm/aa"}}
+      {{f.input type="label" name="egreso"        label="Hasta"     placeholder="mm/aa"}}
+      {{f.input type="label" name="empleador"     label="Empleador" placeholder="organización, institución o particular"}}
+      {{f.input type="label" name="descripcion"   label="Descripción del Puesto o Función" placeholder=""}}
+      {{f.input type="textarea" name="detalle"    label="Tareas a cargo" placeholder=""}}
+      {{f.input type="textarea" name="referencia" label="Referencias"    placeholder="Marca/nombre del empleador - contacto"}}
 
-  {{#validated-form model=experiencia as |f|}}
-<h1 class="seccion"><img src="assets/imagenes/el.png"></h1>
-  <div class="form-group">
-    {{f.input type="label" name="ingreso"     label="Desde"     placeholder="mm/aa"}}
-    {{f.input type="label" name="egreso"      label="Hasta"     placeholder="mm/aa"}}
-    {{f.input type="label" name="empleador"   label="Empleador" placeholder="organización, institución o particular"}}
-    {{f.input type="label" name="descripcion" label="Descripción del Puesto o Función" placeholder=""}}
-
-
-<!--
-    <label class="ember-view control-label">Desde</label>
-    {{input class="ember-text-field form-control" value=experiencia.ingreso placeholder="mm/aaaa"}}
-  </div>
-
-  <div class="form-group">
-    <label class="ember-view control-label">Hasta</label>
-    {{input class="ember-text-field form-control" value=experiencia.egreso placeholder="mm/aaaa"}}
-  </div>
-
-  <div class="form-group">
-    <label class="ember-view control-label">Empleador</label>
-    {{input class="ember-text-field form-control" value=experiencia.empleador placeholder="organización, institución o particular"}}
-  </div>
--->
-    {{f.input type="textarea" name="detalle"    label="Tareas a cargo" placeholder=""}}
-    {{f.input type="textarea" name="referencia" label="Referencias" placeholder="Marca/nombre del empleador - contacto"}}
-
-</div>
-
-{{/validated-form}}
-<!--  <fieldset> -->
-      <button class="btn btn-success" {{action "guardarNuevaExperiencia" experiencia}}>Crear Registro</button>
-<!--  </fieldset> -->
-
+      {{f.submit class="btn btn-success" label=(if editando "Guardar registro" "Crear registro")}}
+    </div>
+  {{/validated-form}}
 {{/ember-remodal}}
 
 {{outlet}}

@@ -1,11 +1,12 @@
 import Ember from 'ember';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 import Estudio from 'huayra-curriculum/models/estudio';
 import Changeset from 'ember-changeset';
 
 export default Ember.Controller.extend({
-  remodal: Ember.inject.service(),
-  editando: computed('estudio', function() {
+  remodal: service(),
+  editando: computed('estudio', function () {
     /* TODO: encontrar una forma mejor de hacer esto, así es muy hacky */
     return this.get('estudio._content') instanceof Estudio;
   }),
@@ -18,12 +19,12 @@ export default Ember.Controller.extend({
 
     abrir(estudio = {}) {
       this.set('estudio', new Changeset(estudio));
-      this.get('remodal').open('estudio');
+      this.transitionToRoute('asistente.paso3.formulario');
     },
 
     /* Destinadas al modal */
     guardar(estudio) {
-      if(!this.get('editando')) {
+      if (!this.get('editando')) {
         const estudios = this.get('model.estudios');
         estudio = this.store.createRecord('estudio', estudio);
         estudios.pushObject(estudio);

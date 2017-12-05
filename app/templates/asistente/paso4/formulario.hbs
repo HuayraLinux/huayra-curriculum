@@ -1,0 +1,18 @@
+{{#ember-remodal onClose=(action transitionToRoute 'asistente.paso4')
+                 forService=true name="experiencia-laboral"}}
+  {{#validated-form model     = experiencia
+                    on-submit = (action "guardar")
+                    as |f|}}
+    <h1 class="seccion"><img src="assets/imagenes/el.png"></h1>
+    <div class="form-group">
+      {{f.input type="label" name="ingreso"       label="Desde"     placeholder="mm/aa"}}
+      {{f.input type="label" name="egreso"        label="Hasta"     placeholder="mm/aa"}}
+      {{f.input type="label" name="empleador"     label="Empleador" placeholder="organización, institución o particular"}}
+      {{f.input type="label" name="descripcion"   label="Descripción del Puesto o Función" placeholder=""}}
+      {{f.input type="textarea" name="detalle"    label="Tareas a cargo" placeholder=""}}
+      {{f.input type="textarea" name="referencia" label="Referencias"    placeholder="Marca/nombre del empleador - contacto"}}
+
+      {{f.submit class="btn btn-success" label=(if editando "Guardar registro" "Crear registro")}}
+    </div>
+  {{/validated-form}}
+{{/ember-remodal}}

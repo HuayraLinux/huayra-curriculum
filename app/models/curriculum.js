@@ -22,6 +22,12 @@ const Curriculum = DS.Model.extend({
   otros:       DS.attr('string'),
   
   objetivo: DS.attr('string'),
+
+  save() {
+    /* Cambiar poner la fecha del momento en el que lo guardo */
+    this.set('fecha', new Date());
+    this._super(...arguments);
+  }
 });
 
 export default Curriculum;

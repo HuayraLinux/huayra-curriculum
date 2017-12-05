@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
     const pasos = this.get('pasos');
     const rutaActual = this.get('rutaActual');
 
-    return pasos.findIndex(paso => paso.ruta === rutaActual);
+    return pasos.findIndex(paso => rutaActual.search(paso.ruta) === 0);
   }),
 
   noHayAnterior: equal('numPasoActual', 0),
@@ -50,7 +50,6 @@ export default Ember.Controller.extend({
 
   actions: {
     guardar: function() {
-      this.set('model.fecha', new Date());
       this.get('model').save();
       this.transitionToRoute('presentacion');
     },

@@ -26,27 +26,10 @@
        avanzado y/o tenés un buen promedio, agregálo en la
        sección de notas.</p>
 
-    <p class="tip-vaca"><div class="tip-vaca image" ></div>    ¡Detallá también todos los cursos,
-       talleres, pasantías o seminarios relacionados con el
-       puesto de trabajo!</p>
+    <p class="tip-vaca"><div class="tip-vaca image" ></div>
+       ¡Detallá también todos los cursos, talleres, pasantías o
+       seminarios relacionados con el puesto de trabajo!</p>
   </div>
 </div>
-
-{{#ember-remodal forService=true name="estudio"}}
-  {{#validated-form model     = estudio
-                    on-submit = (action "guardar")
-                    as |f|}}
-    <h1 class="seccion"><img src="assets/imagenes/ed.png"></h1>
-    <div class="form-group">
-      {{f.input type="label" name="ingreso"     label="Desde"       placeholder="mm/aa"}}
-      {{f.input type="label" name="egreso"      label="Hasta"       placeholder="mm/aa"}}
-      {{f.input type="label" name="institucion" label="Institucion" placeholder="Nombre del establecimiento"}}
-      {{f.input type="label" name="descripcion" label="Título"      placeholder="Título o certificación obtenida"}}
-      {{f.input type="textarea" name="notas"    label="Notas"       placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
-      
-      {{f.submit class="btn btn-success" label=(if editando "Guardar registro" "Crear registro")}}
-    </div>
-  {{/validated-form}}
-{{/ember-remodal}}
 
 {{outlet}}

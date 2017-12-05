@@ -9,13 +9,13 @@ export const pasos = [
 ];
 export const plantillas = [
   {
-    nombre: 'Inserte nombre de fantasía aquí',
+    nombre: 'Plantilla fea para probar cosas',
     imagen: 'plantillas/plantilla1.png',
-    plantilla: 'plantillas/cv1.docx'
+    plantilla: 'plantillas/cv.docx'
   },
   {
     nombre: 'Inserte nombre de fantasía aquí',
-    imagen: 'plantillas/plantilla1.png',
+    imagen: 'plantillas/plantilla2.png',
     plantilla: 'plantillas/cv2.docx'
   }
 ];

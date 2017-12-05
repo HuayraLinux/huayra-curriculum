@@ -36,8 +36,11 @@ export default Ember.Controller.extend({
         }
         return datos_template;
       }).then(datos_template => {
-        return this.get('conversor')
-          .ejecutar('plantillas/cv2.docx', datos_template, ruta_destino)
+        return this.get('conversor').ejecutar(
+          this.get('plantilla.plantilla'),
+          datos_template,
+          ruta_destino
+        );
       }).then((ruta_seleccionada) => {
         this.set('mensaje', "Se ha generado el archivo " + ruta_seleccionada);
         this.set('guardando', false);

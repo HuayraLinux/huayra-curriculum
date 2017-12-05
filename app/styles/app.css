@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   padding-top: 10px;
+  overflow: hidden;
 }
 
 .form-group p {
@@ -101,6 +102,7 @@ div.abrir {
 	line-height:1.16em;
 }
 
+
 div.inicio {
 /*	background-color: #d2ffbb;  /* verde agua */
 	border-radius: 8px;
@@ -130,13 +132,15 @@ div.tutorial {
 
 div.datos {
 	position: relative;
-	top:-20px;
+	top:-30px;
 	left:20px;
 	color: #171717;
 	background-color: #eaeae1; /* verde musgo */
 	border-radius: 1px;
 	float: left;
 	width: 45%;
+	height: 360px;
+	overflow-y: overlay;
 	min-height: 330px;
 	padding: 8px;
 	border-style: solid;

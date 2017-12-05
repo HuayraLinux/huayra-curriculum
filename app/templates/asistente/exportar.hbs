@@ -1,6 +1,7 @@
 <div class="row">
   <h1 class="seccion"><img src="assets/imagenes/li.png"></h1>
   <div class="final">
+    {{huayra-selector-plantilla onSelect=(action (mut plantilla)) seleccionada=plantilla}}
     <div class="hero-unit">
       <p>Ya se generó tu currículum y está listo para guardar,
          imprimir o modificar desde LibreOffice Writer.</p>
@@ -22,10 +23,10 @@
           {{mensaje}}
         </div>
       {{/if}}
-<div>
-      <p class="tip-vaca"><div class="tip-vaca image" ></div>Te recomendamos nombrarlo como
-         <em>CV_NombreyApellido.docx</em> para facilitar su
-         identificación</p></div>
+
+      <p class="tip-vaca"><div class="tip-vaca image" ></div>
+         Te recomendamos nombrarlo como <em>CV_NombreyApellido.docx</em>
+         para facilitar su identificación</p>
     </div>
   </div>
 </div>

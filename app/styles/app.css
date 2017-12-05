@@ -519,10 +519,45 @@ p.tip-vaca {
 .alert-warning {
 	background-color: #ff4646;
 	margin-bottom: 15px;
-
 }
-
 
 .stepwizard-step button {
 	transition: all .4s;
+}
+
+.lista-plantillas {
+	text-align: center;
+}
+.plantilla {
+	display: inline-block;
+	width: 200px;
+	height: 270px;
+	background-color: #293d50;
+	border-radius: 15px;
+	padding: 0em 1em;
+	margin-right: 15px;
+	transition: box-shadow 0.2s;
+	transition: background-color 0.2s;
+	box-shadow: 0 0 0px 0px #59acfa;
+}
+.plantilla:not(.seleccionada):hover {
+	box-shadow: 0 0 20px 5px #59acfa;
+	background-color: #1f5a92;
+}
+.plantilla.seleccionada {
+	box-shadow: 0 0 20px 5px #59acfa;
+	background-color: #00376b;
+}
+.plantilla.seleccionada:hover {
+	box-shadow: 0 0 20px 5px #59acfa;
+	background-color: #3c78b1;
+}
+.plantilla h6 {
+	text-align: center;
+	color: #bdbdbd;
+}
+.plantilla > img {
+	display: block;
+	margin: auto;
+	height: 200px;
 }

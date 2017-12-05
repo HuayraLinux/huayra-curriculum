@@ -26,7 +26,7 @@ const Curriculum = DS.Model.extend({
   save() {
     /* Cambiar poner la fecha del momento en el que lo guardo */
     this.set('fecha', new Date());
-    this._super(...arguments);
+    return this._super(...arguments);
   }
 });
 

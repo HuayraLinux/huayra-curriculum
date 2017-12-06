@@ -57,10 +57,11 @@ input {
   top: 10px;
 }
 
-.tutorial p {
+.tutorial, .tutorial-plantilla p {
 	font-size: 15px;
 	line-height:1.16em;
 }
+
 
 h1.seccion {
 	font-size: 40px;
@@ -114,7 +115,7 @@ div.inicio {
 	min-width: 250px
 }
 
-div.tutorial {
+div.tutorial, div.tutorial.plantilla {
 /*	background-color: #d2ffbb;   verde agua */
 	border-radius: 8px;
 	top:-20px;
@@ -129,8 +130,18 @@ div.tutorial {
 	position:relative;
 }
 
+div.tutorial-plantilla {
+	position:relative;
+	display: flex;
+	top:0px;
+	width: 80%;
+	height: 50px;
+	margin: auto;
 
-div.datos {
+}
+
+
+div.datos, div.plantillas {
 	position: relative;
 	top:-30px;
 	left:20px;
@@ -149,6 +160,12 @@ div.datos {
 	box-shadow: 4px 2px 10px #808080;
 }
 
+div.plantillas {
+	width: 95%;
+	height: 220px;
+	padding: 15px;
+	overflow-x: overlay;
+}
 
 .botones {
   padding: 10px;
@@ -530,33 +547,45 @@ p.tip-vaca {
 }
 .plantilla {
 	display: inline-block;
-	width: 200px;
-	height: 270px;
+	width: 170px;
+	height: 220px;
 	background-color: #293d50;
 	border-radius: 15px;
 	padding: 0em 1em;
 	margin-right: 15px;
 	transition: box-shadow 0.2s;
 	transition: background-color 0.2s;
-	box-shadow: 0 0 0px 0px #59acfa;
+/*	box-shadow: 0 0 0px 0px #59acfa; */
 }
 .plantilla:not(.seleccionada):hover {
 	box-shadow: 0 0 20px 5px #59acfa;
 	background-color: #1f5a92;
 }
 .plantilla.seleccionada {
-	box-shadow: 0 0 20px 5px #59acfa;
-	background-color: #00376b;
+	box-shadow: 5px 5px 25px 3px #969696;
+	background-color: #e2bb1f;
+	border-style: solid;
+	width: 200px;
+	height: 270px;
 }
 .plantilla.seleccionada:hover {
 	box-shadow: 0 0 20px 5px #59acfa;
 	background-color: #3c78b1;
 }
+
 .plantilla h6 {
 	text-align: center;
-	color: #bdbdbd;
+	color: white;
 }
+
 .plantilla > img {
+	display: block;
+	margin: auto;
+	height: 130px;
+	background: transparent;
+}
+
+.plantilla.seleccionada > img {
 	display: block;
 	margin: auto;
 	height: 200px;

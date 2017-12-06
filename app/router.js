@@ -21,6 +21,7 @@ Router.map(function() {
     this.route('paso5');
     this.route('paso6');
     this.route('exportar');
+    this.route('plantilla');
   });
 
   this.route('curriculum');

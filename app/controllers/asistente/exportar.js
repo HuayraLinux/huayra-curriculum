@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { computed } from '@ember/object';
 import { Promise } from 'rsvp';
 import { service } from 'huayra-curriculum/service';
 import { plantillas } from 'huayra-curriculum/data';
@@ -6,12 +7,20 @@ import moment from 'moment';
 
 export default Ember.Controller.extend({
   guardando: false,
-  plantilla: plantillas[0],
+  /* Devuelve el objeto de plantilla a uilizar */
+  plantilla: computed('model.plantilla', function() {
+    const nombreSolicitado = this.get('model.plantilla');
+    const plantillaSolicitada = plantillas.find(plantilla => plantilla.nombre === nombreSolicitado);
+    return plantillaSolicitada || plantillas[0];
+  }),
   mensaje: '',
   conversor: service('conversor'),
 
   actions: {
-    guardarODT: function () {
+    seleccionarPlantilla(plantilla) {
+      this.set('model.plantilla', plantilla.nombre);
+    },
+    guardarODT() {
       const ruta_destino = '/tmp/_temporal.docx';
 
       return this.get('model').save().then(() => {

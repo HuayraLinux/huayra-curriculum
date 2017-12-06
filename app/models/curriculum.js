@@ -23,6 +23,8 @@ const Curriculum = DS.Model.extend({
   
   objetivo: DS.attr('string'),
 
+  plantilla: DS.attr('string'),
+
   save() {
     /* Cambiar poner la fecha del momento en el que lo guardo */
     this.set('fecha', new Date());

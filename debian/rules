@@ -21,11 +21,8 @@ PATH := node-v4.5.0-linux-x64/bin:./node_modules/.bin:$(PATH)
 %:
 	dh $@ 
 
-#override_dh_shlibdeps:
-#	@echo "..."
-
 override_dh_auto_configure:
 	npm install bower
 	npm install
-	nodejs node_modules/.bin/emberjs build
+	nodejs node_modules/.bin/ember build
 	dh_auto_configure

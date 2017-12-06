@@ -553,8 +553,10 @@ p.tip-vaca {
 	border-radius: 15px;
 	padding: 0em 1em;
 	margin-right: 15px;
-	transition: box-shadow 0.2s;
-	transition: background-color 0.2s;
+	transition: box-shadow 0.2s,
+	            background-color 0.2s,
+		    width 0.2s,
+	            height 0.2s;
 /*	box-shadow: 0 0 0px 0px #59acfa; */
 	vertical-align: top;
 }

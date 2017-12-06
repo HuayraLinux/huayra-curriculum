@@ -556,6 +556,7 @@ p.tip-vaca {
 	transition: box-shadow 0.2s;
 	transition: background-color 0.2s;
 /*	box-shadow: 0 0 0px 0px #59acfa; */
+	vertical-align: top;
 }
 .plantilla:not(.seleccionada):hover {
 	box-shadow: 0 0 20px 5px #59acfa;

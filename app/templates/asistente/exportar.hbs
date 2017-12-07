@@ -8,11 +8,8 @@
       <p>Ponele un nombre a tu archivo que facilite
          identificarlo.</p>
 
-      {{#if guardando}}
-        <button disabled class="btn btn-success">{{fa-icon "refresh" rotate=true}} Guardando...</button>
-      {{else}}
-        <button {{action "guardarODT"}} class="btn btn-success">{{fa-icon "download"}} Guardar el archivo generado</button>
-      {{/if}}
+      <button disabled={{guardando}} {{action "guardarODT"}} class="btn btn-success">{{fa-icon "download"}} Guardar el archivo generado</button>
+      <button disabled={{guardando}} {{action "guardarYAbrir"}} class="btn btn-success">{{fa-icon "download"}} Guardar y abrir para editar</button>
 
       <br/>
       <br/>

@@ -7,9 +7,11 @@
       <label class="ember-view control-label">Experiencias laborales</label>
 
       {{#each model.experiencias as |experiencia|}}
-        <p>{{experiencia.descripcion}} - {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}})
-           <button {{action "eliminar" experiencia}} class="btn btn-xs btn-danger">""</button>
-           <button {{action "abrir" experiencia}} class="btn btn-xs btn-info">Editar</button></p>
+        <p>{{experiencia.descripcion}} - {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}})</p>
+	<div class="botonera">
+           <button {{action "eliminar" experiencia}} class="btn-borrar"></button>
+           <button {{action "abrir" experiencia}} class="btn-editar"></button>
+	</div>
       {{else}}
         <p>No hay experiencias cargadas</p>
       {{/each}}

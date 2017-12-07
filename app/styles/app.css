@@ -7,6 +7,11 @@ html, body {
 
 .form-group p {
 	margin:0 0 1em 1em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 260px;
+	display: inline-block;
 }
 
 .zoom-label {
@@ -81,6 +86,10 @@ label {
 	margin-left: 10px;
 }
 
+div.botonera {
+	float:right;
+	display: inline;
+}
 
 div.final {
 	background-color: #d2ffbb;  /* verde agua */
@@ -158,6 +167,10 @@ div.datos, div.plantillas {
 	border-color: #c7c7c7;
 	border-width: 1px;
 	box-shadow: 4px 2px 10px #808080;
+}
+
+div.datos {
+	min-width: 340px;
 }
 
 div.plantillas {
@@ -433,24 +446,66 @@ th {
 
 }
 
-
-.form-group .btn-danger {
-	background-image: url("imagenes/delete.png");
-	background-size: 18px;
+.btn-abrir {
+	background-image: url("imagenes/abrir.png");
+	background-size: 20px;
 	background-repeat: no-repeat;
 	background-color: transparent;
 	box-shadow: none;
-	margin-left: 6px;
-	
+	border-style: none;
+	width: 20px;
+	height: 20px;
 }
-.form-group .btn-danger:hover {
+.btn-abrir:hover {
+	background-image: url("imagenes/abrir-hover.png");
+	border-color: transparent;
+}
+.btn-abrir:active {
+	background-image: url("imagenes/abrir-pressed.png");
+	border-color: transparent;
+	outline: none;
+}
+
+.form-group .btn-danger, .btn-borrar {
+	background-image: url("imagenes/delete.png");
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	box-shadow: none;
+	border-style: none;
+}
+.form-group .btn-danger:hover, .btn-borrar:hover {
 	background-image: url("imagenes/delete-hover.png");
 	border-color: transparent;
 }
-.form-group .btn-danger:active {
+.form-group .btn-danger:active, .btn-borrar:active {
 	background-image: url("imagenes/delete-pressed.png");
 	border-color: transparent;
+	outline: none;
 }
+.form-group .btn-info, .btn-editar {
+	background-image: url("imagenes/editar.png");
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	box-shadow: none;
+	border-style: none;
+}
+
+.form-group .btn-info:hover, .btn-editar:hover {
+	background-image: url("imagenes/editar-hover.png");
+	border-color: transparent;
+}
+.form-group .btn-info:active,.btn-editar:active {
+	background-image: url("imagenes/editar-pressed.png");
+	border-color: transparent;
+	outline: none;
+}
+
 
 /* Pasteado desde huayra-presentacion */
 .box {

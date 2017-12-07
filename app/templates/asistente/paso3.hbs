@@ -5,9 +5,10 @@
       <label class="ember-view control-label">Estudios cursados</label>
 
       {{#each model.estudios as |estudio|}}
-        <p>{{estudio.descripcion}} - {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}})
-           <button {{action "eliminar" estudio}} class="btn btn-xs btn-danger">""</button>
-           <button {{action "abrir" estudio}} class="btn btn-xs btn-info">Editar</button></p>
+        <p>{{estudio.descripcion}} - {{estudio.institucion}} ({{estudio.ingreso}} - {{estudio.egreso}})</p>
+	<div class="botonera">
+           <button {{action "eliminar" estudio}} class="btn-borrar"></button>
+           <button {{action "abrir" estudio}} class="btn-editar"></button></div>
       {{else}}
         <p>No hay estudios cargados</p>
       {{/each}}

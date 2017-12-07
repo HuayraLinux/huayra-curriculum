@@ -10,7 +10,7 @@ html, body {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	width: 260px;
+	max-width: 80%;
 	display: inline-block;
 }
 

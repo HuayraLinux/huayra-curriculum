@@ -9,8 +9,8 @@
       {{#each model.experiencias as |experiencia|}}
         <p>{{experiencia.descripcion}} - {{experiencia.empleador}} ({{experiencia.ingreso}} - {{experiencia.egreso}})</p>
 	<div class="botonera">
-           <button {{action "eliminar" experiencia}} class="btn-borrar"></button>
-           <button {{action "abrir" experiencia}} class="btn-editar"></button>
+           <button {{action "eliminar" experiencia}} title="Borrar Curriculum" class="btn-borrar"></button>
+           <button {{action "abrir" experiencia}} title="Modificar Curriculum" class="btn-editar"></button>
 	</div>
       {{else}}
         <p>No hay experiencias cargadas</p>

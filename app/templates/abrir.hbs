@@ -21,8 +21,8 @@
             <td>{{c.apellido}}, {{c.nombre}}</td>
             <td>{{moment-from-now c.fecha}}</td>
             <td>
-              <button {{action "abrir" c}} class="btn-abrir"></button>
-              <button {{action "borrar" c.id}} class="btn-borrar"></button>
+              <button {{action "abrir" c}} title="Abrir Curriculum" class="btn-abrir"></button>
+              <button {{action "borrar" c.id}} title="Borrar Curriculum" class="btn-borrar"></button>
             </td>
           </tr>
         {{/each}}

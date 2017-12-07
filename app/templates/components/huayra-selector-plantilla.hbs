@@ -1,5 +1,4 @@
 <div class="lista-plantillas">
-  {{log seleccionada}}
   {{#each plantillas as |plantilla|}}
     <div class="plantilla {{if (eq plantilla seleccionada) "seleccionada"}}"
          {{action "seleccionar" plantilla}}>

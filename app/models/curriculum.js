@@ -26,8 +26,10 @@ const Curriculum = DS.Model.extend({
   plantilla: DS.attr('string'),
 
   save() {
-    /* Cambiar poner la fecha del momento en el que lo guardo */
-    this.set('fecha', new Date());
+    if(!this.get('isDeleted')) {
+      /* Cambiar poner la fecha del momento en el que lo guardo */
+      this.set('fecha', new Date());
+    }
     return this._super(...arguments);
   }
 });

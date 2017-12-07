@@ -18,4 +18,10 @@ export default Route.extend({
       });
     });
   },
+
+  actions: {
+    cancelar() {
+      this.get('remodal').close('estudio');
+    }
+  }
 });

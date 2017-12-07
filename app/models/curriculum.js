@@ -26,7 +26,7 @@ const Curriculum = DS.Model.extend({
   plantilla: DS.attr('string'),
 
   save() {
-    if(!this.get('isDeleted')) {
+    if(!this.get('isDeleted') && this.get('hasDirtyAttributes')) {
       /* Cambiar poner la fecha del momento en el que lo guardo */
       this.set('fecha', new Date());
     }

@@ -12,16 +12,13 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
-    regresar: function() {
+    regresar() {
       this.transitionToRoute('presentacion');
     },
-    borrar: function(curriculum_id) {
-      this.store.findRecord('curriculum', curriculum_id).
-        then(function(c) {
-          c.destroyRecord();
-        });
+    borrar(curriculum) {
+      curriculum.destroyRecord();
     },
-    abrir: function(curriculum) {
+    abrir(curriculum) {
       this.transitionToRoute('asistente.paso1', curriculum);
     }
   }

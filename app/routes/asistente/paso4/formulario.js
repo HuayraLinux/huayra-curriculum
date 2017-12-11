@@ -21,7 +21,7 @@ export default Route.extend({
   
   actions: {
     cancelar() {
-      this.get('remodal').close('estudio');
+      this.get('remodal').close('experiencia-laboral');
     }
   }
 });

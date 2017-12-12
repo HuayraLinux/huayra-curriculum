@@ -6,10 +6,10 @@ let win;
 function createWindow () {
 
   win = new BrowserWindow({
-    width: 850,
-    height: 720,
-    minWidth: 850,
-    minHeight: 720,
+    width: 800,
+    height: 640,
+    minWidth: 800,
+    minHeight: 640,
     title: "Huayra currículum!"
   });
 
@@ -17,7 +17,6 @@ function createWindow () {
   const appLocation = `file://${__dirname}/dist/index.html`;
 
   win.loadURL(appLocation);
-  win.setMinimumSize(800, 600);
 
   //win.webContents.openDevTools();
 

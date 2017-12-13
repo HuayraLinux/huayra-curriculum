@@ -159,9 +159,9 @@ div.datos, div.plantillas {
 	border-radius: 1px;
 	float: left;
 	width: 45%;
-	height: 360px;
+	height: 310px;
 	overflow-y: overlay;
-	min-height: 330px;
+	min-height: 310px;
 	padding: 8px;
 	border-style: solid;
 	border-color: #c7c7c7;

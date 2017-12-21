@@ -69,10 +69,19 @@ input {
 
 
 h1.seccion {
-	font-size: 40px;
 	position: relative;
 	top: -30px;
 	margin-left: 30px;
+	height: 60px;
+
+}
+
+h1.seccion_educacion
+{
+	position: relative;
+	top: -34px;
+	margin-left: 30px;
+	height: 60px;
 
 }
 

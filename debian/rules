@@ -15,14 +15,23 @@ export DH_VERBOSE=1
 
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
-PATH := node-v4.5.0-linux-x64/bin:./node_modules/.bin:$(PATH)
-
 
 %:
-	dh $@ 
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf node_modules
+	rm -rf tmp
+	rm -rf dist
+	rm -rf bower_components
+	dh_auto_clean
 
 override_dh_auto_configure:
 	npm install bower
 	npm install
-	nodejs node_modules/.bin/ember build
+	nodejs node_modules/.bin/bower install
 	dh_auto_configure
+
+override_dh_auto_build:
+	nodejs node_modules/.bin/ember build
+	dh_auto_build

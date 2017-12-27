@@ -13,6 +13,8 @@ function createWindow () {
     title: "Huayra currículum!"
   });
 
+  win.setMenu(null);
+
   const dirname = __dirname || path.resolve(path.dirname());
   const appLocation = `file://${__dirname}/dist/index.html`;
 

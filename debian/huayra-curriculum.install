@@ -1,10 +1,11 @@
-dist/* usr/share/huayra-curriculum/dist
-bin/huayra-curriculum usr/bin/
+main.js			usr/share/huayra-curriculum
+package.json		usr/share/huayra-curriculum
+dist			usr/share/huayra-curriculum
+bin/huayra-curriculum	usr/bin/
 
-node_modules/docxtemplater/* /usr/share/huayra-curriculum/node_modules/docxtemplater
-node_modules/moment/* /usr/share/huayra-curriculum/node_modules/moment
-node_modules/temporary/* /usr/share/huayra-curriculum/node_modules/temporary
-node_modules/nwjs-hack/* /usr/share/huayra-curriculum/node_modules/nwjs-hack
+node_modules/docxtemplater	usr/share/huayra-curriculum/node_modules
+node_modules/moment		usr/share/huayra-curriculum/node_modules
+node_modules/temporary		usr/share/huayra-curriculum/node_modules
 
-debian/huayra-curriculum.desktop /usr/share/applications
-debian/huayra-curriculum.svg /usr/share/icons/hicolor/scalable/apps
+debian/huayra-curriculum.desktop	usr/share/applications
+debian/huayra-curriculum.svg		usr/share/icons/hicolor/scalable/apps

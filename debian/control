@@ -2,7 +2,7 @@ Source: huayra-curriculum
 Section: video
 Priority: extra
 Maintainer: Ignacio Losiggio <iglosiggio@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), git, nodejs
+Build-Depends: debhelper (>= 8.0.0), git, nodejs, ca-certificates
 Standards-Version: 3.9.3
 Homepage: http://github.com/HuayraLinux/huayra-curriculum
 Vcs-Git: git://github.com/HuayraLinux/huayra-curriculum.git

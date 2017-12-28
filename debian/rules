@@ -15,7 +15,7 @@ export DH_VERBOSE=1
 
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
-
+export HOME=/tmp
 %:
 	dh $@
 
@@ -27,9 +27,9 @@ override_dh_auto_clean:
 	dh_auto_clean
 
 override_dh_auto_configure:
-	npm install bower
 	npm install
-	nodejs node_modules/.bin/bower install
+	# Ejecutar bower como root (dentro de pbuilder)
+	nodejs node_modules/.bin/bower --allow-root install
 	dh_auto_configure
 
 override_dh_auto_build:

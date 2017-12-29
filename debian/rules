@@ -15,7 +15,12 @@ export DH_VERBOSE=1
 
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
-export HOME=/tmp
+
+# pbuilder doesn't set a valid $HOME on purpose, we need it for the npm cache
+ifeq ($(shell test -e $(HOME) || echo no),no)
+	export HOME=/tmp
+endif
+
 %:
 	dh $@
 
@@ -27,8 +32,8 @@ override_dh_auto_clean:
 	dh_auto_clean
 
 override_dh_auto_configure:
-	npm install
-	# Ejecutar bower como root (dentro de pbuilder)
+	npm install --global-style
+	# bower needs this flag to let us run it as root (eg: on pbuilder)
 	nodejs node_modules/.bin/bower --allow-root install
 	dh_auto_configure
 

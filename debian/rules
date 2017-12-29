@@ -25,10 +25,7 @@ endif
 	dh $@
 
 override_dh_auto_clean:
-	rm -rf node_modules
-	rm -rf tmp
-	rm -rf dist
-	rm -rf bower_components
+	rm -rf node_modules tmp dist bower_components
 	dh_auto_clean
 
 override_dh_auto_configure:

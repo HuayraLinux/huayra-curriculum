@@ -11,8 +11,8 @@
       {{f.input type="label" name="descripcion" label="Título"      placeholder="Título o certificación obtenida"}}
       {{f.input type="textarea" name="notas"    label="Notas"       placeholder="Sumá información relevante (promedio general, cantidad de materias aprobadas, menciones especiales)"}}
 
-      <button {{action "cancelar"}} class="btn">Cancelar</button>
       {{f.submit class="btn btn-success" label=(if editando "Guardar registro" "Crear registro")}}
+      <button {{action "cancelar"}} class="btn">Cancelar</button>
     </div>
   {{/validated-form}}
 {{/ember-remodal}}

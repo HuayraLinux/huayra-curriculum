@@ -12,8 +12,8 @@
       {{f.input type="textarea" name="detalle"    label="Tareas a cargo" placeholder=""}}
       {{f.input type="textarea" name="referencia" label="Referencias"    placeholder="Marca/nombre del empleador - contacto"}}
 
-      <button {{action "cancelar"}} class="btn">Cancelar</button>
       {{f.submit class="btn btn-success" label=(if editando "Guardar registro" "Crear registro")}}
+      <button {{action "cancelar"}} class="btn">Cancelar</button>
     </div>
   {{/validated-form}}
 {{/ember-remodal}}

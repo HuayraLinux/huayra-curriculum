@@ -411,7 +411,7 @@ th {
   box-shadow: none;
 }
 
-.btn-circle-small:hover, .btn-circle-small:focus {
+/*.btn-circle-small:hover, .btn-circle-small:focus {
   width: 36px;
   height: 36px;
   text-align: center;
@@ -421,7 +421,7 @@ th {
   border-radius: 18px;
   box-shadow: none;
   transition-duration: 0.2s;
-}
+}*/
 
 .btn-primary {
 	background-color: #e2bb1f !important;
@@ -448,10 +448,7 @@ th {
 }
 
 .btn-default:hover, .btn-default:focus {
-	background-image: none;
-	background-color: white;
-	border-color: #e2bb1f;
-	border-width: 5px;
+	border-color: #cfcfcf;
 }
 
 .btn-abrir {

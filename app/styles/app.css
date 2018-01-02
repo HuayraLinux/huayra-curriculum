@@ -411,6 +411,12 @@ th {
   box-shadow: none;
 }
 
+button.btn.btn-default.btn-circle-small:hover {
+    color: white;
+    border-color: #d4ab06;
+    background-color: #e2bb1f;
+}
+
 /*.btn-circle-small:hover, .btn-circle-small:focus {
   width: 36px;
   height: 36px;

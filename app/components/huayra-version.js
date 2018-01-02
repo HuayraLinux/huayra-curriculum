@@ -1,8 +1,9 @@
 import Ember from 'ember';
-import {service} from '../service';
+import Component from '@ember/component';
+import {service} from 'huayra-curriculum/service';
 
-export default Ember.Component.extend({
-  version: "0.2.2",
+export default Component.extend({
+  version: "0.3.0",
   mostrarDialog: false,
   infoURL: '',
   imageURL: "imagenes/version/procesando.gif",
@@ -37,7 +38,7 @@ export default Ember.Component.extend({
         var current_version = data.current_version;
         var value = compare(this.get('version'), current_version);
 
-        console.log("Comparacion de versiones", this.get('version'), current_version, value);
+        Ember.Logger.log("Comparacion de versiones", this.get('version'), current_version, value);
 
         if (value >= 0) {
           this.set('imageURL', "imagenes/version/actualizado.png");

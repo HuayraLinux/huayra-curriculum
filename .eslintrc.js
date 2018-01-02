@@ -10,7 +10,7 @@ module.exports = {
     node: true
   },
   globals: {
-    'requireNode': true
+    'requireNode': true,
   },
   rules: {
   }

@@ -1,8 +1,10 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import {Promise} from 'rsvp';
+import $ from 'jquery';
 
-export default Ember.Service.extend({
+export default Service.extend({
   getVersion(url) {
-    return new Ember.RSVP.Promise(function(resolve, reject) {
+    return new Promise(function(resolve, reject) {
       $.getJSON(url).
         done(function(response) {
           resolve(response);

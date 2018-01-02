@@ -1,10 +1,12 @@
-import Ember from 'ember';
+import App from '@ember/application';
+import Service from '@ember/service';
+import {Promise} from 'rsvp';
 
-export default Ember.Service.extend({
+export default Service.extend({
   ejecutar(/*ruta_plantilla, parametros, destino*/) {
-    return new Ember.RSVP.Promise(function(resolve) {
+    return new Promise(function(resolve) {
       setTimeout(function() {
-        console.log("Simulando generación del archivo docx ...");
+        App.logger.log("Simulando generación del archivo docx ...");
         resolve("ruta/simulada");
       }, 1000);
     });

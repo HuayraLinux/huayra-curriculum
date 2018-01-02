@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import { alias, not } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
-import Estudio from 'huayra-curriculum/models/estudio';
 import Changeset from 'ember-changeset';
 
 export default Ember.Controller.extend({

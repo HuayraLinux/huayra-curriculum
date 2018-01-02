@@ -1,4 +1,5 @@
 import { test } from 'qunit';
+import $ from 'jquery';
 import moduleForAcceptance from 'huayra-curriculum/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | puede navegar');

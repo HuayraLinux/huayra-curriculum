@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import {inject} from '@ember/service';
 
 const inElectron = (window.process !== undefined);
 
@@ -18,9 +19,9 @@ function service(nombre) {
     modulo = `${nombre}-browser`;
   }
 
-  console.log(`Inyectando servicio ${modulo}`);
+  Ember.Logger.log(`Inyectando servicio ${modulo}`);
 
-  return Ember.inject.service(modulo);
+  return inject(modulo);
 }
 
 export {service, inElectron};

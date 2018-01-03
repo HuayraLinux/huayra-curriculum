@@ -10,17 +10,17 @@ export const pasos = [
 ];
 export const plantillas = [
   {
-    nombre: 'Plantilla fea para probar cosas',
-    imagen: 'plantillas/plantilla_de_prueba.png',
-    plantilla: 'plantillas/test.docx'
+    nombre: 'Chin chin!',
+    imagen: 'plantillas/chinchin.png',
+    plantilla: 'plantillas/chinchin.docx'
   },
   {
-    nombre: 'Plantilla azul',
-    imagen: 'plantillas/plantilla_azul.png',
-    plantilla: 'plantillas/plantilla_azul.docx'
+    nombre: 'Azul',
+    imagen: 'plantillas/azul.png',
+    plantilla: 'plantillas/azul.docx'
   },
   {
-    nombre: 'La accoplantilla',
+    nombre: 'Accoplantilla',
     imagen: 'plantillas/accoplantilla.png',
     plantilla: 'plantillas/accoplantilla.docx'
   }

@@ -15,14 +15,14 @@ export const plantillas = [
     plantilla: 'plantillas/chinchin.docx'
   },
   {
-    nombre: 'Azul',
-    imagen: 'plantillas/azul.png',
-    plantilla: 'plantillas/azul.docx'
+    nombre: 'Varieté',
+    imagen: 'plantillas/variete.png',
+    plantilla: 'plantillas/variete.docx'
   },
   {
-    nombre: 'Accoplantilla',
-    imagen: 'plantillas/accoplantilla.png',
-    plantilla: 'plantillas/accoplantilla.docx'
+    nombre: 'Cosquín',
+    imagen: 'plantillas/cosquin.png',
+    plantilla: 'plantillas/cosquin.docx'
   }
 ];
 

@@ -1,5 +1,5 @@
 Source: huayra-curriculum
-Section: video
+Section: text
 Priority: extra
 Maintainer: Ignacio Losiggio <iglosiggio@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), git, nodejs, ca-certificates
@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/HuayraLinux/huayra-curriculum
 
 Package: huayra-curriculum
 Architecture: all
-Depends: ${misc:Depends}, electron
+Depends: ${misc:Depends}, electron, huayra-fonts
 Description: Facilita la creación de curriculums
  Huayra-curriculum es un asistente que permite crear curriculums 
  de manera sencilla, incluyendo ejemplos, consejos y buenas prácticas.

@@ -15,7 +15,7 @@
       <br/>
 
       {{#if mensaje}}
-        <div class="alert alert-warning">
+        <div class={{if error "alert alert-warning" "alert alert-success"}}>
           {{mensaje}}
         </div>
       {{/if}}

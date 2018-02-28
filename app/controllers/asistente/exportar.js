@@ -14,6 +14,7 @@ export default Ember.Controller.extend({
     return plantillaSolicitada || plantillas[0];
   }),
   mensaje: '',
+  error: false,
   conversor: service('conversor'),
 
   guardar() {
@@ -48,10 +49,12 @@ export default Ember.Controller.extend({
       );
     }).then((ruta_seleccionada) => {
       this.set('mensaje', "Se ha generado el archivo " + ruta_seleccionada);
+      this.set('error', false);
       this.set('guardando', false);
       return ruta_seleccionada;
     }).catch((mensaje_error) => {
       this.set('mensaje', mensaje_error);
+      this.set('error', true);
       this.set('guardando', false);
       throw mensaje_error;
     });

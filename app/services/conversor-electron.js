@@ -62,6 +62,7 @@ export default Ember.Service.extend({
           filters: [{name: 'Documento de Word 2007 (*.docx)', extensions: ['docx']}]
         },
         (rutaFinal) => {
+          if(rutaFinal === undefined) return reject('Cancelaste la exportación del currículum');
           try {
             fs.renameSync(rutaTemporal, rutaFinal);
             accept(rutaFinal);

@@ -11,8 +11,7 @@
 
     <script charset="utf-8">
       function abrir_devtools() {
-        /* TODO: electron */
-        // require('nw.gui').Window.get().showDevTools();
+        requireNode('electron').remote.getCurrentWindow().openDevTools()
       }
       window.requireNode = require;
     </script>

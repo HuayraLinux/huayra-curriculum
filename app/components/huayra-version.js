@@ -35,7 +35,7 @@ export default Component.extend({
 
     this.get("versionService").getVersion(this.get("url"))
       .then((data) => {
-        var current_version = data.current_version;
+        var current_version = data.versions[0].Version;
         var value = compare(this.get('version'), current_version);
 
         Ember.Logger.log("Comparacion de versiones", this.get('version'), current_version, value);

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>huayra-curriculum</title>
+    <title>¡Creá tu primer currículum con huayra-curriculum!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,8 +11,7 @@
 
     <script charset="utf-8">
       function abrir_devtools() {
-        /* TODO: electron */
-        // require('nw.gui').Window.get().showDevTools();
+        requireNode('electron').remote.getCurrentWindow().openDevTools()
       }
       window.requireNode = require;
     </script>

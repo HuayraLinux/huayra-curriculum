@@ -16,7 +16,9 @@ function createWindow () {
     }
   });
 
+  //TODO: Chequear versión de electron para saber qué método llamar
   win.setMenu(null);
+  win.setMenuBarVisibility(false)
 
   const dirname = __dirname || path.resolve(path.dirname());
   const appLocation = `file://${__dirname}/dist/index.html`;

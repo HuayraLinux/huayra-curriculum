@@ -11,7 +11,7 @@ Aplicativo para generar un Curriculum Vitae de forma sencilla.
 ## Instalar dependencias
 ```
 npm install
-npmx bower install
+npx bower install
 ```
 
 ## Construir y ejecutar

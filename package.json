@@ -10,8 +10,9 @@
   },
   "scripts": {
     "build": "ember build",
+    "dev": "npx electron .",
     "start": "ember server",
-    "dev": "npm run build && npx electron .",
+    "build-and-dev": "npm run build && npm run dev",
     "test": "ember test"
   },
   "repository": "",

@@ -14,7 +14,12 @@ npm install
 npmx bower install
 ```
 
-## Ejecutar
+## Construir y ejecutar
+```
+npm run build-and-dev
+```
+
+## Ejecutar (en caso que previamente hayas construido con `npm run build`)
 ```
 npm run dev
 ```

@@ -11,6 +11,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
+    "dev": "npm run build && npx electron .",
     "test": "ember test"
   },
   "repository": "",
@@ -49,7 +50,8 @@
     "loader.js": "^4.2.3"
   },
   "dependencies": {
-    "docxtemplater": "^2.1.5"
+    "docxtemplater": "^2.1.5",
+    "remodal": "^1.1.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

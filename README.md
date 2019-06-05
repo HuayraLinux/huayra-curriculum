@@ -1,5 +1,4 @@
-huayra-curriculum
-=================
+# huayra-curriculum
 
 [![Build Status](https://travis-ci.org/HuayraLinux/huayra-curriculum.svg?branch=master)](https://travis-ci.org/HuayraLinux/huayra-curriculum)
 
@@ -7,21 +6,20 @@ Aplicativo para generar un Curriculum Vitae de forma sencilla.
 
 ![](imagenes/preview2.jpg)
 
-Iniciar en modo desarrollo
----------------------------
+# Iniciar en modo desarrollo
 
-Para instalar todas las herramientas y dependencias
-de desarrollo tienes que ejecutar el comando:
+## Instalar dependencias
+```
+npm install
+npmx bower install
+```
 
-	npm install
-    ember b
+## Ejecutar
+```
+npm run dev
+```
 
-y luego:
+# Tecnologías utilizadas
 
-    electron .
-
-Tecnologías utilizadas
-----------------------
-
-*Ember
-*Electron
+- Ember
+- Electron

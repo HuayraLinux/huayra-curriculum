@@ -10,7 +10,10 @@ function createWindow () {
     height: 640,
     minWidth: 800,
     minHeight: 640,
-    title: "Huayra currículum!"
+    title: "Huayra currículum!",
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   win.setMenu(null);

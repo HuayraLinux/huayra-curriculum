@@ -19,7 +19,8 @@ npx bower install
 npm run build-and-dev
 ```
 
-## Ejecutar (en caso que previamente hayas construido con `npm run build`)
+## Ejecutar
+(en caso que previamente hayas construido con `npm run build` o `npm run build-and-dev`)
 ```
 npm run dev
 ```

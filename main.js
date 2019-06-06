@@ -10,10 +10,15 @@ function createWindow () {
     height: 640,
     minWidth: 800,
     minHeight: 640,
-    title: "Huayra currículum!"
+    title: "Huayra currículum!",
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
+  //TODO: Chequear versión de electron para saber qué método llamar
   win.setMenu(null);
+  win.setMenuBarVisibility(false)
 
   const dirname = __dirname || path.resolve(path.dirname());
   const appLocation = `file://${__dirname}/dist/index.html`;

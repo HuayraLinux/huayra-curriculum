@@ -1,14 +1,15 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: huayra-curriculum
-Source: <url://example.com>
+Source: https://github.com/HuayraLinux/huayra-curriculum
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: 2014 Hugo Ruscitti <hugoruscitti@gmail.com>
+Copyright: 2019 Sebastian Alvarez <seba.alvarez16@gmail.com>
 License: GPL-3.0+
 
 Files: debian/*
 Copyright: 2014 Hugo Ruscitti <hugoruscitti@gmail.com>
+Copyright: 2019 Fernando Toledo <ragnarok@docksud.com.ar>
 License: GPL-3.0+
 
 License: GPL-3.0+
